@@ -63,8 +63,6 @@ const Navbar = () => {
         setAnchorEl_search(null);
     };
 
-    
-
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl_search(event.currentTarget);
     };
@@ -77,13 +75,13 @@ const Navbar = () => {
         setSearchQuery('');
     };
 
-    const handleSearchKeyPress = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+    const handleSearchKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter' && searchQuery !== '') {
             handleSearch();
         }
     };
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLButtonElement>) => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(event.target.value);
     };
 
