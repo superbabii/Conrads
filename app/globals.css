@@ -42,9 +42,12 @@ html:not([data-scroll="0"]) .navbar {
   overflow: auto;
   outline: 0;
 
-  background: #333; /* Grey color */
-  border: 1px solid #555; /* Dark grey color */
-  color: #eee; /* Light grey color */
+  background: #333;
+  /* Grey color */
+  border: 1px solid #555;
+  /* Dark grey color */
+  color: #eee;
+  /* Light grey color */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.50);
 }
 
@@ -62,8 +65,10 @@ html:not([data-scroll="0"]) .navbar {
 
 .CustomMenuSimple--item:focus {
   outline: 3px solid cyan;
-  background-color: #444; /* Dark grey color */
-  color: #eee; /* Light grey color */
+  background-color: #444;
+  /* Dark grey color */
+  color: #eee;
+  /* Light grey color */
 }
 
 .TriggerButtonSimple {
@@ -76,17 +81,22 @@ html:not([data-scroll="0"]) .navbar {
   color: white;
   transition: all 150ms ease;
   cursor: pointer;
-  background: #333; /* Grey color */
-  border: 1px solid #555; /* Dark grey color */
+  background: #333;
+  /* Grey color */
+  border: 1px solid #555;
+  /* Dark grey color */
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 
   &:hover {
-    background: #444; /* Dark grey color */
-    border-color: #666; /* Grey color */
+    background: #444;
+    /* Dark grey color */
+    border-color: #666;
+    /* Grey color */
   }
 
   &:active {
-    background: #222; /* Darker grey color */
+    background: #222;
+    /* Darker grey color */
   }
 
   &:focus-visible {
@@ -209,10 +219,7 @@ html:not([data-scroll="0"]) .navbar {
 .card-hover {
   opacity: 0.4;
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 1);
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
-    skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
-    scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-width: 1px;
   border-color: transparent;
   transition-property: color, background-color, border-color, fill,
@@ -228,6 +235,7 @@ html:not([data-scroll="0"]) .navbar {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.4s;
 }
+
 .card-hover:hover {
   opacity: 1;
   cursor: pointer;
@@ -298,8 +306,23 @@ html:not([data-scroll="0"]) .navbar {
 
 /* Simple Section */
 
-.simple-bg {
-  background: linear-gradient(90deg, rgba(189, 36, 223, 0.1) 0%, rgba(45, 106, 222, 0.1) 97.15%);
+.why-bg {
+  position: relative;
+}
+
+.why-bg::before {
+  content: "";
+  background-image: url('/images/Products/electronic.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+  z-index: -1; /* Ensure the overlay is behind the content */
 }
 
 .simpleone {
@@ -428,7 +451,7 @@ html:not([data-scroll="0"]) .navbar {
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #fff; 
+  background-color: #fff;
   /* #801022 */
   transform-origin: bottom right;
   transition: transform .25s ease-out;
@@ -458,15 +481,18 @@ html:not([data-scroll="0"]) .navbar {
 
 .address-container {
   display: flex;
-  align-items: flex-start; /* Align items to the start (top) of the container */
+  align-items: flex-start;
+  /* Align items to the start (top) of the container */
 }
 
 .address-container h4 {
-  margin: 0; /* Remove default margin */
+  margin: 0;
+  /* Remove default margin */
 }
 
 .address-container h4 img {
-  margin-top: 2px; /* Adjust margin-top to align with the top line of the address */
+  margin-top: 2px;
+  /* Adjust margin-top to align with the top line of the address */
 }
 
 .verticalLine {

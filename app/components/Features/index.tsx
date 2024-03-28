@@ -48,7 +48,7 @@ const workdata: workdata[] = [
 
 ]
 
-const Work = () => {
+const Features = () => {
     return (
         <div>
             <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative'>
@@ -91,4 +91,4 @@ const Work = () => {
     )
 }
 
-export default Work;
+export default Features;

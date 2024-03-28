@@ -79,7 +79,7 @@ const Products = () => {
           <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>Products</h3>
           <p className='text-offwhite md:text-lg font-normal leading-8'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8" >
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-y-20 mt-32" >
           {productdata.map((items, i) => (
             <ul className="space-y-8" key={i}>
               <li className="text-sm leading-6">

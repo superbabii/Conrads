@@ -2,7 +2,7 @@ import Banner from './components/Banner/index';
 import Companies from './components/Companies/index';
 import Products from './components/Products/index';
 import Features from './components/Features/index';
-import Simple from './components/WhyUs/index';
+import WhyUs from './components/WhyUs/index';
 import Faq from './components/Faq/index';
 
 
@@ -13,7 +13,7 @@ export default function Home() {
       <Features />
       <Companies />
       <Products />
-      <Simple />
+      <WhyUs />
     </main>
   )
 }
