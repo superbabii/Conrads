@@ -75,13 +75,13 @@ const Navbar = () => {
         setSearchQuery('');
     };
 
-    const handleSearchKeyPress = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const handleSearchKeyPress = (event: React.KeyboardEvent<HTMLButtonElement>) => {
         if (event.key === 'Enter' && searchQuery !== '') {
             handleSearch();
         }
     };
 
-    const handleInputChange = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLButtonElement>) => {
         setSearchQuery(event.target.value);
     };
 
