@@ -1,0 +1,124 @@
+"use client"
+import Image from 'next/image';
+import React, { useState } from 'react';
+import ModalVideo from 'react-modal-video';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
+const Banner = () => {
+    const [isOpen, setOpen] = useState(false)
+    const images = [
+        "/images/Banner/banner1.png",
+        "/images/Banner/banner2.png",
+        "/images/Banner/banner3.png"
+    ];
+    const texts = [
+        {
+            title: "Buy, Sell & Accept Digital Assets",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s"
+        },
+        {
+            title: "Another Title",
+            description: "Another description goes here"
+        },
+        {
+            title: "Yet Another Title",
+            description: "Yet another description goes here"
+        }
+    ];
+
+    return (
+        <div className='bg-image relative' id="home-section">
+            <div className='arrowOne'></div>
+            <div className='radial-banner hidden lg:block'></div>
+            <ModalVideo channel='youtube' isOpen={isOpen} videoId="1YyAzVmP9xQ" onClose={() => setOpen(false)} />
+            {/* autoPlay={true} interval={3000} */}
+            <Carousel autoPlay={true} interval={3000} useKeyboardArrows={true} showStatus={false} infiniteLoop={true} stopOnHover={true} emulateTouch={true} showArrows={false}>
+                <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
+                    <div className='height-work'>
+                        <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
+                            <div className='arrowTwo'></div>
+                            <div className='col-span-7'>
+                                <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-white md:4px md:text-start text-center">
+                                    {texts[0].title}
+                                </h1>
+                                <p className='text-white md:text-lg font-normal mb-10 md:text-start text-center'>
+                                    {texts[0].description}
+                                </p>
+                            </div>
+                            <div className='col-span-5 lg:-m-48'>
+                                <div className='arrowThree'></div>
+                                <div className='arrowFour'></div>
+                                <div className='arrowFive'></div>
+                                <Image src={images[0]} alt="nothing" width={1013} height={760} />
+                                <div className='arrowSix'></div>
+                                <div className='arrowSeven'></div>
+                                <div className='arrowEight'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
+                    <div className='height-work'>
+                        <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
+                            <div className='arrowTwo'></div>
+                            <div className='col-span-7'>
+                                <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-white md:4px md:text-start text-center">
+                                    {texts[1].title}
+                                </h1>
+                                <p className='text-white md:text-lg font-normal mb-10 md:text-start text-center'>
+                                    {texts[1].description}
+                                </p>
+                            </div>
+                            <div className='col-span-5 lg:-m-48'>
+                                <div className='arrowThree'></div>
+                                <div className='arrowFour'></div>
+                                <div className='arrowFive'></div>
+                                <Image src={images[1]} alt="nothing" width={1013} height={760} />
+                                <div className='arrowSix'></div>
+                                <div className='arrowSeven'></div>
+                                <div className='arrowEight'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
+                    <div className='height-work'>
+                        <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
+                            <div className='arrowTwo'></div>
+                            <div className='col-span-7'>
+                                <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-white md:4px md:text-start text-center">
+                                    {texts[2].title}
+                                </h1>
+                                <p className='text-white md:text-lg font-normal mb-10 md:text-start text-center'>
+                                    {texts[2].description}
+                                </p>
+                            </div>
+                            <div className='col-span-5 lg:-m-48'>
+                                <div className='arrowThree'></div>
+                                <div className='arrowFour'></div>
+                                <div className='arrowFive'></div>
+                                <Image src={images[2]} alt="nothing" width={1013} height={760} />
+                                <div className='arrowSix'></div>
+                                <div className='arrowSeven'></div>
+                                <div className='arrowEight'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Carousel>
+
+            {/* <div className='flex align-middle justify-center md:justify-start'>
+                                <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton mr-6'>
+                                    Get Started
+                                </button>
+                                <button onClick={() => setOpen(true)} className='bg-transparent flex justify-center items-center text-white'>
+                                    <Image src={'/images/Banner/playbutton.svg'} alt="button-image" className='mr-3' width={47} height={47} />
+                                    How it work
+                                </button>
+                            </div> */}
+        </div>
+    )
+}
+
+export default Banner;
