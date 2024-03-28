@@ -44,8 +44,8 @@ const Navbar = () => {
 
     const [isOpen, setIsOpen] = React.useState(false);
 
-    const [anchorEl_account, setAnchorEl_account] = React.useState(null);
-    const [anchorEl_language, setAnchorEl_language] = React.useState(null);
+    const [anchorEl_account, setAnchorEl_account] = React.useState<EventTarget | null>(null);;
+    const [anchorEl_language, setAnchorEl_language] = React.useState<EventTarget | null>(null);;
     const open_account = Boolean(anchorEl_account);
     const open_language = Boolean(anchorEl_language);
     const handleAccountClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -60,7 +60,7 @@ const Navbar = () => {
         setAnchorEl_search(null);
     };
 
-    const [anchorEl_search, setAnchorEl_search] = React.useState(null);
+    const [anchorEl_search, setAnchorEl_search] = React.useState<EventTarget | null>(null);;
     const [searchQuery, setSearchQuery] = React.useState('');
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
