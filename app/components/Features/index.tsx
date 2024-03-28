@@ -62,7 +62,7 @@ const Work = () => {
                         </div>
                     ))} */}
                     {workdata.map((items, i) => (
-                        <div className="flex shadow-lg hover:shadow-[#a21229] flex-col justify-between p-5 transition duration-400 bg-cardbg rounded-xl card-hover group space-y-5">
+                        <div className="flex shadow-lg hover:shadow-[#a21229] flex-col justify-between p-5 transition duration-400 bg-cardbg rounded-xl card-hover group space-y-5" key={i}>
                             <div className='rounded-full flex justify-center p-6'>
                                 <Image src={items.imgSrc} alt={items.imgSrc} width={80} height={80} />
                             </div>
