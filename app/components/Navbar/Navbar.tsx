@@ -6,20 +6,77 @@ import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
 // import Contactusform from './Contactus';
 import Box from '@mui/material/Box';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import { Menu, MenuItem, MenuProps } from '@mui/material';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import TextField from '@mui/material/TextField';
 
-import PersonAdd from '@mui/icons-material/PersonAdd';
-import Settings from '@mui/icons-material/Settings';
-import Logout from '@mui/icons-material/Logout';
-
 import PersonIcon from '@mui/icons-material/Person';
 import LanguageIcon from '@mui/icons-material/Language';
 import SearchIcon from '@mui/icons-material/Search';
-import LogoutIcon from '@mui/icons-material/Logout';
+
+import { styled, alpha } from '@mui/material/styles';
+
+const StyledMenu = styled((props: MenuProps & { open?: boolean }) => (
+    <Menu
+        elevation={0}
+        anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'right',
+        }}
+        transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+        }}
+        {...props}
+    />
+))(({ theme }) => ({
+    '& .MuiPaper-root': {
+        borderRadius: 6,
+        marginTop: theme.spacing(1),
+        minWidth: 180,
+        color:
+            theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
+        boxShadow:
+            'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+        '& .MuiMenu-list': {
+            padding: '0px 0',
+        },
+        '& .MuiMenuItem-root': {
+            '& .MuiSvgIcon-root': {
+                fontSize: 18,
+                color: theme.palette.text.secondary,
+                marginRight: theme.spacing(1.5),
+            },
+            '&:active': {
+                backgroundColor: alpha(
+                    theme.palette.primary.main,
+                    theme.palette.action.selectedOpacity,
+                ),
+            },
+        },
+    },
+}));
+
+const CssTextField = styled(TextField)({
+    '& label.Mui-focused': {
+        color: '#A0AAB4',
+    },
+    '& .MuiInput-underline:after': {
+        borderBottomColor: '#B2BAC2',
+    },
+    '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+            borderColor: '#E0E3E7',
+        },
+        '&:hover fieldset': {
+            borderColor: '#B2BAC2',
+        },
+        '&.Mui-focused fieldset': {
+            borderColor: '#6F7E8C',
+        },
+    },
+});
 
 interface NavigationItem {
     name: string;
@@ -31,7 +88,6 @@ const navigation: NavigationItem[] = [
     { name: 'Home', href: '#home-section', current: false },
     { name: 'About Us', href: '#exchange-section', current: false },
     { name: 'Features', href: '#features-section', current: false },
-    { name: 'Testimols', href: '#faq-section', current: false },
     { name: 'Products', href: '#product-section', current: false },
     { name: 'Contact', href: '#contact-section', current: false },
 ]
@@ -61,6 +117,7 @@ const Navbar = () => {
         setAnchorEl_account(null);
         setAnchorEl_language(null);
         setAnchorEl_search(null);
+        setSearchQuery('');
     };
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -68,9 +125,7 @@ const Navbar = () => {
     };
 
     const handleSearch = () => {
-        // Perform search operation with searchQuery
         console.log('Searching for:', searchQuery);
-        // You can add your search logic here
         handleClose(); // Close the menu after search
         setSearchQuery('');
     };
@@ -133,7 +188,12 @@ const Navbar = () => {
                                     <IconButton
                                         onClick={handleAccountClick}
                                         size="small"
-                                        sx={{ ml: 2 }}
+                                        sx={{
+                                            ml: 2,
+                                            '&:hover': {
+                                                bgcolor: 'rgba(39, 40, 43, 0.7)',
+                                            },
+                                        }}
                                         aria-controls={open_account ? 'account-menu' : undefined}
                                         aria-haspopup="true"
                                         aria-expanded={open_account ? 'true' : undefined}
@@ -148,68 +208,46 @@ const Navbar = () => {
                                     onClose={handleClose}
                                     onClick={handleClose}
                                     PaperProps={{
-                                        elevation: 0,
+                                        elevation: 2,
                                         sx: {
                                             overflow: 'visible',
-                                            filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-                                            mt: 1.5,
-                                            '& .MuiAvatar-root': {
-                                                width: 32,
-                                                height: 32,
-                                                ml: -0.5,
-                                                mr: 1,
-                                            },
-                                            '&::before': {
-                                                content: '""',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: 0,
-                                                right: 14,
-                                                width: 10,
-                                                height: 10,
-                                                bgcolor: 'background.paper',
-                                                transform: 'translateY(-50%) rotate(45deg)',
-                                                zIndex: 0,
-                                            },
+                                            filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
+                                            mt: 1,
+                                            backgroundColor: 'rgba(39, 40, 43, 0.7)',
+                                            color: 'white',
                                         },
                                     }}
-                                    transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                                    anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                                    transformOrigin={{ horizontal: 'left', vertical: 'top' }}
+                                    anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
                                 >
-                                    {/* <MenuItem onClick={handleClose}>
-                                        <Avatar /> Profile
-                                    </MenuItem> */}
-                                    <MenuItem onClick={handleClose}>
+                                    <MenuItem onClick={handleClose} sx={{
+                                        '&:hover': {
+                                            textDecoration: "underline",
+                                            color: "white",
+                                        },
+                                    }}>
                                         My account
                                     </MenuItem>
-                                    <Divider />
-                                    <MenuItem onClick={handleClose}>
+                                    <Divider variant="middle" component="li" style={{ borderBottom: "1px solid #323639" }} />
+                                    <MenuItem onClick={handleClose} sx={{
+                                        '&:hover': {
+                                            textDecoration: "underline",
+                                            color: "white",
+                                        },
+                                    }}>
                                         Create Account
                                     </MenuItem>
-                                    {/* <MenuItem onClick={handleClose}>
-                                        <ListItemIcon>
-                                            <PersonAdd fontSize="small" />
-                                        </ListItemIcon>
-                                        Add another account
-                                    </MenuItem>
-                                    <MenuItem onClick={handleClose}>
-                                        <ListItemIcon>
-                                            <Settings fontSize="small" />
-                                        </ListItemIcon>
-                                        Settings
-                                    </MenuItem>
-                                    <MenuItem onClick={handleClose}>
-                                        <ListItemIcon>
-                                            <Logout fontSize="small" />
-                                        </ListItemIcon>
-                                        Logout
-                                    </MenuItem> */}
                                 </Menu>
                                 <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                                     <IconButton
                                         onClick={handlelanguageClick}
                                         size="small"
-                                        sx={{ ml: 2 }}
+                                        sx={{
+                                            ml: 2,
+                                            '&:hover': {
+                                                bgcolor: 'rgba(39, 40, 43, 0.7)',
+                                            },
+                                        }}
                                         aria-controls={open_language ? 'language-menu' : undefined}
                                         aria-haspopup="true"
                                         aria-expanded={open_language ? 'true' : undefined}
@@ -224,38 +262,32 @@ const Navbar = () => {
                                     onClose={handleClose}
                                     onClick={handleClose}
                                     PaperProps={{
-                                        elevation: 0,
+                                        elevation: 2,
                                         sx: {
                                             overflow: 'visible',
-                                            filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-                                            mt: 1.5,
-                                            '& .MuiAvatar-root': {
-                                                width: 32,
-                                                height: 32,
-                                                ml: -0.5,
-                                                mr: 1,
-                                            },
-                                            '&::before': {
-                                                content: '""',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: 0,
-                                                right: 14,
-                                                width: 10,
-                                                height: 10,
-                                                bgcolor: 'background.paper',
-                                                transform: 'translateY(-50%) rotate(45deg)',
-                                                zIndex: 0,
-                                            },
+                                            filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
+                                            mt: 1,
+                                            backgroundColor: 'rgba(39, 40, 43, 0.7)',
+                                            color: 'white',
                                         },
                                     }}
-                                    transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                                    anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                                    transformOrigin={{ horizontal: 'left', vertical: 'top' }}
+                                    anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
                                 >
-                                    <MenuItem onClick={handleClose}>
+                                    <MenuItem onClick={handleClose} sx={{
+                                        '&:hover': {
+                                            textDecoration: "underline",
+                                            color: "white",
+                                        },
+                                    }}>
                                         English
                                     </MenuItem>
-                                    <MenuItem onClick={handleClose}>
+                                    <MenuItem onClick={handleClose} sx={{
+                                        '&:hover': {
+                                            textDecoration: "underline",
+                                            color: "white",
+                                        },
+                                    }}>
                                         Germany
                                     </MenuItem>
                                 </Menu>
@@ -263,7 +295,12 @@ const Navbar = () => {
                                     <IconButton
                                         onClick={handleClick}
                                         size="small"
-                                        sx={{ ml: 2 }}
+                                        sx={{
+                                            ml: 2,
+                                            '&:hover': {
+                                                bgcolor: 'rgba(39, 40, 43, 0.7)',
+                                            },
+                                        }}
                                         aria-controls={anchorEl_search ? 'search-menu' : undefined}
                                         aria-haspopup="true"
                                         aria-expanded={anchorEl_search ? 'true' : undefined}
@@ -271,23 +308,36 @@ const Navbar = () => {
                                         <SearchIcon style={{ color: 'white' }} />
                                     </IconButton>
                                 </Box>
-                                <Menu
+                                <StyledMenu
                                     anchorEl={anchorEl_search}
                                     id="search-menu"
                                     open={Boolean(anchorEl_search)}
                                     onClose={handleClose}
+                                    style={{ padding: '0px !important' }}
+                                    PaperProps={{
+                                        elevation: 2,
+                                        sx: {
+                                            overflow: 'visible',
+                                            filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
+                                            mt: 1,
+                                            backgroundColor: 'rgba(39, 40, 43, 0.7)',
+                                            color: 'white',
+                                            padding: '0px !important',
+                                            borderRadius: '4px',
+                                        },
+                                    }}
                                 >
                                     <MenuItem>
-                                        <TextField
-                                            placeholder="Search..."
+                                        <CssTextField
+                                            label="Search"
                                             value={searchQuery}
+                                            id="custom-css-outlined-input"
                                             onChange={handleInputChange}
                                             onKeyPress={handleSearchKeyPress}
                                             fullWidth
                                         />
                                     </MenuItem>
-                                </Menu>
-
+                                </StyledMenu>
                             </div>
                             {/* <button className='hidden lg:flex justify-end text-xl font-semibold py-4 px-6 lg:px-12 navbutton text-white'>
                                 Connect Wallet

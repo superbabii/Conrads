@@ -33,6 +33,18 @@ const workdata: workdata[] = [
         subheading: 'Lorem Ipsum has been the industry and this',
         hiddenpara: 'standard dummy text ever since the 1500s, when an unknownprinter took a galley of type and scrambled it to make a type specimen book. It has survived...',
     },
+    {
+        imgSrc: '/images/Work/icon-three.svg',
+        heading: 'Mechanical Engineering CAD/CAM',
+        subheading: 'Lorem Ipsum has been the industry and this',
+        hiddenpara: 'standard dummy text ever since the 1500s, when an unknownprinter took a galley of type and scrambled it to make a type specimen book. It has survived...',
+    },
+    {
+        imgSrc: '/images/Work/icon-three.svg',
+        heading: 'Mechanical Engineering CAD/CAM',
+        subheading: 'Lorem Ipsum has been the industry and this',
+        hiddenpara: 'standard dummy text ever since the 1500s, when an unknownprinter took a galley of type and scrambled it to make a type specimen book. It has survived...',
+    },
 
 ]
 
@@ -43,7 +55,7 @@ const Work = () => {
                 <div className="radial-bgone hidden lg:block"></div>
                 <div className='text-center mb-14'>
                     <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>Features</h3>
-                    <p className='text-white md:text-lg font-normal leading-8'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p className='text-white md:text-lg font-normal leading-8'>At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.</p>
                 </div>
 
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10 mt-32'>
@@ -62,7 +74,7 @@ const Work = () => {
                         </div>
                     ))} */}
                     {workdata.map((items, i) => (
-                        <div className="flex shadow-lg hover:shadow-[#a21229] flex-col justify-between p-5 transition duration-400 bg-cardbg rounded-xl card-hover group space-y-5" key={i}>
+                        <div className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-main rounded-lg card-hover group space-y-5" key={i}>
                             <div className='rounded-full flex justify-center p-6'>
                                 <Image src={items.imgSrc} alt={items.imgSrc} width={80} height={80} />
                             </div>

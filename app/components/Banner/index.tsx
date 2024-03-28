@@ -14,8 +14,8 @@ const Banner = () => {
     ];
     const texts = [
         {
-            title: "Buy, Sell & Accept Digital Assets",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s"
+            title: "Unlock Innovation with Conrads Consult & Engineering!",
+            description: "Your Trusted Partner for Mechanical Design, PCB Development, and Software Integration"
         },
         {
             title: "Another Title",
@@ -33,16 +33,16 @@ const Banner = () => {
             <div className='radial-banner hidden lg:block'></div>
             <ModalVideo channel='youtube' isOpen={isOpen} videoId="1YyAzVmP9xQ" onClose={() => setOpen(false)} />
             {/* autoPlay={true} interval={3000} */}
-            <Carousel autoPlay={true} interval={3000} useKeyboardArrows={true} showStatus={false} infiniteLoop={true} stopOnHover={true} emulateTouch={true} showArrows={false}>
+            <Carousel autoPlay={true} interval={3000} useKeyboardArrows={true} showStatus={false} infiniteLoop={true} stopOnHover={true} emulateTouch={true} showArrows={false} showThumbs={false}>
                 <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
                     <div className='height-work'>
                         <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
                             <div className='arrowTwo'></div>
-                            <div className='col-span-7'>
-                                <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-white md:4px md:text-start text-center">
+                            <div className='banner-text col-span-7'>
+                                <h1 className="text-3xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[0].title}
                                 </h1>
-                                <p className='text-white md:text-lg font-normal mb-10 md:text-start text-center'>
+                                <p className='text-offwhite md:text-lg font-normal mb-10 md:text-start text-center'>
                                     {texts[0].description}
                                 </p>
                             </div>
@@ -62,11 +62,11 @@ const Banner = () => {
                     <div className='height-work'>
                         <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
                             <div className='arrowTwo'></div>
-                            <div className='col-span-7'>
-                                <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-white md:4px md:text-start text-center">
+                            <div className='banner-text col-span-7'>
+                                <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[1].title}
                                 </h1>
-                                <p className='text-white md:text-lg font-normal mb-10 md:text-start text-center'>
+                                <p className='text-offwhite md:text-lg font-normal mb-10 md:text-start text-center'>
                                     {texts[1].description}
                                 </p>
                             </div>
@@ -86,11 +86,11 @@ const Banner = () => {
                     <div className='height-work'>
                         <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
                             <div className='arrowTwo'></div>
-                            <div className='col-span-7'>
-                                <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-white md:4px md:text-start text-center">
+                            <div className='banner-text col-span-7'>
+                                <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[2].title}
                                 </h1>
-                                <p className='text-white md:text-lg font-normal mb-10 md:text-start text-center'>
+                                <p className='text-offwhite md:text-lg font-normal mb-10 md:text-start text-center'>
                                     {texts[2].description}
                                 </p>
                             </div>

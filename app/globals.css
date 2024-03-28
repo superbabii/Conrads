@@ -100,14 +100,14 @@ html:not([data-scroll="0"]) .navbar {
 }
 
 
-/* .navbutton {
+.navbutton {
   background: linear-gradient(90deg, #BD24DF 0%, #2D6ADE 97.15%);
   border-radius: 10px;
 }
 
 .navbutton:hover {
   background: linear-gradient(90deg, #2D6ADE 0%, #BD24DF 97.15%);
-} */
+}
 
 /* .height-work {
 
@@ -122,7 +122,7 @@ html:not([data-scroll="0"]) .navbar {
   height: 59px;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
+  z-index: -2;
 }
 
 .arrowTwo {
@@ -133,7 +133,7 @@ html:not([data-scroll="0"]) .navbar {
   width: 9%;
   height: 100%;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -2;
 }
 
 .arrowThree {
@@ -144,7 +144,7 @@ html:not([data-scroll="0"]) .navbar {
   width: 9%;
   height: 100%;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -2;
 }
 
 .arrowFour {
@@ -155,7 +155,7 @@ html:not([data-scroll="0"]) .navbar {
   width: 9%;
   height: 100%;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -2;
 }
 
 .arrowFive {
@@ -166,7 +166,7 @@ html:not([data-scroll="0"]) .navbar {
   width: 9%;
   height: 100%;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -2;
 }
 
 .arrowSix {
@@ -177,7 +177,7 @@ html:not([data-scroll="0"]) .navbar {
   width: 9%;
   height: 100%;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -2;
 }
 
 .arrowSeven {
@@ -188,7 +188,7 @@ html:not([data-scroll="0"]) .navbar {
   width: 9%;
   height: 100%;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -2;
 }
 
 .arrowEight {
@@ -199,10 +199,16 @@ html:not([data-scroll="0"]) .navbar {
   width: 9%;
   height: 100%;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -2;
+}
+
+.banner-text {
+  z-index: 1;
 }
 
 .card-hover {
+  opacity: 0.5;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 1);
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
     skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
@@ -223,8 +229,10 @@ html:not([data-scroll="0"]) .navbar {
   transition-duration: 0.4s;
 }
 .card-hover:hover {
+  opacity: 1;
+  cursor: pointer;
   --tw-border-opacity: 1;
-  border-color: #7d4525;
+  border-color: #801022;
   --tw-shadow: #7d4525 0px 4px 24px;
   --tw-shadow-colored: 0px 4px 24px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
@@ -269,10 +277,10 @@ html:not([data-scroll="0"]) .navbar {
 
 /* Table Section */
 
-.table-b {
+/* .table-b {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-}
+} */
 
 /* Feature Section */
 
@@ -482,7 +490,7 @@ th:last-child {
 .radial-bgone {
   position: absolute;
   background: linear-gradient(90deg, #801022 0%, #801022 97.15%);
-  opacity: 0.5;
+  opacity: 0.7;
   filter: blur(392px);
   border-radius: 508.5px;
   width: 51rem;
