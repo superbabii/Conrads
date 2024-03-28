@@ -26,7 +26,7 @@ html:not([data-scroll="0"]) .navbar {
   background-color: #040000;
   background-blend-mode: overlay;
   opacity: 1.9;
-  box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px 15px rgba(128, 16, 34, 0.25);
   transition: background-color 0.6s linear, opacity 0.6s linear, box-shadow 0.6s linear;
   z-index: 40;
 }
@@ -207,8 +207,8 @@ html:not([data-scroll="0"]) .navbar {
 }
 
 .card-hover {
-  opacity: 0.5;
-  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 1);
+  opacity: 0.4;
+  box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 1);
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
     skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
@@ -490,7 +490,7 @@ th:last-child {
 .radial-bgone {
   position: absolute;
   background: linear-gradient(90deg, #801022 0%, #801022 97.15%);
-  opacity: 0.7;
+  opacity: 0.5;
   filter: blur(392px);
   border-radius: 508.5px;
   width: 51rem;
@@ -515,7 +515,7 @@ th:last-child {
 .radial-bg {
   position: absolute;
   background: linear-gradient(90deg, #801022 0%, #801022 97.15%);
-  opacity: 1.5;
+  opacity: 1;
   filter: blur(392px);
   border-radius: 508.5px;
   width: 51rem;

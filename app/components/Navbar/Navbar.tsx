@@ -58,22 +58,22 @@ const StyledMenu = styled((props: MenuProps & { open?: boolean }) => (
     },
 }));
 
-const CssTextField = styled(TextField)({
+const SearchTextField = styled(TextField)({
     '& label.Mui-focused': {
-        color: '#A0AAB4',
+        color: '#fff',
     },
     '& .MuiInput-underline:after': {
-        borderBottomColor: '#B2BAC2',
+        borderBottomColor: 'transparent',
     },
     '& .MuiOutlinedInput-root': {
         '& fieldset': {
-            borderColor: '#E0E3E7',
+            borderColor: 'transparent',
         },
         '&:hover fieldset': {
-            borderColor: '#B2BAC2',
+            borderColor: 'transparent',
         },
         '&.Mui-focused fieldset': {
-            borderColor: '#6F7E8C',
+            borderColor: '#323639',
         },
     },
 });
@@ -213,12 +213,15 @@ const Navbar = () => {
                                             overflow: 'visible',
                                             filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
                                             mt: 1,
-                                            backgroundColor: 'rgba(39, 40, 43, 0.7)',
+                                            backgroundColor: 'rgba(39, 40, 43, 0.9)',
                                             color: 'white',
                                         },
                                     }}
-                                    transformOrigin={{ horizontal: 'left', vertical: 'top' }}
-                                    anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+                                    BackdropProps={{
+                                        sx: { backdropFilter: 'blur(8px)' }, // Add blur effect to the backdrop
+                                    }}
+                                    transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                    anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                                 >
                                     <MenuItem onClick={handleClose} sx={{
                                         '&:hover': {
@@ -267,12 +270,15 @@ const Navbar = () => {
                                             overflow: 'visible',
                                             filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
                                             mt: 1,
-                                            backgroundColor: 'rgba(39, 40, 43, 0.7)',
+                                            backgroundColor: 'rgba(39, 40, 43, 0.9)',
                                             color: 'white',
                                         },
                                     }}
-                                    transformOrigin={{ horizontal: 'left', vertical: 'top' }}
-                                    anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+                                    BackdropProps={{
+                                        sx: { backdropFilter: 'blur(8px)' }, // Add blur effect to the backdrop
+                                    }}
+                                    transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                    anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                                 >
                                     <MenuItem onClick={handleClose} sx={{
                                         '&:hover': {
@@ -320,20 +326,34 @@ const Navbar = () => {
                                             overflow: 'visible',
                                             filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
                                             mt: 1,
-                                            backgroundColor: 'rgba(39, 40, 43, 0.7)',
+                                            backgroundColor: 'rgba(39, 40, 43, 0.9)',
                                             color: 'white',
                                             padding: '0px !important',
                                             borderRadius: '4px',
                                         },
                                     }}
+                                    BackdropProps={{
+                                        sx: { backdropFilter: 'blur(8px)' }, // Add blur effect to the backdrop
+                                    }}
                                 >
-                                    <CssTextField
+                                    <SearchTextField
                                         label="Search"
                                         value={searchQuery}
                                         id="custom-css-outlined-input"
                                         onChange={handleInputChange}
                                         onKeyPress={handleSearchKeyPress}
                                         fullWidth
+                                        InputProps={{
+                                            style: {
+                                                color: 'white',
+                                                // backgroundColor: 'white',
+                                            },
+                                        }}
+                                        InputLabelProps={{
+                                            style: {
+                                                color: 'white',
+                                            },
+                                        }}
                                     />
                                 </StyledMenu>
 
