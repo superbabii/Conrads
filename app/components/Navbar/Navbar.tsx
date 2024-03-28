@@ -48,10 +48,10 @@ const Navbar = () => {
     const [anchorEl_language, setAnchorEl_language] = React.useState(null);
     const open_account = Boolean(anchorEl_account);
     const open_language = Boolean(anchorEl_language);
-    const handleAccountClick = (event) => {
+    const handleAccountClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl_account(event.currentTarget);
     };
-    const handlelanguageClick = (event) => {
+    const handlelanguageClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl_language(event.currentTarget);
     };
     const handleClose = () => {
@@ -63,7 +63,7 @@ const Navbar = () => {
     const [anchorEl_search, setAnchorEl_search] = React.useState(null);
     const [searchQuery, setSearchQuery] = React.useState('');
 
-    const handleClick = (event) => {
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl_search(event.currentTarget);
     };
 
@@ -75,13 +75,13 @@ const Navbar = () => {
         setSearchQuery('');
     };
 
-    const handleSearchKeyPress = (event) => {
+    const handleSearchKeyPress = (event: React.MouseEvent<HTMLButtonElement>) => {
         if (event.key === 'Enter' && searchQuery !== '') {
             handleSearch();
         }
     };
 
-    const handleInputChange = (event) => {
+    const handleInputChange = (event: React.MouseEvent<HTMLButtonElement>) => {
         setSearchQuery(event.target.value);
     };
 
