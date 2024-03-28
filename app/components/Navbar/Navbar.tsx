@@ -327,17 +327,16 @@ const Navbar = () => {
                                         },
                                     }}
                                 >
-                                    <MenuItem>
-                                        <CssTextField
-                                            label="Search"
-                                            value={searchQuery}
-                                            id="custom-css-outlined-input"
-                                            onChange={handleInputChange}
-                                            onKeyPress={handleSearchKeyPress}
-                                            fullWidth
-                                        />
-                                    </MenuItem>
+                                    <CssTextField
+                                        label="Search"
+                                        value={searchQuery}
+                                        id="custom-css-outlined-input"
+                                        onChange={handleInputChange}
+                                        onKeyPress={handleSearchKeyPress}
+                                        fullWidth
+                                    />
                                 </StyledMenu>
+
                             </div>
                             {/* <button className='hidden lg:flex justify-end text-xl font-semibold py-4 px-6 lg:px-12 navbutton text-white'>
                                 Connect Wallet
