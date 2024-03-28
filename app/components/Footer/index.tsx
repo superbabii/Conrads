@@ -42,7 +42,7 @@ const footer = () => {
             <img
               className="block h-12 w-20px mb-4"
               src={'/images/Logo/logo.png'}
-              alt="Crypto-Logo"
+              alt="conrads-engineering-Logo"
             />
             <h3 className='text-white text-sm font-normal leading-9 mb-4 lg:mb-16'>
               Conrads Consult & Engineering provides sophisticated consulting in mechanical design, 

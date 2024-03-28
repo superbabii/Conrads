@@ -34,7 +34,7 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
                             <img
                                 className="block h-10 lg:hidden"
                                 src={'/images/Logo/logo.png'}
-                                alt="Crypto-Logo"
+                                alt="conrads-engineering-Logo"
                             />
                         </div>
 
