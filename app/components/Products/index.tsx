@@ -38,7 +38,6 @@ const productdata: productdata[] = [
     heading: 'Products-exm1',
     subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
-
 ]
 
 interface ProductsCardProps {
@@ -50,9 +49,7 @@ interface ProductsCardProps {
 const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageLink }) => {
   return (
     <div className="relative group">
-      {/* Gradient overlay */}
       <div className="absolute transition opacity-40 -inset-1 bg-gradient-to-r from-[#592693] to-[#96225f] blur duration-400 group-hover:opacity-100 group-hover:duration-200" />
-      {/* Main container for the card */}
       <div className='relative'
         onMouseOver={(e) => {
           const highlightElement = e.currentTarget.querySelector('.highlight') as HTMLElement | null;
@@ -67,7 +64,6 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageL
           }
         }}
       >
-        {/* Background image */}
         <div className="relative space-y-6 leading-none rounded-lg ring-1 ring-gray-900/5 highlight"
           style={{
             backgroundImage: `url(${imageLink})`,
@@ -105,7 +101,7 @@ const Products = () => {
           </h3>
           <p className='text-offwhite md:text-lg font-normal leading-8'>
             Explore our range of cutting-edge solutions designed to drive innovation and enhance efficiency.<br />
-            From advanced printed circuit boards to custom software integrations, our products are meticulously crafted to meet the diverse needs of modern businesses, empowering you to stay ahead in today's dynamic market.
+            From advanced printed circuit boards to custom software integrations, our products are meticulously crafted to meet the diverse needs of modern businesses, empowering you to stay ahead in today&apos;s dynamic market.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-y-20 mt-32" >
