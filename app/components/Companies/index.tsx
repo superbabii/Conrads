@@ -75,7 +75,7 @@ export default class MultipleItems extends Component {
 
         return (
 
-            <div className='text-center bg-lightpink' >
+            <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative'>
                 <div className='text-center mb-14'>
                     <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
                         Trusted by

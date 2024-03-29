@@ -10,7 +10,7 @@ const Banner = () => {
     const images = [
         "/images/Banner/banner1.png",
         "/images/Banner/banner2.png",
-        "/images/Banner/banner3.png"
+        "/images/Banner/banner4.png"
     ];
     const texts = [
         {
