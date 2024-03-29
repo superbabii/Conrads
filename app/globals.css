@@ -314,7 +314,7 @@ html:not([data-scroll="0"]) .navbar {
 
 .why-bg::before {
   content: "";
-  background-image: url('/images/Products/electronic.jpg');
+  background-image: url('/images/WhyUs/electron_lab.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -9,7 +9,7 @@ const WhyUs = () => {
                     Why <Typing /> Us
                 </h3>
                 <p className="text-center text-offwhite text-lg font-normal mb-8">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum <br /> has been the industry
+                    Choose us for our exclusive Rapid Prototyping Program, ensuring swift development and top-notch quality, giving you the competitive edge.
                 </p>
                 <div className="flex justify-center ">
                     <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>

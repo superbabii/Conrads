@@ -9,28 +9,33 @@ interface productdata {
 
 const productdata: productdata[] = [
   {
-    imgSrc: '/images/Products/electronic.jpg',
-    heading: 'Electronic Engineering',
+    imgSrc: '/images/Products/AI.jpg',
+    heading: 'Products-exm1',
     subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
-    imgSrc: '/images/Products/electronic.jpg',
-    heading: 'Find your Credit',
+    imgSrc: '/images/Products/simulation.jpg',
+    heading: 'Products-exm1',
     subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry and this',
   },
   {
-    imgSrc: '/images/Products/electronic.jpg',
-    heading: 'Exchange Currency',
+    imgSrc: '/images/Products/electronic2.jpg',
+    heading: 'Products-exm1',
+    subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  },
+  {
+    imgSrc: '/images/Products/IC.jpg',
+    heading: 'Products-exm1',
     subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     imgSrc: '/images/Products/electronic.jpg',
-    heading: 'Exchange Currency',
+    heading: 'Products-exm1',
     subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
-    imgSrc: '/images/Products/electronic.jpg',
-    heading: 'Exchange Currency',
+    imgSrc: '/images/Products/electron-2.png',
+    heading: 'Products-exm1',
     subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
 
@@ -105,10 +110,9 @@ const Products = () => {
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-y-20 mt-32" >
           {productdata.map((items, index) => (
-            <ul className="space-y-8">
+            <ul className="space-y-8" key={index}>
               <li className="text-sm leading-6">
                 <ProductsCard
-                  key={index}
                   heading={items.heading}
                   subheading={items.subheading}
                   imageLink={items.imgSrc}
