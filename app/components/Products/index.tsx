@@ -39,31 +39,50 @@ const productdata: productdata[] = [
 interface ProductsCardProps {
   heading: string;
   subheading: string;
-  photoLink: string;
+  imageLink: string;
 }
 
-const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, photoLink }) => {
+const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageLink }) => {
   return (
     <div className="relative group">
+      {/* Gradient overlay */}
       <div className="absolute transition opacity-40 -inset-1 bg-gradient-to-r from-[#592693] to-[#96225f] blur duration-400 group-hover:opacity-100 group-hover:duration-200" />
-      <div className="relative space-y-6 leading-none rounded-lg ring-1 ring-gray-900/5 highlight"
-        style={{
-          backgroundImage: `url(${photoLink})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          height: '240px',
+      {/* Main container for the card */}
+      <div className='relative'
+        onMouseOver={(e) => {
+          const highlightElement = e.currentTarget.querySelector('.highlight') as HTMLElement | null;
+          if (highlightElement) {
+            highlightElement.style.opacity = '1';
+          }
+        }}
+        onMouseOut={(e) => {
+          const highlightElement = e.currentTarget.querySelector('.highlight') as HTMLElement | null;
+          if (highlightElement) {
+            highlightElement.style.opacity = '0.7';
+          }
         }}
       >
-        <div className="flex items-center space-x-4">
-          <div className="relative overflow-hidden p-2">
-            <h3 className="text-md text-white border p-1 border-white rounded-md z-10 inline-block">
-              {heading}
-            </h3>
-            <p className="leading-normal text-white text-lg py-2">
-              {subheading}
-            </p>
-          </div>
+        {/* Background image */}
+        <div className="relative space-y-6 leading-none rounded-lg ring-1 ring-gray-900/5 highlight"
+          style={{
+            backgroundImage: `url(${imageLink})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            height: '240px',
+            opacity: 0.7,
+            transition: 'opacity 0.4s ease-in-out',
+          }}
+        >
+        </div>
+        {/* Text content */}
+        <div className="absolute bottom-0 left-0 right-0 p-2">
+          <h3 className="text-md text-white border p-1 border-white rounded-md z-10 inline-block">
+            {heading}
+          </h3>
+          <p className="leading-normal text-white text-lg py-3">
+            {subheading}
+          </p>
         </div>
       </div>
     </div>
@@ -76,40 +95,28 @@ const Products = () => {
       <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative'>
         <div className="radial-bgone hidden lg:block"></div>
         <div className='text-center mb-14'>
-          <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>Products</h3>
-          <p className='text-offwhite md:text-lg font-normal leading-8'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
+            Products
+          </h3>
+          <p className='text-offwhite md:text-lg font-normal leading-8'>
+            Explore our range of cutting-edge solutions designed to drive innovation and enhance efficiency.<br />
+            From advanced printed circuit boards to custom software integrations, our products are meticulously crafted to meet the diverse needs of modern businesses, empowering you to stay ahead in today's dynamic market.
+          </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-y-20 mt-32" >
-          {productdata.map((items, i) => (
-            <ul className="space-y-8" key={i}>
+          {productdata.map((items, index) => (
+            <ul className="space-y-8">
               <li className="text-sm leading-6">
                 <ProductsCard
+                  key={index}
                   heading={items.heading}
                   subheading={items.subheading}
-                  photoLink={items.imgSrc}
+                  imageLink={items.imgSrc}
                 />
               </li>
             </ul>
           ))}
         </div>
-        {/* <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-5 mt-32'>
-
-                    {productdata.map((items, i) => (
-                        <div className='card-b p-8' key={i}>
-                            <div className='work-img-bg rounded-full flex justify-center absolute p-6'>
-                                <Image src={items.imgSrc} alt={items.imgSrc} width={44} height={44} />
-                            </div>
-                            <div>
-                                <Image src={'/images/Work/bg-arrow.svg'} alt="arrow-bg" width={85} height={35} />
-                            </div>
-                            <h3 className='text-2xl text-offwhite font-semibold text-center mt-8'>{items.heading}</h3>
-                            <p className='text-base font-normal text-bluish text-center mt-2'>{items.subheading}</p>
-                            <span className="text-base font-normal m-0 text-bluish text-center hides">{items.hiddenpara}</span>
-                        </div>
-                    ))}
-
-                </div> */}
-
       </div>
     </div>
   )

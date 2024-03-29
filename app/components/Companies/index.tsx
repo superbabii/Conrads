@@ -77,7 +77,12 @@ export default class MultipleItems extends Component {
 
             <div className='text-center bg-lightpink' >
                 <div className='text-center mb-14'>
-                    <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>Trusted by</h3>
+                    <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
+                        Trusted by
+                    </h3>
+                    <p className='text-offwhite md:text-lg font-normal leading-8'>
+                        Trusted by leading businesses worldwide, including Fortune 500 companies and innovative startups, Conrads Consult & Engineering delivers expert consulting services in mechanical design, PCB development, and software integration, ensuring unparalleled quality and reliability.
+                    </p>
                 </div>
                 <div className="mx-auto max-w-2xl py-16 px-4s pt-0 sm:px-6 lg:max-w-7xl lg:pt-0">
                     <div>

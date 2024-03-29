@@ -8,8 +8,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #000;
-  background-image: linear-gradient(90deg, #BD24DF 0%, #2D6ADE 97.15%);
+  background-color: #121212;
+  /* background-image: linear-gradient(90deg, #BD24DF 0%, #2D6ADE 97.15%); */
   /* background-image: linear-gradient(90deg, rgba(189, 36, 223, 0.5) 0%, rgba(45, 106, 222, 0.5) 97.15%); */
   background-blend-mode: overlay;
 }
@@ -307,7 +307,9 @@ html:not([data-scroll="0"]) .navbar {
 /* Simple Section */
 
 .why-bg {
+  background: #000;
   position: relative;
+  z-index: 0;
 }
 
 .why-bg::before {
@@ -321,8 +323,8 @@ html:not([data-scroll="0"]) .navbar {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.3;
-  z-index: -1; /* Ensure the overlay is behind the content */
+  opacity: 0.7;
+  z-index: -1;
 }
 
 .simpleone {
