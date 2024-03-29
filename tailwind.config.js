@@ -18,7 +18,7 @@ module.exports = {
       'premain': '#6a3526',
       'cardbg': '#7a1022',
       'offwhite': '#ECF2FF',
-      'bluish': '#B4C7ED',
+      'maingray': '#717375',
       'navyblue': '#13224f',
       'lightwhite': '#d0d3db',
       'darkblue': '#091945',

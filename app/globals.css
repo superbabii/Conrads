@@ -471,6 +471,16 @@ html:not([data-scroll="0"]) .navbar {
 
 .space-links:hover {
   letter-spacing: 1px;
+  color: #801022;
+}
+
+.contact-obj {
+  transition: .3s;
+}
+
+.contact-obj:hover {
+  letter-spacing: 1px;
+  color: #801022;
 }
 
 .footer-icons {

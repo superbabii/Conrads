@@ -90,8 +90,8 @@ export default function RootLayout({
               opacity: '1',
               boxShadow: "0 0 8px 4px rgba(128, 16, 34, 0.3)",
             },
-            width: isSmallScreen ? '40px' : '52px',
-            height: isSmallScreen ? '40px' : '52px',
+            width: isSmallScreen ? '42px' : '52px',
+            height: isSmallScreen ? '42px' : '52px',
           }}
         >
           <KeyboardArrowUpIcon />
