@@ -104,7 +104,7 @@ const footer = () => {
 
       {/* All Rights Reserved */}
 
-      <div className='py-8 px-4 border-t border-t-main'>
+      <div className='py-8 px-4 border-t border-t-primary'>
         <h3 className='text-center text-maingray'>Copyright © 2024 Conrads Consult & Engineering | All rights reserved.</h3>
       </div>
 

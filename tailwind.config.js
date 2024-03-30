@@ -14,7 +14,7 @@ module.exports = {
       current: 'currentColor',
       'white': '#ffffff',
       'black': '#000000',
-      'main': '#801022',
+      'primary': '#801022',
       'premain': '#6a3526',
       'cardbg': '#7a1022',
       'offwhite': '#ECF2FF',
