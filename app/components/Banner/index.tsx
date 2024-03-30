@@ -18,12 +18,12 @@ const Banner = () => {
             description: "Your Trusted Partner for Mechanical Design, PCB Development, and Software Integration"
         },
         {
-            title: "Another Title",
-            description: "Another description goes here"
+            title: "Revolutionize Your Business with Our AI Technology!",
+            description: "Unlock the Power of Artificial Intelligence for Enhanced Efficiency and Innovation"
         },
         {
-            title: "Yet Another Title",
-            description: "Yet another description goes here"
+            title: "Elevate Your Electronics with Our PCB Solutions!",
+            description: "Precision Engineering for Reliable, High-Performance Printed Circuit Boards"
         }
     ];
 
@@ -32,13 +32,12 @@ const Banner = () => {
             <div className='arrowOne'></div>
             <div className='radial-banner hidden lg:block'></div>
             <ModalVideo channel='youtube' isOpen={isOpen} videoId="1YyAzVmP9xQ" onClose={() => setOpen(false)} />
-            {/* autoPlay={true} interval={3000} */}
             <Carousel autoPlay={true} interval={3000} useKeyboardArrows={true} showStatus={false} infiniteLoop={true} stopOnHover={true} emulateTouch={true} showArrows={false} showThumbs={false}>
                 <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
                     <div className='height-work'>
                         <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
                             <div className='arrowTwo'></div>
-                            <div className='banner-text col-span-7'>
+                            <div className='banner-text col-span-6'>
                                 <h1 className="text-3xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[0].title}
                                 </h1>
