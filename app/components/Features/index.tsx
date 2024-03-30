@@ -5,7 +5,6 @@ interface workdata {
     imgSrc: string;
     heading: string;
     subheading: string;
-    hiddenpara: string;
 }
 
 const workdata: workdata[] = [
@@ -13,39 +12,32 @@ const workdata: workdata[] = [
         imgSrc: '/images/Features/consult.svg',
         heading: 'Consulting',
         subheading: 'Lorem Ipsum has been the industry and this',
-        hiddenpara: 'standard dummy text ever since the 1500s, when an unknownprinter took a galley of type and scrambled it to make a type specimen book. It has survived...',
     },
     {
-        imgSrc: '/images/Features/simulation.svg',
+        imgSrc: '/images/Features/simulation.png',
         heading: 'Simulation',
         subheading: 'Lorem Ipsum has been the industry and this',
-        hiddenpara: 'standard dummy text ever since the 1500s, when an unknownprinter took a galley of type and scrambled it to make a type specimen book. It has survived...',
     },
     {
-        imgSrc: '/images/Features/Edesign.svg',
+        imgSrc: '/images/Features/Edesign.png',
         heading: 'Electronics Design and Manufacturing CAE',
         subheading: 'Lorem Ipsum has been the industry and this',
-        hiddenpara: 'standard dummy text ever since the 1500s, when an unknownprinter took a galley of type and scrambled it to make a type specimen book. It has survived...',
     },
     {
-        imgSrc: '/images/Features/cam.svg',
+        imgSrc: '/images/Features/cam.png',
         heading: 'Mechanical Engineering CAD/CAM',
         subheading: 'Lorem Ipsum has been the industry and this',
-        hiddenpara: 'standard dummy text ever since the 1500s, when an unknownprinter took a galley of type and scrambled it to make a type specimen book. It has survived...',
     },
     {
-        imgSrc: '/images/Features/software.svg',
+        imgSrc: '/images/Features/software.png',
         heading: 'Software',
         subheading: 'Lorem Ipsum has been the industry and this',
-        hiddenpara: 'standard dummy text ever since the 1500s, when an unknownprinter took a galley of type and scrambled it to make a type specimen book. It has survived...',
     },
     {
         imgSrc: '/images/Features/blockchain.svg',
         heading: 'Mechanical Engineering CAD/CAM',
         subheading: 'Lorem Ipsum has been the industry and this',
-        hiddenpara: 'standard dummy text ever since the 1500s, when an unknownprinter took a galley of type and scrambled it to make a type specimen book. It has survived...',
     },
-
 ]
 
 const Features = () => {
@@ -62,16 +54,16 @@ const Features = () => {
                     </p>
                 </div>
 
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10 mt-32'>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-y-20 mt-32'>
                     {workdata.map((items, i) => (
-                        <div className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-main rounded-lg card-hover group space-y-5" key={i}>
-                            <div className='rounded-full flex justify-center p-4'>
-                                <Image src={items.imgSrc} alt={items.imgSrc} width={160} height={160} />
+                        <div className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-main rounded-lg card-hover" key={i}>
+                            <div className='rounded-full flex justify-center p-3'>
+                                <Image src={items.imgSrc} alt={items.imgSrc} width={120} height={120} />
                             </div>
                             <h3 className="text-2xl font-semibold text-white text-center">
                                 {items.heading}
                             </h3>
-                            <p className='text-base font-normal text-white text-center mt-2'>
+                            <p className='text-base font-normal text-white text-center'>
                                 {items.subheading}
                             </p>
                         </div>
