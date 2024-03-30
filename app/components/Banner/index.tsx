@@ -9,7 +9,7 @@ const Banner = () => {
     const [isOpen, setOpen] = useState(false)
     const images = [
         "/images/Banner/banner1.png",
-        "/images/Banner/banner2.png",
+        "/images/Banner/banner5.png",
         "/images/Banner/banner4.png"
     ];
     const texts = [
