@@ -31,7 +31,6 @@ const socialLinks: Social[] = [
   { imgsrc: '/images/Footer/youtube.svg', href: "https://youtube.com/" },
 ]
 
-
 const footer = () => {
   return (
     <div className=" relative">
@@ -81,7 +80,9 @@ const footer = () => {
           ))}
 
           <div className="col-span-4">
-            <h3 className="text-white text-xl font-medium mb-9">Contact Us</h3>
+            <h3 className="text-white text-xl font-medium mb-9">
+              Contact Us
+            </h3>
             <h4 className="text-maingray text-sm font-normal mb-6 flex gap-2" style={{ alignItems: 'flex-start' }}>
               <HomeIcon style={{ verticalAlign: 'top', color: 'white' }} />
               <span>
@@ -92,11 +93,15 @@ const footer = () => {
             </h4>
             <h4 className="text-maingray text-sm font-normal mb-6 flex gap-2">
               <CallIcon style={{ color: 'white' }} />
-              <a className="contact-obj" href="tel:+49-662-343-645-10" style={{ textDecoration: 'none' }}>+49 (66) 234 3645 10</a>
+              <a className="contact-obj" href="tel:+49-662-343-645-10" style={{ textDecoration: 'none' }}>
+                +49 (66) 234 3645 10
+              </a>
             </h4>
             <h4 className="text-maingray text-sm font-normal mb-6 flex gap-2">
               <EmailIcon style={{ color: 'white' }} />
-              <a className="contact-obj" href="mailto:info@conrads-engineering.com" style={{ textDecoration: 'none' }}>info@conrads-engineering.com</a>
+              <a className="contact-obj" href="mailto:info@conrads-engineering.com" style={{ textDecoration: 'none' }}>
+                info@conrads-engineering.com
+              </a>
             </h4>
           </div>
         </div>
@@ -104,10 +109,12 @@ const footer = () => {
 
       {/* All Rights Reserved */}
 
-      <div className='py-8 px-4 border-t border-t-primary'>
-        <h3 className='text-center text-maingray'>Copyright © 2024 Conrads Consult & Engineering | All rights reserved.</h3>
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent"/>
+      <div className='py-8 px-4'>
+        <h3 className='text-center text-maingray'>
+          Copyright © 2024 Conrads Consult & Engineering | All rights reserved.
+        </h3>
       </div>
-
     </div>
   )
 }

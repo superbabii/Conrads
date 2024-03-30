@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <head>
         <title>Conrads Consult & Engineering</title>
         <meta name="description" content='Conrads Consult & Engineering' />

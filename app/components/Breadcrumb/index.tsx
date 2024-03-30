@@ -22,23 +22,23 @@ const Breadcrumb = ({
                     </div>
                 </div>
                 <div className="w-full px-4 md:w-4/12 lg:w-5/12">
-                    <div className="text-end">
-                        <ul className="flex items-center md:justify-end">
-                            <li className="flex items-center">
-                                <Link
-                                    href="/"
-                                    className="pr-1 text-base font-medium text-maingray hover:text-primary"
-                                >
-                                    Home
-                                </Link>
-                                <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-maingray"></span>
-                            </li>
-                            <li className="text-base font-medium text-primary">
-                                {pageName}
-                            </li>
-                        </ul>
-                    </div>
+                    {/* <div className="text-end"> */}
+                    <ul className="flex items-center md:justify-end">
+                        <li className="flex items-center">
+                            <Link
+                                href="/"
+                                className="pr-1 text-base font-medium text-maingray hover:text-primary"
+                            >
+                                Home
+                            </Link>
+                            <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-maingray"></span>
+                        </li>
+                        <li className="text-base font-medium text-primary">
+                            {pageName}
+                        </li>
+                    </ul>
                 </div>
+                {/* </div> */}
             </div>
         </div>
     );
