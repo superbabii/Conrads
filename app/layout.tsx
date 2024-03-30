@@ -1,12 +1,10 @@
 "use client"
 import './globals.css';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '@/node_modules/react-modal-video/scss/modal-video.scss';
 import Navbar from './components/Navbar/index';
 import Footer from './components/Footer/index';
-import IconButton from '@mui/material/IconButton';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import ScrollToTop from './components/ScrollToTop';
 
 const scrollbarStyles = `
   ::-webkit-scrollbar {
@@ -37,28 +35,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const isSmallScreen = useMediaQuery('(max-width: 1024px)');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsVisible(scrollTop > 300); // Adjust the scroll position threshold as needed
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
   return (
     <html lang="en">
       <head>
@@ -71,31 +47,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <IconButton
-          style={{
-            display: isVisible ? 'block' : 'none',
-          }}
-          onClick={scrollToTop}
-          size={isSmallScreen ? 'small' : 'medium'}
-          sx={{
-            position: 'fixed',
-            bottom: isSmallScreen ? '1rem' : '2rem',
-            right: isSmallScreen ? '1rem' : '2rem',
-            backgroundColor: '#801022',
-            opacity: '0.5',
-            color: '#fff',
-            boxShadow: "0 0 8px 4px rgba(0, 0, 0, 0.3)",
-            '&:hover': {
-              backgroundColor: '#801022',
-              opacity: '1',
-              boxShadow: "0 0 8px 4px rgba(128, 16, 34, 0.3)",
-            },
-            width: isSmallScreen ? '42px' : '52px',
-            height: isSmallScreen ? '42px' : '52px',
-          }}
-        >
-          <KeyboardArrowUpIcon />
-        </IconButton>
+        <ScrollToTop />
       </body>
     </html>
   )
