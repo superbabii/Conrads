@@ -123,6 +123,19 @@ html:not([data-scroll="0"]) .navbar {
 
 } */
 
+.dance-text {
+  font-family: 'Dancing Script', cursive !important;
+  transform: rotate(-20.06deg);
+  /* text-align: center; */
+  /* margin-left: -340px; */
+}
+
+@media only screen and (max-width: 466px) {
+  .dance-text {
+    margin-left: -265px;
+  }
+}
+
 .arrowOne {
   position: absolute;
   bottom: 37%;

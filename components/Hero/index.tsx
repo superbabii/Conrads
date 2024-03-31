@@ -29,6 +29,8 @@ const Banner = () => {
     return (
         <div className='bg-image relative' id="home-section">
             <div className='arrowOne'></div>
+            <div className='dance-text text-primary'>Top rated and verified business</div>
+
             <div className='radial-banner hidden lg:block'></div>
             <Carousel autoPlay={true} interval={3000} useKeyboardArrows={true} showStatus={false} infiniteLoop={true} stopOnHover={true} emulateTouch={true} showArrows={false} showThumbs={false}>
                 <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
