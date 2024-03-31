@@ -3,7 +3,7 @@ import Link from "next/link";
 import HomeIcon from '@mui/icons-material/Home';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
-import { useTranslation, Trans } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 // import type { FC } from 'react'
 
 // MIDDLE LINKS DATA
@@ -32,7 +32,7 @@ const socialLinks: Social[] = [
   { imgsrc: '/images/Footer/youtube.svg', href: "https://youtube.com/" },
 ]
 
-const footer = () => {
+const Footer = () => {
   const { t } = useTranslation('footer')
 
   return (
@@ -110,7 +110,7 @@ const footer = () => {
 
       {/* All Rights Reserved */}
 
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent"/>
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent" />
       <div className='py-8 px-4'>
         <h3 className='text-center text-maingray'>
           Copyright © 2024 Conrads Consult & Engineering | All rights reserved.
@@ -120,4 +120,4 @@ const footer = () => {
   )
 }
 
-export default footer;
+export default Footer;
