@@ -3,6 +3,8 @@ import Link from "next/link";
 import HomeIcon from '@mui/icons-material/Home';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
+import { useTranslation, Trans } from 'next-i18next'
+// import type { FC } from 'react'
 
 // MIDDLE LINKS DATA
 interface ProductType {
@@ -10,7 +12,6 @@ interface ProductType {
   section: string;
   link: string[];
 }
-
 interface Social {
   imgsrc: string,
   href: string,
@@ -32,6 +33,8 @@ const socialLinks: Social[] = [
 ]
 
 const footer = () => {
+  const { t } = useTranslation('footer')
+
   return (
     <div className=" relative">
       <div className="radial-bg hidden lg:block"></div>
@@ -47,9 +50,7 @@ const footer = () => {
               alt="conrads-engineering-Logo"
             />
             <h3 className='text-maingray text-sm font-normal leading-9 mb-4 lg:mb-16'>
-              Conrads Consult & Engineering provides sophisticated consulting in mechanical design,
-              PCB development, and software integration,
-              leveraging advanced simulations and a multidisciplinary team to offer tailored outsourcing solutions for business optimization.
+              {t('description')}
             </h3>
             <div className='flex gap-4'>
               {socialLinks.map((items, i) => (

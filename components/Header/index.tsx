@@ -1,6 +1,8 @@
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
-import React from 'react';
+import { useRouter } from 'next/router';
+import { useTranslation, Trans } from 'next-i18next';
+import React, { useEffect } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
@@ -86,7 +88,7 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
     // { name: 'Home', href: '#home-section', current: false },
-    { name: 'About Us', href: '/about', current: false },
+    { name: 'About Us', href: '/about-us', current: false },
     { name: 'Features', href: '/feature', current: false },
     { name: 'Products', href: '/product', current: false },
     { name: 'Contact', href: '/contact', current: false },
@@ -96,7 +98,10 @@ function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
-const Navbar = () => {
+const Header = () => {
+
+    const router = useRouter();
+    const { t, i18n } = useTranslation('common');
 
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -120,6 +125,11 @@ const Navbar = () => {
         setSearchQuery('');
     };
 
+    const handleLanguageSelect = (newLocale: string) => {
+        // router.locale = newLocale;
+        handleClose();
+    };
+
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl_search(event.currentTarget);
     };
@@ -139,6 +149,30 @@ const Navbar = () => {
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(event.target.value);
     };
+
+    useEffect(() => {
+        const debounce = (fn: Function) => {
+            let frame: number;
+            return (...params: any[]) => {
+                if (frame) {
+                    cancelAnimationFrame(frame);
+                }
+                frame = requestAnimationFrame(() => {
+                    fn(...params);
+                });
+            }
+        };
+
+        const storeScroll = () => {
+            document.documentElement.dataset.scroll = window.scrollY.toString();
+        }
+
+        document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+
+        storeScroll();
+    }, [])
+
+    const changeTo = router.locale === 'en' ? 'de' : 'en'
 
     return (
         <Disclosure as="nav" className="navbar">
@@ -280,21 +314,25 @@ const Navbar = () => {
                                     transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                                     anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                                 >
-                                    <MenuItem onClick={handleClose} sx={{
+                                    <MenuItem onClick={() => handleLanguageSelect('en')} sx={{
                                         '&:hover': {
                                             textDecoration: "underline",
                                             color: "white",
                                         },
                                     }}>
-                                        English
+                                        <Link href="/" locale={changeTo}>
+                                            English
+                                        </Link>
                                     </MenuItem>
-                                    <MenuItem onClick={handleClose} sx={{
+                                    <MenuItem onClick={() => handleLanguageSelect('de')} sx={{
                                         '&:hover': {
                                             textDecoration: "underline",
                                             color: "white",
                                         },
                                     }}>
-                                        Germany
+                                        <Link href="/" locale={changeTo}>
+                                            Deutsch
+                                        </Link>
                                     </MenuItem>
                                 </Menu>
                                 <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
@@ -386,4 +424,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default Header;
