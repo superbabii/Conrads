@@ -4,12 +4,12 @@ import React, { useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
-const Banner = () => {
+const Hero = () => {
     const [isOpen, setOpen] = useState(false)
     const images = [
-        "/images/Banner/banner1.png",
-        "/images/Banner/banner5.png",
-        "/images/Banner/banner4.png"
+        "/images/Hero/hero1.png",
+        "/images/Hero/hero2.png",
+        "/images/Hero/hero3.png"
     ];
     const texts = [
         {
@@ -31,13 +31,13 @@ const Banner = () => {
             <div className='arrowOne'></div>
             <div className='dance-text text-primary'>==== WE&apos;RE THE BEST ====</div>
 
-            <div className='radial-banner hidden lg:block'></div>
+            <div className='radial-hero hidden lg:block'></div>
             <Carousel autoPlay={true} interval={3000} useKeyboardArrows={true} showStatus={false} infiniteLoop={true} stopOnHover={true} emulateTouch={true} showArrows={false} showThumbs={false}>
                 <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
                     <div className='height-work'>
                         <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
                             <div className='arrowTwo'></div>
-                            <div className='banner-text col-span-6'>
+                            <div className='hero-text col-span-6'>
                                 <h1 className="text-3xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[0].title}
                                 </h1>
@@ -61,7 +61,7 @@ const Banner = () => {
                     <div className='height-work'>
                         <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
                             <div className='arrowTwo'></div>
-                            <div className='banner-text col-span-7'>
+                            <div className='hero-text col-span-7'>
                                 <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[1].title}
                                 </h1>
@@ -85,7 +85,7 @@ const Banner = () => {
                     <div className='height-work'>
                         <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
                             <div className='arrowTwo'></div>
-                            <div className='banner-text col-span-7'>
+                            <div className='hero-text col-span-7'>
                                 <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[2].title}
                                 </h1>
@@ -112,7 +112,7 @@ const Banner = () => {
                                     Get Started
                                 </button>
                                 <button onClick={() => setOpen(true)} className='bg-transparent flex justify-center items-center text-white'>
-                                    <Image src={'/images/Banner/playbutton.svg'} alt="button-image" className='mr-3' width={47} height={47} />
+                                    <Image src={'/images/hero/playbutton.svg'} alt="button-image" className='mr-3' width={47} height={47} />
                                     How it work
                                 </button>
                             </div> */}
@@ -120,4 +120,4 @@ const Banner = () => {
     )
 }
 
-export default Banner;
+export default Hero;

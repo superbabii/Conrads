@@ -104,9 +104,9 @@ const AboutPage = () => {
 
             <div className="relative">
 
-                <Image src="/images/dedicated/spiral.svg" height={272} width={686} alt="spiral-design" className="absolute left-0 hidden lg:block -z-10" />
+                <Image src="/images/dedicated/spiral.png" height={272} width={686} alt="spiral-design" className="absolute left-0 hidden lg:block -z-10" />
 
-                <div className='mx-auto max-w-7xl px-4 my-40 sm:py-20 lg:px-8'>
+                <div className='mx-auto max-w-7xl px-4 my-16 sm:py-20 lg:px-8'>
                     <div className='grid grid-cols-1 md:grid-cols-2 my-16'>
 
                         {/* COLUMN-1 */}
