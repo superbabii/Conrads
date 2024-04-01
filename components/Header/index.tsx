@@ -89,8 +89,8 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
     // { name: 'Home', href: '#home-section', current: false },
     { name: 'About Us', href: '/about-us', current: false },
-    { name: 'Features', href: '/feature', current: false },
-    { name: 'Products', href: '/product', current: false },
+    { name: 'Services', href: '/services', current: false },
+    { name: 'Products', href: '/products', current: false },
     { name: 'Contact', href: '/contact', current: false },
 ]
 
