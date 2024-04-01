@@ -108,7 +108,7 @@ const AboutPage = () => {
                         <img src="/images/About/ceo.jpg" alt="CEO-image" width="416" height="530" className="shadow-image rounded-2xl" />
                     </div>
                     <div className="relative text-container">
-                        <h2 className="text-2xl lg:text-4xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">
+                        <h2 className="text-3xl lg:text-5xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">
                             Dedicated to help people&apos;s needs.
                         </h2>
                         <p className="font-medium text-lg mt-5 text-center text-maingray">
@@ -123,7 +123,7 @@ const AboutPage = () => {
             <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className="relative text-container">
-                        <h2 className="text-2xl lg:text-4xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">
+                        <h2 className="text-3xl lg:text-5xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">
                             Our team belives you deserve <br /> only the best.
                         </h2>
                         <p className="text-lg font-medium text-center text-maingray pt-10">
@@ -139,7 +139,7 @@ const AboutPage = () => {
             <div className="bg-wework py-4">
                 <div className='mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8 '>
                     <div className="text-center">
-                        <h3 className="text-4xl sm:text-6xl font-bold text-white my-2">We work in several verticals.</h3>
+                        <h3 className="text-3xl sm:text-5xl font-bold text-white my-2">Meet our team members</h3>
                     </div>
                 </div>
                 <div className="mx-auto max-w-7xl">
@@ -151,7 +151,7 @@ const AboutPage = () => {
                                         <Image src={items.imgSrc} alt="gaby" width={182} height={182} className="inline-block m-auto" />
                                         <Image src={'/images/wework/linkedin.svg'} alt="greenbg" width={120} height={120} className=" absolute inline-block position-linkedin" />
                                     </div>
-                                    <h4 className='text-4xl font-bold pt-14'>{items.name}</h4>
+                                    <h4 className='text-3xl font-bold pt-14'>{items.name}</h4>
                                     <h3 className='text-2xl font-normal pt-4 pb-2 opacity-50'>{items.profession}</h3>
                                 </div>
                             </div>
