@@ -171,9 +171,12 @@ const AboutPage = () => {
                         Anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
                         occur in which toil and pain can procure him some great pleasure.
                     </p>
-                    <div className="flex justify-center ">
+                    <div className="flex justify-center gap-x-16">
                         <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
-                            Know more
+                            Our Services
+                        </button>
+                        <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
+                            Our Products
                         </button>
                     </div>
                 </div>
