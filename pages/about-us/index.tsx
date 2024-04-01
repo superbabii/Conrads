@@ -159,8 +159,6 @@ const AboutPage = () => {
                         ))}
                     </Slider>
                 </div>
-
-
             </div>
 
             <div className="wide-bg mt-32">
