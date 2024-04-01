@@ -319,13 +319,13 @@ html:not([data-scroll="0"]) .navbar {
 
 /* Simple Section */
 
-.why-bg {
+.wide-bg {
   background: #000;
   position: relative;
   z-index: 0;
 }
 
-.why-bg::before {
+.wide-bg::before {
   content: "";
   background-image: url('/images/WhyUs/electron_lab.png');
   background-position: center;

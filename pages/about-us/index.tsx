@@ -101,32 +101,19 @@ const AboutPage = () => {
                 pageName="About Us"
                 description="Conrads Consult & Engineering is a company working in the field of consulting for sales and management support. Our company has a team of expert for the mechanical design of test instrument and equipment."
             />
-
-            {/* <div className="relative"> */}
-
-                {/* <Image src="/images/dedicated/spiral.png" height={272} width={686} alt="spiral-design" className="absolute left-0 hidden lg:block -z-10" /> */}
-
-                <div className='mx-auto max-w-7xl px-4 sm:py-10 lg:px-8'>
-                    <div className='grid grid-cols-1 md:grid-cols-2'>
-
-                        {/* COLUMN-1 */}
-                        <div>
-                            <Image src="/images/dedicated/man.svg" alt="man-icon" width={416} height={530} className="mx-auto md:mx-0" />
-                        </div>
-
-                        {/* COLUMN-2 */}
-                        <div className="relative">
-                            {/* <Image src="images/dedicated/comma.svg" alt="comma-image" width={200} height={106} className="absolute comma-pos hidden lg:block" /> */}
-                            <h2 className="text-4xl lg:text-65xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">Dedicated to help peoples needs.</h2>
-                            <p className="font-medium text-offwhite text-2xl mt-5 text-center text-white">Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan lacus vel facilisis</p>
-                            <p className="text-2xl font-semibold mt-12 lg:ml-32 preline text-center text-white"> Werner Conrads, CEO</p>
-                        </div>
-
+            <div className="radial-bgone hidden lg:block"></div>
+            <div className='mx-auto max-w-7xl px-4 sm:py-10 lg:px-8'>
+                <div className='grid grid-cols-1 md:grid-cols-2'>
+                    <div>
+                        <Image src="/images/dedicated/man.svg" alt="man-icon" width={416} height={530} className="mx-auto md:mx-0" />
+                    </div>
+                    <div className="relative">
+                        <h2 className="text-4xl lg:text-65xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">Dedicated to help peoples needs.</h2>
+                        <p className="font-medium text-offwhite text-2xl mt-5 text-center text-white">Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan lacus vel facilisis</p>
+                        <p className="text-2xl font-semibold mt-12 lg:ml-32 preline text-center text-white"> Werner Conrads, CEO</p>
                     </div>
                 </div>
-
-            {/* </div> */}
-
+            </div>
             <div className='mx-auto max-w-7xl sm:py-4 lg:px-8 m-16'>
                 <h2 className="text-4xl sm:text-6xl font-bold text-center text-white">Our team belives you deserve <br /> only the best.</h2>
                 <h3 className="text-2xl font-medium text-center text-maingray pt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor.</h3>
@@ -164,29 +151,19 @@ const AboutPage = () => {
 
             </div>
 
-            <div className="mx-2">
-                <div className='mx-auto max-w-7xl px-4 my-40 pb-20 lg:pb-40 lg:px-8 bg-digital rounded-3xl bg-blue relative'>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 my-16'>
-
-                        {/* COLUMN-1 */}
-
-                        <div className="pt-24 lg:pl-24 ">
-                            <h3 className="text-lg font-normal text-white mb-5 tracking-widest text-center lg:text-offwhite">WHO WE ARE</h3>
-                            <h4 className="text-4xl sm:text-6xl font-bold text-white mb-8 leading-snug text-center lg:text-offwhite">We are a Consult <br /> engineering that builds <br /> amazing products.</h4>
-                            <div className="text-center lg:text-offwhite">
-                                <button className="text-xl font-semibold text-white bg-btnblue py-4 px-12 hover:bg-hoblue rounded-full">Get started</button>
-                            </div>
-                        </div>
-
-                        {/* COLUMN-2 */}
-
-                        <div>
-                            <div className="lg:absolute girldoodle">
-                                <Image src="/images/digital/girldoodle.svg" alt="girldoodle" width={815} height={691} />
-                            </div>
-                        </div>
-
-
+            <div className="wide-bg mt-32">
+                <div className="mx-auto max-w-5xl py-36 px-6">
+                    <h3 className="text-center text-offwhite text-3xl lg:text-5xl font-semibold mb-6">
+                        Endless possibilities & opportunities.
+                    </h3>
+                    <p className="text-center text-offwhite text-lg font-normal mb-8">
+                        Anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
+                        occur in which toil and pain can procure him some great pleasure.
+                    </p>
+                    <div className="flex justify-center ">
+                        <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
+                            Know more
+                        </button>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import Typing from './Typing';
 
 const WhyUs = () => {
     return (
-        <div className="why-bg mt-32">
+        <div className="wide-bg mt-32">
             <div className="mx-auto max-w-5xl py-36 px-6">
                 <h3 className="text-center text-offwhite text-3xl lg:text-5xl font-semibold mb-6">
                     Why <Typing /> Us
