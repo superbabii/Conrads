@@ -9,45 +9,45 @@ interface workdata {
 
 const workdata: workdata[] = [
     {
-        imgSrc: '/images/Features/consult.svg',
+        imgSrc: '/images/Services/consult.svg',
         heading: 'Consulting',
         subheading: 'Lorem Ipsum has been the industry and this',
     },
     {
-        imgSrc: '/images/Features/simulation.png',
+        imgSrc: '/images/Services/simulation.png',
         heading: 'Simulation',
         subheading: 'Lorem Ipsum has been the industry and this',
     },
     {
-        imgSrc: '/images/Features/Edesign.png',
+        imgSrc: '/images/Services/Edesign.png',
         heading: 'Electronics Design and Manufacturing CAE',
         subheading: 'Lorem Ipsum has been the industry and this',
     },
     {
-        imgSrc: '/images/Features/cam.png',
+        imgSrc: '/images/Services/cam.png',
         heading: 'Mechanical Engineering CAD/CAM',
         subheading: 'Lorem Ipsum has been the industry and this',
     },
     {
-        imgSrc: '/images/Features/software.png',
+        imgSrc: '/images/Services/software.png',
         heading: 'Software',
         subheading: 'Lorem Ipsum has been the industry and this',
     },
     {
-        imgSrc: '/images/Features/blockchain.svg',
+        imgSrc: '/images/Services/blockchain.svg',
         heading: 'Mechanical Engineering CAD/CAM',
         subheading: 'Lorem Ipsum has been the industry and this',
     },
 ]
 
-const Features = () => {
+const Services = () => {
     return (
         <div>
             <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative'>
-                <div className="radial-bgone hidden lg:block"/>
+                <div className="radial-bgone hidden lg:block" />
                 <div className='text-center mb-14'>
                     <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
-                        Features
+                        Services
                     </h3>
                     <p className='text-white md:text-lg font-normal leading-8'>
                         At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
@@ -75,4 +75,4 @@ const Features = () => {
     )
 }
 
-export default Features;
+export default Services;

@@ -1,9 +1,5 @@
-import Head from 'next/head';
-import { Inter } from "next/font/google";
-import Header from '@/components/Header';
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
+import Services from "@/components/Services";
 import Companies from "@/components/Companies";
 import Products from "@/components/Products";
 import WhyUs from "@/components/WhyUs";
@@ -20,7 +16,7 @@ export default function Home() {
   return (
     <Layout>
         <Hero />
-        <Features />
+        <Services />
         <Companies />
         <Products />
         <WhyUs />
