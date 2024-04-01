@@ -121,7 +121,7 @@ const AboutUs = () => {
                         <p className="font-medium text-lg mt-5 text-center text-maingray">
                             Dedicated to fulfilling people&apos;s needs, our mission is to provide innovative solutions that address challenges and enhance lives. With a commitment to customer satisfaction and social responsibility, we strive to make a positive impact in communities and empower individuals to thrive.
                         </p>
-                        <p className="text-lg font-semibold mt-12 lg:ml-32 preline text-center text-maingray handwritten">
+                        <p className="text-lg font-semibold mt-12 lg:ml-32 preline text-center text-offwhite handwritten">
                             Werner Conrads, CEO
                         </p>
                     </div>
