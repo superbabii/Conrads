@@ -9,7 +9,7 @@ const Breadcrumb = ({
     description: string;
 }) => {
     return (
-        <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative'>
+        <div className='mx-auto max-w-7xl mt-16 px-6 relative'>
             <div className="-mx-4 flex flex-wrap items-center">
                 <div className="w-full px-4 md:w-8/12 lg:w-8/12">
                     <div className="mb-8 max-w-5xl md:mb-0 lg:mb-12">

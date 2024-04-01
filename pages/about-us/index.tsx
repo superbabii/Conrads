@@ -102,12 +102,12 @@ const AboutPage = () => {
                 description="Conrads Consult & Engineering is a company working in the field of consulting for sales and management support. Our company has a team of expert for the mechanical design of test instrument and equipment."
             />
 
-            <div className="relative">
+            {/* <div className="relative"> */}
 
-                <Image src="/images/dedicated/spiral.png" height={272} width={686} alt="spiral-design" className="absolute left-0 hidden lg:block -z-10" />
+                {/* <Image src="/images/dedicated/spiral.png" height={272} width={686} alt="spiral-design" className="absolute left-0 hidden lg:block -z-10" /> */}
 
-                <div className='mx-auto max-w-7xl px-4 my-16 sm:py-20 lg:px-8'>
-                    <div className='grid grid-cols-1 md:grid-cols-2 my-16'>
+                <div className='mx-auto max-w-7xl px-4 sm:py-10 lg:px-8'>
+                    <div className='grid grid-cols-1 md:grid-cols-2'>
 
                         {/* COLUMN-1 */}
                         <div>
@@ -116,20 +116,20 @@ const AboutPage = () => {
 
                         {/* COLUMN-2 */}
                         <div className="relative">
-                            <Image src="images/dedicated/comma.svg" alt="comma-image" width={200} height={106} className="absolute comma-pos hidden lg:block" />
-                            <h2 className="text-4xl lg:text-65xl pt-4 font-bold sm:leading-tight mt-5 text-center lg:text-white">Dedicated to help peoples needs.</h2>
-                            <p className="font-medium text-offwhite text-2xl mt-5 text-center lg:text-white">Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan lacus vel facilisis</p>
-                            <p className="text-2xl font-semibold mt-12 lg:ml-32 preline text-center lg:text-white"> Werner Conrads, CEO</p>
+                            {/* <Image src="images/dedicated/comma.svg" alt="comma-image" width={200} height={106} className="absolute comma-pos hidden lg:block" /> */}
+                            <h2 className="text-4xl lg:text-65xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">Dedicated to help peoples needs.</h2>
+                            <p className="font-medium text-offwhite text-2xl mt-5 text-center text-white">Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan lacus vel facilisis</p>
+                            <p className="text-2xl font-semibold mt-12 lg:ml-32 preline text-center text-white"> Werner Conrads, CEO</p>
                         </div>
 
                     </div>
                 </div>
 
-            </div>
+            {/* </div> */}
 
             <div className='mx-auto max-w-7xl sm:py-4 lg:px-8 m-16'>
-                <h2 className="text-4xl sm:text-6xl font-bold text-white">Our team belives you deserve <br /> only the best.</h2>
-                <h3 className="text-2xl font-medium text-maingray pt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor.</h3>
+                <h2 className="text-4xl sm:text-6xl font-bold text-center text-white">Our team belives you deserve <br /> only the best.</h2>
+                <h3 className="text-2xl font-medium text-center text-maingray pt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor.</h3>
                 <div className='grid grid-cols-1 my-16'>
                     <Image src="/images/team/teamimg.png" alt="office-image" height={684} width={1296} />
                 </div>
