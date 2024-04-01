@@ -104,13 +104,13 @@ const AboutPage = () => {
             <div className="radial-bgone hidden lg:block"></div>
             <div className='mx-auto max-w-7xl px-4 sm:py-10 lg:px-8'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
-                    <div>
-                        <Image src="/images/dedicated/man.svg" alt="man-icon" width={416} height={530} className="mx-auto md:mx-0" />
+                    <div className='relative'>
+                        <img src="/images/About/ceo.jpg" alt="CEO-image" width="416" height="530" className="mx-auto md:mx-0 shadow-image rounded-2xl" />
                     </div>
-                    <div className="relative">
-                        <h2 className="text-4xl lg:text-65xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">Dedicated to help peoples needs.</h2>
-                        <p className="font-medium text-offwhite text-2xl mt-5 text-center text-white">Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan lacus vel facilisis</p>
-                        <p className="text-2xl font-semibold mt-12 lg:ml-32 preline text-center text-white"> Werner Conrads, CEO</p>
+                    <div className="relative text-container">
+                        <h2 className="text-4xl lg:text-6xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">Dedicated to help people's needs.</h2>
+                        <p className="font-medium text-2xl mt-5 text-center text-maingray">Dedicated to fulfilling people's needs, our mission is to provide innovative solutions that address challenges and enhance lives. With a commitment to customer satisfaction and social responsibility, we strive to make a positive impact in communities and empower individuals to thrive.</p>
+                        <p className="text-2xl font-semibold mt-12 lg:ml-32 preline text-center text-maingray handwritten">Werner Conrads, CEO</p>
                     </div>
                 </div>
             </div>

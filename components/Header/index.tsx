@@ -87,7 +87,6 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    // { name: 'Home', href: '#home-section', current: false },
     { name: 'About Us', href: '/about-us', current: false },
     { name: 'Services', href: '/services', current: false },
     { name: 'Products', href: '/products', current: false },
@@ -217,7 +216,7 @@ const Header = () => {
                                     ))}
                                 </div>
                             </div>
-                            <div className="hidden lg:flex items-center border-right ">
+                            <div className="hidden lg:flex items-center border-right">
                                 <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                                     <IconButton
                                         onClick={handleAccountClick}
