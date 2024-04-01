@@ -1,13 +1,19 @@
 import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Layout from "../layout";
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+type Props = {
+    // Define the props here
+};
 
 export const metadata: Metadata = {
     title: "Product | Conrads Consult & Engineering",
     description: "This is Product Page for Conrads Consult & Engineering",
 };
 
-const ProductPage = () => {
+const Products = () => {
     return (
         <Layout>
             <Breadcrumb
@@ -18,4 +24,16 @@ const ProductPage = () => {
     );
 };
 
-export default ProductPage;
+export default Products;
+
+export const getStaticProps: GetStaticProps<Props> = async ({
+    locale,
+}) => ({
+    props: {
+        ...(await serverSideTranslations(locale ?? 'en', [
+            'common',
+            'header',
+            'footer',
+        ])),
+    },
+})

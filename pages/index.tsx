@@ -4,9 +4,8 @@ import Companies from "@/components/Companies";
 import Products from "@/components/Products";
 import WhyUs from "@/components/WhyUs";
 import { GetStaticProps } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Layout from './layout'
-
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Layout from './layout';
 
 type Props = {
   // Define the props here
@@ -30,6 +29,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({
   props: {
     ...(await serverSideTranslations(locale ?? 'en', [
       'common',
+      'header',
       'footer',
     ])),
   },

@@ -5,6 +5,12 @@ import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 import Link from "next/link";
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+type Props = {
+    // Define the props here
+};
 
 export const metadata: Metadata = {
     title: "About | Conrads Consult & Engineering",
@@ -54,7 +60,7 @@ const postData: DataType[] = [
 
 // CAROUSEL SETTINGS
 
-const AboutPage = () => {
+const AboutUs = () => {
     const settings = {
         dots: false,
         infinite: true,
@@ -188,4 +194,16 @@ const AboutPage = () => {
     );
 };
 
-export default AboutPage;
+export default AboutUs;
+
+export const getStaticProps: GetStaticProps<Props> = async ({
+    locale,
+}) => ({
+    props: {
+        ...(await serverSideTranslations(locale ?? 'en', [
+            'common',
+            'header',
+            'footer',
+        ])),
+    },
+})
