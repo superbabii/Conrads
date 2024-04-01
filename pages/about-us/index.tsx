@@ -2,8 +2,9 @@ import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Layout from "../layout";
 import Image from "next/image";
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "About | Conrads Consult & Engineering",
@@ -172,12 +173,16 @@ const AboutPage = () => {
                         occur in which toil and pain can procure him some great pleasure.
                     </p>
                     <div className="flex justify-center gap-x-16">
-                        <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
-                            Our Services
-                        </button>
-                        <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
-                            Our Products
-                        </button>
+                        <Link href="/services">
+                            <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
+                                Our Services
+                            </button>
+                        </Link>
+                        <Link href="/products">
+                            <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
+                                Our Products
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
