@@ -42,7 +42,7 @@ const postData: DataType[] = [
     {
         profession: 'Accountant',
         name: 'John Doe',
-        imgSrc: '/images/wework/avatar5.svg',
+        imgSrc: '/images/wework/avatar3.svg',
     },
     {
         profession: 'Co-founder',
@@ -101,29 +101,32 @@ const AboutPage = () => {
                 pageName="About Us"
                 description="Conrads Consult & Engineering is a company working in the field of consulting for sales and management support. Our company has a team of expert for the mechanical design of test instrument and equipment."
             />
-            <div className="radial-bgone hidden lg:block"></div>
-            <div className='mx-auto max-w-7xl px-4 sm:py-10 lg:px-8'>
+            {/* <div className="radial-bgone hidden lg:block"></div> */}
+            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className='relative'>
-                        <img src="/images/About/ceo.jpg" alt="CEO-image" width="416" height="530" className="mx-auto md:mx-0 shadow-image rounded-2xl" />
+                        <img src="/images/About/ceo.jpg" alt="CEO-image" width="416" height="530" className="shadow-image rounded-2xl" />
                     </div>
                     <div className="relative text-container">
-                        <h2 className="text-4xl lg:text-6xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">Dedicated to help people's needs.</h2>
-                        <p className="font-medium text-2xl mt-5 text-center text-maingray">Dedicated to fulfilling people's needs, our mission is to provide innovative solutions that address challenges and enhance lives. With a commitment to customer satisfaction and social responsibility, we strive to make a positive impact in communities and empower individuals to thrive.</p>
-                        <p className="text-2xl font-semibold mt-12 lg:ml-32 preline text-center text-maingray handwritten">Werner Conrads, CEO</p>
+                        <h2 className="text-2xl lg:text-4xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">Dedicated to help people&apos;s needs.</h2>
+                        <p className="font-medium text-lg mt-5 text-center text-maingray">Dedicated to fulfilling people&apos;s needs, our mission is to provide innovative solutions that address challenges and enhance lives. With a commitment to customer satisfaction and social responsibility, we strive to make a positive impact in communities and empower individuals to thrive.</p>
+                        <p className="text-lg font-semibold mt-12 lg:ml-32 preline text-center text-maingray handwritten">Werner Conrads, CEO</p>
                     </div>
                 </div>
             </div>
-            <div className='mx-auto max-w-7xl sm:py-4 lg:px-8 m-16'>
-                <h2 className="text-4xl sm:text-6xl font-bold text-center text-white">Our team belives you deserve <br /> only the best.</h2>
-                <h3 className="text-2xl font-medium text-center text-maingray pt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor.</h3>
-                <div className='grid grid-cols-1 my-16'>
-                    <Image src="/images/team/teamimg.png" alt="office-image" height={684} width={1296} />
+            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
+                <div className='grid grid-cols-1 md:grid-cols-2'>
+                    <div className="relative text-container">
+                        <h2 className="text-2xl lg:text-4xl font-bold text-center text-white">Our team belives you deserve <br /> only the best.</h2>
+                        <p className="text-lg font-medium text-center text-maingray pt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor.</p>
+                    </div >
+                    <div className='relative'>
+                        <Image src="/images/team/teamimg.png" alt="office-image" height={684} width={1296} className="mt-4 rounded-2xl" />
+                    </div>
                 </div>
             </div>
 
             <div className="bg-wework py-4">
-
                 <div className='mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8 '>
                     <div className="text-center">
                         <h3 className="text-4xl sm:text-6xl font-bold text-white my-2">We work in several verticals.</h3>
