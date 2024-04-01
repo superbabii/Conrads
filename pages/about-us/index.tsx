@@ -25,24 +25,24 @@ const postData: DataType[] = [
         imgSrc: '/images/wework/avatar.svg',
     },
     {
-        profession: 'Co-founder',
+        profession: 'Electronic Engineer',
         name: 'John Doe',
         imgSrc: '/images/wework/avatar3.svg',
     },
     {
-        profession: 'Co-founder',
+        profession: 'FPGA Programmer',
         name: 'John Doe',
         imgSrc: '/images/wework/avatar4.svg',
     },
     {
-        profession: 'Co-founder',
+        profession: 'Software Developer',
         name: 'John Doe',
         imgSrc: '/images/wework/avatar.svg',
     },
     {
-        profession: 'Co-founder',
+        profession: 'Accountant',
         name: 'John Doe',
-        imgSrc: '/images/wework/avatar3.svg',
+        imgSrc: '/images/wework/avatar5.svg',
     },
     {
         profession: 'Co-founder',
@@ -57,12 +57,12 @@ const AboutPage = () => {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 5,
+        slidesToShow: 4,
         // centerMode: true,
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        speed: 4000,
+        speed: 8000,
         autoplaySpeed: 2000,
         cssEase: "linear",
         responsive: [
@@ -122,32 +122,30 @@ const AboutPage = () => {
                 </div>
             </div>
 
-            <div className="bg-wework py-16">
+            <div className="bg-wework py-4">
 
                 <div className='mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8 '>
-
                     <div className="text-center">
                         <h3 className="text-4xl sm:text-6xl font-bold text-white my-2">We work in several verticals.</h3>
-                        <h3 className="text-4xl sm:text-6xl font-bold text-white opacity-50 lg:mr-48 my-2">We work in several verticals.</h3>
-                        <h3 className="text-4xl sm:text-6xl font-bold text-white opacity-25 lg:-mr-32 my-2">We work in several verticals.</h3>
                     </div>
-
+                </div>
+                <div className="mx-auto max-w-7xl">
+                    <Slider {...settings}>
+                        {postData.map((items, i) => (
+                            <div key={i}>
+                                <div className='bg-white m-3 py-14 my-10 text-center shadow-xl rounded-3xl'>
+                                    <div className='relative'>
+                                        <Image src={items.imgSrc} alt="gaby" width={182} height={182} className="inline-block m-auto" />
+                                        <Image src={'/images/wework/linkedin.svg'} alt="greenbg" width={120} height={120} className=" absolute inline-block position-linkedin" />
+                                    </div>
+                                    <h4 className='text-4xl font-bold pt-14'>{items.name}</h4>
+                                    <h3 className='text-2xl font-normal pt-4 pb-2 opacity-50'>{items.profession}</h3>
+                                </div>
+                            </div>
+                        ))}
+                    </Slider>
                 </div>
 
-                <Slider {...settings}>
-                    {postData.map((items, i) => (
-                        <div key={i}>
-                            <div className='bg-white m-3 py-14 my-10 text-center shadow-xl rounded-3xl'>
-                                <div className='relative'>
-                                    <Image src={items.imgSrc} alt="gaby" width={182} height={182} className="inline-block m-auto" />
-                                    <Image src={'/images/wework/linkedin.svg'} alt="greenbg" width={120} height={120} className=" absolute inline-block position-linkedin" />
-                                </div>
-                                <h4 className='text-4xl font-bold pt-14'>{items.name}</h4>
-                                <h3 className='text-2xl font-normal pt-4 pb-2 opacity-50'>{items.profession}</h3>
-                            </div>
-                        </div>
-                    ))}
-                </Slider>
 
             </div>
 
