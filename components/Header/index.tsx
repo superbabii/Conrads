@@ -124,7 +124,8 @@ const Header = () => {
     };
 
     const handleLanguageSelect = (newLocale: string) => {
-        // router.locale = newLocale;
+        const { pathname, asPath, query } = router
+        router.push({ pathname, query }, asPath, { locale: newLocale })
         handleClose();
     };
 
@@ -169,8 +170,6 @@ const Header = () => {
 
         storeScroll();
     }, [])
-
-    const changeTo = router.locale === 'en' ? 'de' : 'en'
 
     const { t } = useTranslation('header')
     return (
@@ -319,9 +318,7 @@ const Header = () => {
                                             color: "white",
                                         },
                                     }}>
-                                        <Link href="/" locale={changeTo}>
-                                            English
-                                        </Link>
+                                        English
                                     </MenuItem>
                                     <MenuItem onClick={() => handleLanguageSelect('de')} sx={{
                                         '&:hover': {
@@ -329,9 +326,7 @@ const Header = () => {
                                             color: "white",
                                         },
                                     }}>
-                                        <Link href="/" locale={changeTo}>
-                                            Deutsch
-                                        </Link>
+                                        Deutsch
                                     </MenuItem>
                                 </Menu>
                                 <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
@@ -370,7 +365,7 @@ const Header = () => {
                                         },
                                     }}
                                     BackdropProps={{
-                                        sx: { backdropFilter: 'blur(8px)' }, // Add blur effect to the backdrop
+                                        sx: { backdropFilter: 'blur(8px)' },
                                     }}
                                 >
                                     <SearchTextField
@@ -400,7 +395,6 @@ const Header = () => {
                             {/* <Contactusform /> */}
                         </div>
 
-
                         {/* DRAWER FOR MOBILE VIEW */}
 
                         {/* DRAWER ICON */}
@@ -414,7 +408,6 @@ const Header = () => {
                         <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
                             <Drawerdata />
                         </Drawer>
-
                     </div>
                 </div>
             </>
