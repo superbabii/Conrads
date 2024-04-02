@@ -102,6 +102,7 @@ const AboutUs = () => {
             }
         ]
     };
+    
     return (
         <Layout>
             <Breadcrumb

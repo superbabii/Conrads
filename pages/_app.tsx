@@ -14,14 +14,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     let timer: NodeJS.Timeout;
 
     const handleStart = () => {
-      // Start the timer with a delay of 500 milliseconds (adjust as needed)
       timer = setTimeout(() => {
         setLoading(true);
-      }, 500); // Adjust the delay time here (in milliseconds)
+      }, 500);
     };
 
     const handleComplete = () => {
-      // Clear the timer to prevent the spinner from showing if the page loads quickly
       clearTimeout(timer);
       setLoading(false);
     };

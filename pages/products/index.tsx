@@ -75,7 +75,7 @@ const Products = () => {
                 pageName="Products"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
             />
-            <div className="mx-auto max-w-7xl my-4 md:my-8 px-4 sm:py-4 lg:px-8">
+            <div className="mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12">
                 <StyledTabs
                     value={value}
                     onChange={handleChange}
