@@ -11,10 +11,18 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    let timer: NodeJS.Timeout;
+
     const handleStart = () => {
-      setLoading(true);
+      // Start the timer with a delay of 500 milliseconds (adjust as needed)
+      timer = setTimeout(() => {
+        setLoading(true);
+      }, 500); // Adjust the delay time here (in milliseconds)
     };
+
     const handleComplete = () => {
+      // Clear the timer to prevent the spinner from showing if the page loads quickly
+      clearTimeout(timer);
       setLoading(false);
     };
 
