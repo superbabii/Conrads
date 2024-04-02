@@ -1,5 +1,6 @@
 "use client"
 import Typing from './Typing';
+import Link from 'next/link';
 
 const WhyUs = () => {
     return (
@@ -12,9 +13,12 @@ const WhyUs = () => {
                     Choose us for our exclusive Rapid Prototyping Program, ensuring swift development and top-notch quality, giving you the competitive edge.
                 </p>
                 <div className="flex justify-center ">
-                    <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
-                        Know more
-                    </button>
+                    <Link href="/about-us">
+                        <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
+                            Know more
+                        </button>
+                    </Link>
+
                 </div>
             </div>
         </div>
