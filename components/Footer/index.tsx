@@ -1,10 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import HomeIcon from '@mui/icons-material/Home';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import { useTranslation } from 'next-i18next'
-// import type { FC } from 'react'
 
 // MIDDLE LINKS DATA
 interface ProductType {
@@ -21,7 +19,7 @@ const products: ProductType[] = [
   {
     id: 1,
     section: "Links",
-    link: ['Home', 'About Us', 'Services', 'Products'],
+    link: ['About Us', 'Services', 'Products'],
   }
 ]
 
@@ -66,7 +64,7 @@ const Footer = () => {
           {products.map((product) => (
             <div key={product.id} className="group relative col-span-2">
               <p className="text-white text-xl font-medium mb-9">
-                {product.section}
+                {t(product.section)}
               </p>
               <ul>
                 {product.link.map((link: string, index: number) => (
@@ -82,7 +80,7 @@ const Footer = () => {
 
           <div className="col-span-4">
             <h3 className="text-white text-xl font-medium mb-9">
-              Contact Us
+              {t("Contact Us")}
             </h3>
             <h4 className="text-maingray text-sm font-normal mb-6 flex gap-2" style={{ alignItems: 'flex-start' }}>
               <HomeIcon style={{ verticalAlign: 'top', color: 'white' }} />

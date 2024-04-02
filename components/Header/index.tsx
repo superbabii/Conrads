@@ -383,7 +383,6 @@ const Header = () => {
                                         InputProps={{
                                             style: {
                                                 color: 'white',
-                                                // backgroundColor: 'white',
                                             },
                                         }}
                                         InputLabelProps={{
