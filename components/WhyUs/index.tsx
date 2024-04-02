@@ -18,7 +18,6 @@ const WhyUs = () => {
                             Know more
                         </button>
                     </Link>
-
                 </div>
             </div>
         </div>

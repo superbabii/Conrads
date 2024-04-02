@@ -71,7 +71,7 @@ const Services = () => {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor.
                             </p>
                         </div >
-                        <div className={`col-span-1 flex flex-col justify-center items-center p-5 transition duration-400 bg-primary rounded-lg card-hover ${i % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+                        <div className={`col-span-1 flex flex-col justify-center items-center p-5 transition duration-400 bg-primary rounded-lg opacity-40 ${i % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
                             <div className='rounded-full flex justify-center p-3'>
                                 <Image src={items.imgSrc} alt={items.imgSrc} width={120} height={120} />
                             </div>
