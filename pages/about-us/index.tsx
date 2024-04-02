@@ -112,7 +112,7 @@ const AboutUs = () => {
             <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className='relative'>
-                        <img src="/images/About/ceo.jpg" alt="CEO-image" width="416" height="530" className="shadow-image rounded-2xl" />
+                        <img src="/images/About/ceo.jpg" alt="CEO-image" width="416" height="530" className="rounded-2xl" />
                     </div>
                     <div className="relative text-container">
                         <h2 className="text-3xl lg:text-5xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">
@@ -138,7 +138,7 @@ const AboutUs = () => {
                         </p>
                     </div >
                     <div className='relative'>
-                        <Image src="/images/team/teamimg.png" alt="office-image" height={684} width={1296} className="mt-4 lg:mt-0 rounded-2xl" />
+                        <Image src="/images/About/team.png" alt="office-image" height={684} width={1296} className="mt-4 lg:mt-0 rounded-2xl" />
                     </div>
                 </div>
             </div>
