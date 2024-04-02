@@ -81,6 +81,7 @@ const Products = () => {
                     onChange={handleChange}
                     aria-label="styled tabs example"
                 >
+                    <StyledTab label="All" />
                     <StyledTab label="Automotive" />
                     <StyledTab label="AI" />
                     <StyledTab label="Electronic" />
