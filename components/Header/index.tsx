@@ -100,7 +100,6 @@ function classNames(...classes: string[]) {
 const Header = () => {
 
     const router = useRouter();
-    const { t, i18n } = useTranslation('common');
 
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -173,6 +172,7 @@ const Header = () => {
 
     const changeTo = router.locale === 'en' ? 'de' : 'en'
 
+    const { t } = useTranslation('header')
     return (
         <Disclosure as="nav" className="navbar">
             <>
@@ -211,7 +211,7 @@ const Header = () => {
                                             )}
                                             aria-current={item.href ? 'page' : undefined}
                                         >
-                                            {item.name}
+                                            {t(item.name)}
                                         </Link>
                                     ))}
                                 </div>
@@ -262,7 +262,7 @@ const Header = () => {
                                             color: "white",
                                         },
                                     }}>
-                                        My account
+                                        {t('My account')}
                                     </MenuItem>
                                     <Divider variant="middle" component="li" style={{ borderBottom: "1px solid #323639" }} />
                                     <MenuItem onClick={handleClose} sx={{
@@ -271,7 +271,7 @@ const Header = () => {
                                             color: "white",
                                         },
                                     }}>
-                                        Create Account
+                                        {t('Create Account')}
                                     </MenuItem>
                                 </Menu>
                                 <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
