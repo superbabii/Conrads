@@ -374,7 +374,7 @@ const Header = () => {
                                     }}
                                 >
                                     <SearchTextField
-                                        label="Search"
+                                        label={t("Search")}
                                         value={searchQuery}
                                         id="custom-css-outlined-input"
                                         onChange={handleInputChange}
