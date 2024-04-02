@@ -254,23 +254,27 @@ const Header = () => {
                                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                             >
-                                <MenuItem onClick={handleClose} sx={{
-                                    '&:hover': {
-                                        textDecoration: "underline",
-                                        color: "white",
-                                    },
-                                }}>
-                                    {t('My account')}
-                                </MenuItem>
+                                <Link href={"/dashboard"}>
+                                    <MenuItem onClick={handleClose} sx={{
+                                        '&:hover': {
+                                            textDecoration: "underline",
+                                            color: "white",
+                                        },
+                                    }}>
+                                        {t('My Account')}
+                                    </MenuItem>
+                                </Link>
                                 <Divider variant="middle" component="li" style={{ borderBottom: "1px solid #323639" }} />
-                                <MenuItem onClick={handleClose} sx={{
-                                    '&:hover': {
-                                        textDecoration: "underline",
-                                        color: "white",
-                                    },
-                                }}>
-                                    {t('Create Account')}
-                                </MenuItem>
+                                <Link href={"/signup"}>
+                                    <MenuItem onClick={handleClose} sx={{
+                                        '&:hover': {
+                                            textDecoration: "underline",
+                                            color: "white",
+                                        },
+                                    }}>
+                                        {t('Create Account')}
+                                    </MenuItem>
+                                </Link>
                             </Menu>
                             <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                                 <IconButton
