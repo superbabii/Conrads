@@ -108,7 +108,7 @@ const Hero = () => {
             </Carousel>
 
             {/* <div className='flex align-middle justify-center md:justify-start'>
-                                <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton mr-6'>
+                                <button className='text-xl text-white py-4 px-6 lg:px-12 mainbutton mr-6'>
                                     Get Started
                                 </button>
                                 <button onClick={() => setOpen(true)} className='bg-transparent flex justify-center items-center text-white'>

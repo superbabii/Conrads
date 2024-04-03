@@ -14,7 +14,7 @@ const WhyUs = () => {
                 </p>
                 <div className="flex justify-center ">
                     <Link href="/about-us">
-                        <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
+                        <button className='text-lg py-4 px-6 lg:px-12 mainbutton'>
                             Know more
                         </button>
                     </Link>

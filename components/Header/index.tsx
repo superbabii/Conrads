@@ -392,7 +392,7 @@ const Header = () => {
                             </StyledMenu>
 
                         </div>
-                        {/* <button className='hidden lg:flex justify-end text-xl font-semibold py-4 px-6 lg:px-12 navbutton text-white'>
+                        {/* <button className='hidden lg:flex justify-end text-xl font-semibold py-4 px-6 lg:px-12 mainbutton text-white'>
                                 Connect Wallet
                             </button> */}
                         {/* <Contactusform /> */}

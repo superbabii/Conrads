@@ -102,7 +102,7 @@ const AboutUs = () => {
             }
         ]
     };
-    
+
     return (
         <Layout>
             <Breadcrumb
@@ -179,12 +179,12 @@ const AboutUs = () => {
                     </p>
                     <div className="flex justify-center gap-x-16">
                         <Link href="/services">
-                            <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
+                            <button className='text-xl text-white py-4 px-6 lg:px-12 mainbutton'>
                                 Our Services
                             </button>
                         </Link>
                         <Link href="/products">
-                            <button className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'>
+                            <button className='text-xl text-white py-4 px-6 lg:px-12 mainbutton'>
                                 Our Products
                             </button>
                         </Link>
