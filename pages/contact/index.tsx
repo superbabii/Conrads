@@ -94,7 +94,8 @@ const Contact = () => {
                                         <input
                                             type="text"
                                             placeholder="Enter your name"
-                                            className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                            className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                            required
                                         />
                                     </div>
                                 </div>
@@ -103,22 +104,47 @@ const Contact = () => {
                                         <input
                                             type="email"
                                             placeholder="Enter your email"
-                                            className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                            className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                            required
                                         />
+                                    </div>
+                                </div>
+                                <div className="w-full px-4">
+                                    <div className="mb-8">
+                                        <input
+                                            type="tel"
+                                            placeholder="Enter your phone number"
+                                            className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="w-full px-4">
+                                    <div className="mb-8">
+                                        <select
+                                            name="subject"
+                                            className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                        >
+                                            <option value="">Select a subject</option>
+                                            <option value="General Inquiry">General Inquiry</option>
+                                            <option value="Technical Support">Technical Support</option>
+                                            <option value="Feedback">Feedback</option>
+                                            <option value="Product Inquiry">Product Inquiry</option>
+                                            <option value="Partnership Opportunities">Partnership Opportunities</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div className="w-full px-4">
                                     <div className="mb-8">
                                         <textarea
                                             name="message"
-                                            rows={5}
+                                            rows={4}
                                             placeholder="Enter your Message"
-                                            className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                            className="border-stroke w-full resize-none rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
                                         ></textarea>
                                     </div>
                                 </div>
                                 <div className="w-full px-4">
-                                    <button className='text-lg text-white mainbutton'>
+                                    <button className='text-lg text-white mainbutton rounded-md'>
                                         Free Consultant <KeyboardDoubleArrowRightIcon />
                                     </button>
                                 </div>
