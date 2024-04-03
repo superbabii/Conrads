@@ -107,7 +107,7 @@ const AboutUs = () => {
         <Layout>
             <Breadcrumb
                 pageName="About Us"
-                heading = "Know Our About Company"
+                heading="Know Our About Company"
                 description="Conrads Consult & Engineering is a company working in the field of consulting for sales and management support. Our company has a team of expert for the mechanical design of test instrument and equipment."
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />
@@ -180,15 +180,11 @@ const AboutUs = () => {
                         occur in which toil and pain can procure him some great pleasure.
                     </p>
                     <div className="flex justify-center gap-x-16">
-                        <Link href="/services">
-                            <button className='text-xl text-white py-4 px-6 lg:px-12 mainbutton'>
-                                Our Services
-                            </button>
+                        <Link href="/services" className='text-lg text-white mainbutton' style={{ width: '200px' }}>
+                            OUR SERVICES
                         </Link>
-                        <Link href="/products">
-                            <button className='text-xl text-white py-4 px-6 lg:px-12 mainbutton'>
-                                Our Products
-                            </button>
+                        <Link href="/products" className='text-lg text-white mainbutton' style={{ width: '200px' }}>
+                            OUR PRODUCTS
                         </Link>
                     </div>
                 </div>
