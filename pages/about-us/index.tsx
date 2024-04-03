@@ -179,7 +179,7 @@ const AboutUs = () => {
                         Anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
                         occur in which toil and pain can procure him some great pleasure.
                     </p>
-                    <div className="flex justify-center gap-x-16">
+                    <div className="flex flex-col lg:flex-row justify-center items-center gap-y-8 lg:gap-x-16">
                         <Link href="/services" className='text-lg text-white mainbutton' style={{ width: '200px' }}>
                             OUR SERVICES
                         </Link>

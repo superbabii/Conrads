@@ -127,8 +127,6 @@ const ElectronicsAndSoftwareCard: React.FC<ElectronicsAndSoftwareCardProps> = ({
     );
 }
 
-
-
 const Products = () => {
     const [value, setValue] = React.useState(0);
 

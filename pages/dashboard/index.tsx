@@ -15,9 +15,6 @@ export const metadata: Metadata = {
     description: "This is About Page for Conrads Consult & Engineering",
 };
 
-
-
-
 const Dashboard = () => {
 
     const [profileData, setProfileData] = useState({

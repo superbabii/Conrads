@@ -251,7 +251,7 @@ html:not([data-scroll="0"]) .navbar {
   z-index: 1;
 }
 
-.card-hover {
+.service-card {
   opacity: 0.4;
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 1);
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -271,12 +271,42 @@ html:not([data-scroll="0"]) .navbar {
   transition-duration: 0.4s;
 }
 
-.card-hover:hover {
+.service-card:hover {
   opacity: 1;
   cursor: pointer;
   --tw-border-opacity: 1;
   border-color: #801022;
   --tw-shadow: #7d4525 0px 4px 24px;
+  --tw-shadow-colored: 0px 4px 24px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.contact-card {
+  opacity: 0.4;
+  box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 1);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-width: 2px;
+  border-color: #801022;
+  transition-property: color, background-color, border-color, fill,
+    stroke, opacity, box-shadow, transform, filter,
+    -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow,
+    transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow,
+    transform, filter, backdrop-filter, -webkit-text-decoration-color,
+    -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.4s;
+}
+
+.contact-card:hover {
+  opacity: 1;
+  cursor: pointer;
+  --tw-border-opacity: 1;
+  border-color: #801022;
   --tw-shadow-colored: 0px 4px 24px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
