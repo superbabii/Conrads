@@ -117,7 +117,7 @@ html:not([data-scroll="0"]) .navbar {
   text-align: center;
   padding: 10px 20px;
   border-radius: 4px;
-  cursor: pointer;
+  opacity: 0.7;
   transition: color 0.7s, background 0.7s;
   z-index: 0;
 }
@@ -141,6 +141,7 @@ html:not([data-scroll="0"]) .navbar {
 
 .mainbutton:hover {
   color: #801022;
+  opacity: 1;
 }
 
 .dance-text {
@@ -156,95 +157,6 @@ html:not([data-scroll="0"]) .navbar {
   .dance-text {
     margin-left: -265px;
   }
-}
-
-.arrowOne {
-  position: absolute;
-  bottom: 37%;
-  left: 0px;
-  background-image: url('/images/Hero/arrowOne.png');
-  width: 105px;
-  height: 59px;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
-  z-index: -3;
-}
-
-.arrowTwo {
-  position: absolute;
-  top: 20%;
-  left: 17%;
-  background-image: url('/images/Hero/arrowTwo.png');
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -3;
-}
-
-.arrowThree {
-  position: absolute;
-  background-image: url('/images/Hero/arrowThree.svg');
-  top: 32%;
-  left: 53%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -2;
-}
-
-.arrowFour {
-  position: absolute;
-  background-image: url('/images/Hero/arrowFour.svg');
-  top: 48%;
-  left: 46%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -2;
-}
-
-.arrowFive {
-  position: absolute;
-  background-image: url('/images/Hero/arrowFive.svg');
-  top: 61%;
-  left: 53%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -2;
-}
-
-.arrowSix {
-  position: absolute;
-  background-image: url('/images/Hero/arrowSix.svg');
-  top: 39%;
-  left: 80%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -2;
-}
-
-.arrowSeven {
-  position: absolute;
-  background-image: url('/images/Hero/arrowSeven.svg');
-  top: 57%;
-  left: 79%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -2;
-}
-
-.arrowEight {
-  position: absolute;
-  background-image: url('/images/Hero/arrowEight.svg');
-  top: 57%;
-  right: 0%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -2;
 }
 
 .hero-text {
@@ -404,117 +316,6 @@ html:not([data-scroll="0"]) .navbar {
   z-index: -1;
 }
 
-
-.simpleone {
-  position: absolute;
-  background-image: url('/images/Simple/arrowone.svg');
-  top: 57%;
-  left: 0%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.simpletwo {
-  position: absolute;
-  background-image: url('/images/Simple/arrowtwo.svg');
-  top: 15%;
-  left: 5%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.simplethree {
-  position: absolute;
-  background-image: url('/images/Simple/arrowthree.svg');
-  top: 80%;
-  left: 8%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.simplefour {
-  position: absolute;
-  background-image: url('/images/Simple/arrowfour.svg');
-  top: 32%;
-  left: 21%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.simplefive {
-  position: absolute;
-  background-image: url('/images/Simple/arrowfive.svg');
-  top: 84%;
-  left: 33%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.simplesix {
-  position: absolute;
-  background-image: url('/images/Simple/arrowsix.svg');
-  top: 79%;
-  left: 63%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.simpleseven {
-  position: absolute;
-  background-image: url('/images/Simple/arrowseven.svg');
-  top: 47%;
-  left: 70%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.simpleeight {
-  position: absolute;
-  background-image: url('/images/Simple/arroweight.svg');
-  top: 70%;
-  left: 78%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.simplenine {
-  position: absolute;
-  background-image: url('/images/Simple/arrownine.svg');
-  top: 26%;
-  left: 82%;
-  width: 9%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.simpleten {
-  position: absolute;
-  background-image: url('/images/Simple/arrowten.svg');
-  top: 50%;
-  right: 0%;
-  width: 4%;
-  height: 100%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
 .hover-underline {
   display: inline-flex;
   position: relative;
@@ -568,40 +369,6 @@ html:not([data-scroll="0"]) .navbar {
   transform: translateY(-8px);
 }
 
-.address-container {
-  display: flex;
-  align-items: flex-start;
-  /* Align items to the start (top) of the container */
-}
-
-.address-container h4 {
-  margin: 0;
-  /* Remove default margin */
-}
-
-.address-container h4 img {
-  margin-top: 2px;
-  /* Adjust margin-top to align with the top line of the address */
-}
-
-.verticalLine {
-  height: 3rem;
-  background: #B4C7ED;
-  opacity: 0.3;
-  width: 2px;
-  margin-top: 20px;
-}
-
-td:first-child,
-th:first-child {
-  border-radius: 15px 0 0 15px;
-}
-
-td:last-child,
-th:last-child {
-  border-radius: 0 15px 15px 0;
-}
-
 .radial-bgone {
   position: absolute;
   background: linear-gradient(90deg, #801022 0%, #801022 97.15%);
@@ -640,7 +407,6 @@ th:last-child {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
-
 
 .radial-bg {
   position: absolute;
