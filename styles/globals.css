@@ -273,7 +273,6 @@ html:not([data-scroll="0"]) .navbar {
 
 .service-card:hover {
   opacity: 1;
-  cursor: pointer;
   --tw-border-opacity: 1;
   border-color: #801022;
   --tw-shadow: #7d4525 0px 4px 24px;
@@ -304,7 +303,6 @@ html:not([data-scroll="0"]) .navbar {
 
 .contact-card:hover {
   opacity: 1;
-  cursor: pointer;
   --tw-border-opacity: 1;
   border-color: #801022;
   --tw-shadow-colored: 0px 4px 24px var(--tw-shadow-color);
