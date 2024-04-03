@@ -93,7 +93,7 @@ const Contact = () => {
                                     <div className="mb-8">
                                         <input
                                             type="text"
-                                            placeholder="Enter your name"
+                                            placeholder="Enter your name *"
                                             className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
                                             required
                                         />
@@ -103,7 +103,7 @@ const Contact = () => {
                                     <div className="mb-8">
                                         <input
                                             type="email"
-                                            placeholder="Enter your email"
+                                            placeholder="Enter your email *"
                                             className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
                                             required
                                         />
