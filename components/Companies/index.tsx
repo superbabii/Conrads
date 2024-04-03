@@ -84,7 +84,7 @@ export default class MultipleItems extends Component {
                         Trusted by leading businesses worldwide, including Fortune 500 companies and innovative startups, Conrads Consult & Engineering delivers expert consulting services in mechanical design, PCB development, and software integration, ensuring unparalleled quality and reliability.
                     </p>
                 </div>
-                <div className="mx-auto px-4 pt-0 sm:px-6">
+                <div className="mx-auto px-4 sm:px-6 mt-32">
                     <div>
                         <Slider {...settings}>
                             {data.map((item, i) =>

@@ -103,7 +103,7 @@ const Products = () => {
           From advanced printed circuit boards to custom software integrations, our products are meticulously crafted to meet the diverse needs of modern businesses, empowering you to stay ahead in today&apos;s dynamic market.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-y-20 mt-24" >
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-32" >
         {productdata.map((items, index) => (
           <ul className="space-y-8" key={index}>
             <li className="text-sm leading-6">
