@@ -117,7 +117,6 @@ html:not([data-scroll="0"]) .navbar {
   text-align: center;
   padding: 10px 20px;
   border-radius: 4px;
-  /* border: 1px solid transparent; */
   cursor: pointer;
   transition: color 0.7s, background 0.7s;
   z-index: 0;
@@ -131,7 +130,7 @@ html:not([data-scroll="0"]) .navbar {
   width: 0;
   height: 100%;
   background: white;
-  transition: width 0.7s;
+  transition: width 0.5s;
   transform: translateX(-50%);
   z-index: -1;
 }
@@ -142,7 +141,6 @@ html:not([data-scroll="0"]) .navbar {
 
 .mainbutton:hover {
   color: #801022;
-  /* border-color: #801022; */
 }
 
 .dance-text {
