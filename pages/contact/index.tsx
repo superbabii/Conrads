@@ -43,7 +43,7 @@ const Contact = () => {
             <Breadcrumb
                 pageName="Contact"
                 heading = "Reach Out, We're Here!"
-                description="Don't hesitate to connect with us. Our team is readily available and eager to assist you with any inquiries or assistance you may need. Reach out to us today; we're here to help!"
+                description="Don&apos;t hesitate to connect with us. Our team is readily available and eager to assist you with any inquiries or assistance you may need. Reach out to us today; we&apos;re here to help!"
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />
             <div className="mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12">
