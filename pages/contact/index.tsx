@@ -8,6 +8,29 @@ import NewsLatterBox from "./NewsLatterBox";
 type Props = {
     // Define the props here
 };
+interface servicedata {
+    imgSrc: string;
+    heading: string;
+    subheading: string;
+}
+
+const servicedata: servicedata[] = [
+    {
+        imgSrc: '/images/Services/consult.svg',
+        heading: 'Consulting',
+        subheading: 'Lorem Ipsum has been the industry and this',
+    },
+    {
+        imgSrc: '/images/Services/simulation.png',
+        heading: 'Simulation',
+        subheading: 'Lorem Ipsum has been the industry and this',
+    },
+    {
+        imgSrc: '/images/Services/Edesign.png',
+        heading: 'Electronics Design and Manufacturing CAE',
+        subheading: 'Lorem Ipsum has been the industry and this',
+    },
+]
 
 export const metadata: Metadata = {
     title: "Contact | Conrads Consult & Engineering",
@@ -22,6 +45,24 @@ const Contact = () => {
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
             />
             <div className="mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12">
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 lg:gap-12 mb-12'>
+                    {servicedata.map((items, index) => (
+                        <div
+                            className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-primary rounded-lg card-hover"
+                            key={index}
+                        >
+                            <div className='rounded-full flex justify-center p-3'>
+                                <img src={items.imgSrc} alt={items.imgSrc} width={120} height={120} />
+                            </div>
+                            <h3 className="text-2xl font-semibold text-white text-center">
+                                {items.heading}
+                            </h3>
+                            <p className='text-base font-normal text-white text-center'>
+                                {items.subheading}
+                            </p>
+                        </div>
+                    ))}
+                </div>
                 <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
                         <div
@@ -92,9 +133,9 @@ const Contact = () => {
                             </form>
                         </div>
                     </div>
-                    <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
+                    {/* <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
                         <NewsLatterBox />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Layout>

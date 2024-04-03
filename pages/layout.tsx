@@ -3,14 +3,8 @@ import { Inter } from "next/font/google";
 import Header from '@/components/Header';
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/pages/ScrollToTop";
-import { GetStaticProps } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const inter = Inter({ subsets: ["latin"] });
-
-type Props = {
-    // Define the props here
-};
 
 const scrollbarStyles = `
   ::-webkit-scrollbar {
@@ -58,14 +52,3 @@ export default function Layout({
         </>
     );
 }
-
-// export const getStaticProps: GetStaticProps<Props> = async ({
-//     locale,
-// }) => ({
-//     props: {
-//         ...(await serverSideTranslations(locale ?? 'en', [
-//             'common',
-//             'footer',
-//         ])),
-//     },
-// })
