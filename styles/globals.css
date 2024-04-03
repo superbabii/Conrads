@@ -146,7 +146,9 @@ html:not([data-scroll="0"]) .navbar {
 }
 
 .dance-text {
-  font-family: 'Dancing Script', cursive !important;
+  position: absolute;
+  top: 5%;
+  left: 5%;
   transform: rotate(-20.06deg);
   /* text-align: center; */
   /* margin-left: -340px; */
@@ -162,11 +164,11 @@ html:not([data-scroll="0"]) .navbar {
   position: absolute;
   bottom: 37%;
   left: 0px;
-  background-image: url('/images/Hero/arrowOne.svg');
+  background-image: url('/images/Hero/arrowOne.png');
   width: 105px;
   height: 59px;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
   z-index: -3;
 }
 
@@ -174,7 +176,7 @@ html:not([data-scroll="0"]) .navbar {
   position: absolute;
   top: 20%;
   left: 17%;
-  background-image: url('/images/Hero/arrowTwo.svg');
+  background-image: url('/images/Hero/arrowTwo.png');
   width: 9%;
   height: 100%;
   background-repeat: no-repeat;

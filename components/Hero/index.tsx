@@ -13,12 +13,12 @@ const Hero = () => {
     ];
     const texts = [
         {
-            title: "Unlock Innovation with Conrads Consult & Engineering!",
-            description: "Your Trusted Partner for Mechanical Design, PCB Development, and Software Integration"
+            title: "Business Coaching and Consulting",
+            description: "With over 10 years of experience helping companies to find comprehensive solution"
         },
         {
-            title: "Revolutionize Your Business with Our AI Technology!",
-            description: "Unlock the Power of Artificial Intelligence for Enhanced Efficiency and Innovation"
+            title: "Your Growth is Our Target",
+            description: "With over 10 years of experience helping companies to find comprehensive solution"
         },
         {
             title: "Elevate Your Electronics with Our PCB Solutions!",
@@ -28,7 +28,6 @@ const Hero = () => {
 
     return (
         <div className='bg-image relative' id="home-section">
-            <div className='arrowOne'></div>
             <div className='dance-text text-primary'>==== WE&apos;RE THE BEST ====</div>
 
             <div className='radial-hero hidden lg:block'></div>
@@ -36,9 +35,8 @@ const Hero = () => {
                 <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
                     <div className='height-work'>
                         <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
-                            <div className='arrowTwo'></div>
-                            <div className='hero-text col-span-6'>
-                                <h1 className="text-3xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
+                            <div className='hero-text col-span-7'>
+                                <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[0].title}
                                 </h1>
                                 <p className='text-offwhite md:text-lg font-normal mb-10 md:text-start text-center'>
@@ -46,13 +44,7 @@ const Hero = () => {
                                 </p>
                             </div>
                             <div className='col-span-5 lg:-m-48'>
-                                <div className='arrowThree'></div>
-                                <div className='arrowFour'></div>
-                                <div className='arrowFive'></div>
                                 <Image src={images[0]} alt="nothing" width={1013} height={760} />
-                                <div className='arrowSix'></div>
-                                <div className='arrowSeven'></div>
-                                <div className='arrowEight'></div>
                             </div>
                         </div>
                     </div>
@@ -60,7 +52,6 @@ const Hero = () => {
                 <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
                     <div className='height-work'>
                         <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
-                            <div className='arrowTwo'></div>
                             <div className='hero-text col-span-7'>
                                 <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[1].title}
@@ -70,13 +61,7 @@ const Hero = () => {
                                 </p>
                             </div>
                             <div className='col-span-5 lg:-m-48'>
-                                <div className='arrowThree'></div>
-                                <div className='arrowFour'></div>
-                                <div className='arrowFive'></div>
                                 <Image src={images[1]} alt="nothing" width={1013} height={760} />
-                                <div className='arrowSix'></div>
-                                <div className='arrowSeven'></div>
-                                <div className='arrowEight'></div>
                             </div>
                         </div>
                     </div>
@@ -84,7 +69,6 @@ const Hero = () => {
                 <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
                     <div className='height-work'>
                         <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
-                            <div className='arrowTwo'></div>
                             <div className='hero-text col-span-7'>
                                 <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[2].title}
@@ -94,13 +78,7 @@ const Hero = () => {
                                 </p>
                             </div>
                             <div className='col-span-5 lg:-m-48'>
-                                <div className='arrowThree'></div>
-                                <div className='arrowFour'></div>
-                                <div className='arrowFive'></div>
                                 <Image src={images[2]} alt="nothing" width={1013} height={760} />
-                                <div className='arrowSix'></div>
-                                <div className='arrowSeven'></div>
-                                <div className='arrowEight'></div>
                             </div>
                         </div>
                     </div>
