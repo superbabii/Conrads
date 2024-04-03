@@ -10,22 +10,22 @@ interface Data {
 
 const data: Data[] = [
     {
-        imgSrc: "/images/Companies/birdseye.svg"
+        imgSrc: "/images/Companies/SpaceX-Logo.svg"
     },
     {
-        imgSrc: "/images/Companies/break.svg"
+        imgSrc: "/images/Companies/SpaceX-Logo.svg"
     },
     {
-        imgSrc: "/images/Companies/keddar.svg"
+        imgSrc: "/images/Companies/SpaceX-Logo.svg"
     },
     {
-        imgSrc: "/images/Companies/shield.svg"
+        imgSrc: "/images/Companies/SpaceX-Logo.svg"
     },
     {
-        imgSrc: "/images/Companies/tandov.svg"
+        imgSrc: "/images/Companies/SpaceX-Logo.svg"
     },
     {
-        imgSrc: "/images/Companies/tree.svg"
+        imgSrc: "/images/Companies/SpaceX-Logo.svg"
     },
 ]
 
@@ -88,7 +88,7 @@ export default class MultipleItems extends Component {
                     <div>
                         <Slider {...settings}>
                             {data.map((item, i) =>
-                                <div key={i}>
+                                <div key={i} className="px-5">
                                     <img src={item.imgSrc} alt={item.imgSrc} />
                                 </div>
                             )}
