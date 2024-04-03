@@ -108,12 +108,13 @@ const AboutUs = () => {
             <Breadcrumb
                 pageName="About Us"
                 description="Conrads Consult & Engineering is a company working in the field of consulting for sales and management support. Our company has a team of expert for the mechanical design of test instrument and equipment."
+                backgroundImageUrl="/images/Breadcrumb/background.png"
             />
             {/* <div className="radial-bgone hidden lg:block"></div> */}
             <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className='relative'>
-                        <img src="/images/About/ceo.jpg" alt="CEO-image" className="rounded-2xl sm:w-64 sm:h-auto lg:w-96 lg:h-auto mx-auto"/>
+                        <img src="/images/About/ceo.jpg" alt="CEO-image" className="rounded-2xl sm:w-64 sm:h-auto lg:w-96 lg:h-auto mx-auto" />
                     </div>
                     <div className="relative text-container">
                         <h2 className="text-3xl lg:text-5xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">

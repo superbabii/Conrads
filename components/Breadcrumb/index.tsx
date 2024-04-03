@@ -3,16 +3,18 @@ import Link from "next/link";
 const Breadcrumb = ({
     pageName,
     description,
+    backgroundImageUrl
 }: {
     pageName: string;
     description: string;
+    backgroundImageUrl: string
 }) => {
     return (
         <div className="relative overflow-hidden h-[320px]">
             <div className="absolute inset-0 z-0">
                 <img
                     className="absolute inset-0 w-full h-full object-cover object-bottom"
-                    src="/images/Breadcrumb/background.png"
+                    src={backgroundImageUrl}
                     alt="Background"
                     style={{
                         maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',

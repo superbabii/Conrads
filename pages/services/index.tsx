@@ -79,6 +79,7 @@ const Services = () => {
             <Breadcrumb
                 pageName="Services"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+                backgroundImageUrl="/images/Breadcrumb/background.png"
             />
             <div className="mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12">
                 {servicedata.map((items, index) => (

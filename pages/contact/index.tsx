@@ -43,6 +43,7 @@ const Contact = () => {
             <Breadcrumb
                 pageName="Contact"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+                backgroundImageUrl="/images/Breadcrumb/background.png"
             />
             <div className="mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12">
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 lg:gap-12 mb-12'>
