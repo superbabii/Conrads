@@ -31,7 +31,7 @@ const Breadcrumb = ({
                             <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-white">
                                 {heading}
                             </h1>
-                            <p className="font-medium leading-relaxed text-maingray">
+                            <p className="text-md lg:text-lg leading-relaxed text-white opacity-80">
                                 {description}
                             </p>
                         </div>

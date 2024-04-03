@@ -140,8 +140,8 @@ const Products = () => {
         <Layout>
             <Breadcrumb
                 pageName="Products"
-                heading = "Friendly, Optimized and Quick Services"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+                heading = "Diverse Offerings, Solutions Galore Here."
+                description="Explore our diverse range of offerings, where solutions abound for your every need."
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />
             <div className='flex mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>

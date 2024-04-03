@@ -12,8 +12,8 @@ type Props = {
 };
 
 export const metadata: Metadata = {
-    title: "Feature | Conrads Consult & Engineering",
-    description: "This is Feature Page for Conrads Consult & Engineering",
+    title: "Services | Conrads Consult & Engineering",
+    description: "This is Services Page for Conrads Consult & Engineering",
 };
 
 interface servicedata {
@@ -78,8 +78,8 @@ const Services = () => {
         <Layout>
             <Breadcrumb
                 pageName="Services"
-                heading = "Friendly, Optimized and Quick Services"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+                heading = "Efficient, Friendly, Expert Solutions Delivered."
+                description="We are dedicated to providing fast, high-quality service to ensure your satisfaction."
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />
             <div className="mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12">
