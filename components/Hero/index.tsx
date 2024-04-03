@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import Link from 'next/link';
 
 const Hero = () => {
     const [isOpen, setOpen] = useState(false)
@@ -21,7 +22,7 @@ const Hero = () => {
             description: "With over 10 years of experience helping companies to find comprehensive solution"
         },
         {
-            title: "Elevate Your Electronics with Our PCB Solutions!",
+            title: "Best Grow Your Business",
             description: "Precision Engineering for Reliable, High-Performance Printed Circuit Boards"
         }
     ];
@@ -31,10 +32,10 @@ const Hero = () => {
             <div className='dance-text text-primary'>==== WE&apos;RE THE BEST ====</div>
 
             <div className='radial-hero hidden lg:block'></div>
-            <Carousel autoPlay={true} interval={3000} useKeyboardArrows={true} showStatus={false} infiniteLoop={true} stopOnHover={true} emulateTouch={true} showArrows={false} showThumbs={false}>
+            <Carousel autoPlay={true} interval={5000} useKeyboardArrows={true} showStatus={false} infiniteLoop={true} stopOnHover={true} emulateTouch={true} showArrows={false} showThumbs={false}>
                 <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
                     <div className='height-work'>
-                        <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
+                        <div className='grid grid-cols-1 lg:grid-cols-12 mt-8'>
                             <div className='hero-text col-span-7'>
                                 <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[0].title}
@@ -47,11 +48,23 @@ const Hero = () => {
                                 <Image src={images[0]} alt="nothing" width={1013} height={760} />
                             </div>
                         </div>
+                        <div className='flex items-center justify-center md:justify-start space-x-4 mb-24'>
+                            <Link href={"/contact"}>
+                                <button className='text-lg text-white mainbutton' style={{ width: '180px' }}>
+                                    CONTACT US
+                                </button>
+                            </Link>
+                            <Link href={"/about-us"}>
+                                <button className='text-lg text-white mainbutton' style={{ width: '180px' }}>
+                                    ABOUT US
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
                     <div className='height-work'>
-                        <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
+                        <div className='grid grid-cols-1 lg:grid-cols-12 mt-8'>
                             <div className='hero-text col-span-7'>
                                 <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[1].title}
@@ -64,11 +77,23 @@ const Hero = () => {
                                 <Image src={images[1]} alt="nothing" width={1013} height={760} />
                             </div>
                         </div>
+                        <div className='flex items-center justify-center md:justify-start space-x-4 mb-24'>
+                            <Link href={"/contact"}>
+                                <button className='text-lg text-white mainbutton' style={{ width: '180px' }}>
+                                    CONTACT US
+                                </button>
+                            </Link>
+                            <Link href={"/about-us"}>
+                                <button className='text-lg text-white mainbutton' style={{ width: '180px' }}>
+                                    ABOUT US
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
                     <div className='height-work'>
-                        <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
+                        <div className='grid grid-cols-1 lg:grid-cols-12 mt-8'>
                             <div className='hero-text col-span-7'>
                                 <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
                                     {texts[2].title}
@@ -81,19 +106,21 @@ const Hero = () => {
                                 <Image src={images[2]} alt="nothing" width={1013} height={760} />
                             </div>
                         </div>
+                        <div className='flex items-center justify-center md:justify-start space-x-4 mb-24'>
+                            <Link href={"/contact"}>
+                                <button className='text-lg text-white mainbutton' style={{ width: '180px' }}>
+                                    CONTACT US
+                                </button>
+                            </Link>
+                            <Link href={"/about-us"}>
+                                <button className='text-lg text-white mainbutton' style={{ width: '180px' }}>
+                                    ABOUT US
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </Carousel>
-
-            {/* <div className='flex align-middle justify-center md:justify-start'>
-                                <button className='text-xl text-white py-4 px-6 lg:px-12 mainbutton mr-6'>
-                                    Get Started
-                                </button>
-                                <button onClick={() => setOpen(true)} className='bg-transparent flex justify-center items-center text-white'>
-                                    <Image src={'/images/hero/playbutton.svg'} alt="button-image" className='mr-3' width={47} height={47} />
-                                    How it work
-                                </button>
-                            </div> */}
         </div>
     )
 }

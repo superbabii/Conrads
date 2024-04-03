@@ -42,6 +42,7 @@ const Contact = () => {
         <Layout>
             <Breadcrumb
                 pageName="Contact"
+                heading = "Friendly, Optimized and Quick Services"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />

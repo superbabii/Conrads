@@ -107,6 +107,7 @@ const AboutUs = () => {
         <Layout>
             <Breadcrumb
                 pageName="About Us"
+                heading = "Know Our About Company"
                 description="Conrads Consult & Engineering is a company working in the field of consulting for sales and management support. Our company has a team of expert for the mechanical design of test instrument and equipment."
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />

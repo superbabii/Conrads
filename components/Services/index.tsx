@@ -11,7 +11,7 @@ interface servicedata {
 const servicedata: servicedata[] = [
     {
         imgSrc: '/images/Services/consult.svg',
-        heading: 'Consulting',
+        heading: 'Business Consulting',
         subheading: 'Lorem Ipsum has been the industry and this',
     },
     {
