@@ -20,7 +20,7 @@ const CustomSpinner: React.FC<CustomSpinnerProps> = ({ loading }) => {
     return (
         // <Layout>
         <>
-            <div className='radial-spinner hidden lg:block'></div>
+            <div className='radial-center hidden lg:block'></div>
             <div className="sweet-loading" >
                 <ScaleLoader color={'#801022'} loading={loading} width={10} margin={5} cssOverride={override} />
             </div>

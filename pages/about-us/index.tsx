@@ -158,10 +158,10 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-            <div className='mx-auto max-w-7xl grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 gap-y-12 my-24'>
+            <div className='mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 gap-y-12 my-24'>
                 {successdata.map((items, index) => (
                     <div
-                        className="flex flex-col justify-between items-center bg-transparent"
+                        className="flex flex-col bg-transparent"
                         key={index}
                     >
                         <div className='work-card rounded-md flex'>
@@ -172,7 +172,7 @@ const AboutUs = () => {
                                 <h3 className='text-3xl font-semibold text-primary'>
                                     {items.subheading}
                                 </h3>
-                                <div className="w-full h-[0.5px] bg-maingray mb-2"></div> {/* Line */}
+                                <div className="w-full h-[1px] opacity-50 bg-maingray mb-2"></div>
                                 <p className="text-md text-maingray text-center">
                                     {items.heading}
                                 </p>

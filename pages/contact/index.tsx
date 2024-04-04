@@ -72,13 +72,11 @@ const Contact = () => {
                     className="h-32 w-24px"
                     src={'/images/Logo/logo.png'}
                     alt="conrads-engineering-Logo"
-                /></div>
+                />
+            </div>
             <div className="mx-auto max-w-7xl p-4 lg:px-8">
                 <div className="py-4 lg:w-5/12">
-                    <div
-                        className="rounded-lg bg-transparent shadow-lg free-consultation px-16 py-12"
-                        data-wow-delay=".15s"
-                    >
+                    <div className="rounded-lg bg-transparent shadow-lg form-board px-16 py-12">
                         <h2 className="mb-8 text-3xl font-bold text-white opacity-80">
                             Free Consultation
                         </h2>

@@ -228,7 +228,7 @@ html:not([data-scroll="0"]) .navbar {
   border-color: rgba(128, 16, 34, 0.4);
 }
 
-.free-consultation {
+.form-board {
   opacity: 1;
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 1);
   border-width: 1px;
@@ -405,7 +405,7 @@ html:not([data-scroll="0"]) .navbar {
   z-index: -2;
 }
 
-.radial-spinner {
+.radial-center {
   position: absolute;
   background: linear-gradient(90deg, #801022 0%, #801022 97.15%);
   opacity: 0.5;
