@@ -67,8 +67,13 @@ const Contact = () => {
             </div>
             <div className="h-px mb-20 py-[1px] w-full opacity-40 bg-gradient-to-r from-transparent via-[#801022] to-transparent" />
             <div className="red-band"></div>
-            <div className="contact-logo"></div>
-            <div className="mx-auto max-w-7xl lg:px-8">
+            <div className="contact-logo rounded-lg bg-[#121212] shadow-lg p-4 hidden lg:block">
+                <img
+                    className="h-32 w-24px"
+                    src={'/images/Logo/logo.png'}
+                    alt="conrads-engineering-Logo"
+                /></div>
+            <div className="mx-auto max-w-7xl p-4 lg:px-8">
                 <div className="py-4 lg:w-5/12">
                     <div
                         className="rounded-lg bg-transparent shadow-lg free-consultation px-16 py-12"

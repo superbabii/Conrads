@@ -232,11 +232,21 @@ html:not([data-scroll="0"]) .navbar {
 .red-band {
   position: absolute;
   background-color: #801022;
-  margin-top: 85px;
+  margin-top: 100px;
   width: 100%;
   height: 480px;
   opacity: 0.4;
   z-index: -1;
+}
+
+.contact-logo {
+  position: absolute;
+  margin-top: 250px;
+  right:14%;
+  z-index: -1;
+  box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.4);
+  border-width: 1px;
+  border-color: rgba(128, 16, 34, 0.4);
 }
 
 .highlight {
@@ -265,31 +275,9 @@ html:not([data-scroll="0"]) .navbar {
   display: none;
 }
 
-.card-b:hover>.hides {
+.card-b:hover.hides {
   display: block;
 }
-
-.work-img-bg {
-  background: linear-gradient(90deg, #BD24DF 0%, #2D6ADE 97.15%);
-  top: -51px;
-  right: 40%;
-}
-
-/* Feature Section */
-
-.feature-font {
-  background: linear-gradient(90deg, #BD24DF 0%, #2D6ADE 97.15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  /* text-fill-color: transparent; */
-}
-
-.gg {
-  background: linear-gradient(90deg, #BD24DF 0%, #2D6ADE 97.15%);
-}
-
-/* Simple Section */
 
 .about-wide-bg {
   background: #000;
