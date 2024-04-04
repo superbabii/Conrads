@@ -19,7 +19,7 @@ const products: ProductType[] = [
   {
     id: 1,
     section: "Links",
-    link: ['About Us', 'Services', 'Products'],
+    link: ['About Us', 'Services', 'Products', 'Terms of Service', 'Privacy Policy'],
   }
 ]
 
@@ -62,7 +62,7 @@ const Footer = () => {
           {/* CLOUMN-2/3 */}
 
           {products.map((product) => (
-            <div key={product.id} className="group relative col-span-2">
+            <div key={product.id} className="group relative col-span-3">
               <p className="text-white text-xl font-medium mb-9">
                 {t(product.section)}
               </p>
@@ -78,7 +78,7 @@ const Footer = () => {
             </div>
           ))}
 
-          <div className="col-span-4">
+          <div className="col-span-3">
             <h3 className="text-white text-xl font-medium mb-9">
               {t("Contact Us")}
             </h3>
