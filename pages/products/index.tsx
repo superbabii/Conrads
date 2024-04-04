@@ -61,24 +61,82 @@ const StyledTab = styled((props: StyledTabProps) => (
     },
 }));
 
-interface productdata {
+interface Product {
     imgSrc: string;
     heading: string;
     price: number;
+    category: string;
 }
 
-const productdata: productdata[] = [
+const productData: Product[] = [
     {
         imgSrc: '/images/Products/AI.jpg',
         heading: 'Products-exm1',
         price: 1000,
+        category: 'AI',
     },
     {
         imgSrc: '/images/Products/simulation.jpg',
         heading: 'Products-exm1',
         price: 100,
+        category: 'Electronic',
     },
-]
+    // Add more products with different categories
+];
+
+const popularProducts = [
+    {
+        imgSrc: '/images/Products/AI.jpg',
+        heading: 'Popular Product 1',
+        price: 1500,
+        category: 'AI',
+    },
+    {
+        imgSrc: '/images/Products/simulation.jpg',
+        heading: 'Popular Product 2',
+        price: 1200,
+        category: 'Electronic',
+    },
+    // Add more popular products as needed
+];
+
+interface PopularProductCardProps {
+    productName: string;
+    imageUrl: string;
+    price: number;
+}
+
+const PopularProductCard: React.FC<PopularProductCardProps> = ({ productName, imageUrl, price }) => {
+    return (
+        <div className="relative group">
+            <div
+                className="relative space-y-6 leading-none rounded-lg highlight"
+                style={{
+                    backgroundImage: `url(${imageUrl})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    height: '240px',
+                    opacity: 1,
+                }}
+            ></div>
+            <div className="absolute bottom-0 left-0 right-0 p-2 bg-gray-800 bg-opacity-80">
+                <h3 className="text-md text-white border p-1 border-white rounded-md z-10 inline-block">
+                    {productName}
+                </h3>
+                <div className="flex justify-between items-center">
+                    <span className="text-white text-lg">
+                        Price: ${price}
+                    </span>
+                </div>
+                <button className="mt-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded inline-block">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    );
+}
+
 interface ElectronicsAndSoftwareCardProps {
     productName: string;
     imageUrl: string;
@@ -89,9 +147,6 @@ interface ElectronicsAndSoftwareCardProps {
 const ElectronicsAndSoftwareCard: React.FC<ElectronicsAndSoftwareCardProps> = ({ productName, imageUrl, price, discount }) => {
     return (
         <div className="relative group">
-            {/* Gradient overlay */}
-            {/* <div className="absolute transition opacity-40 -inset-1 bg-gradient-to-r from-[#592693] to-[#96225f] blur duration-400 group-hover:opacity-100 group-hover:duration-200" /> */}
-
             <div
                 className="relative space-y-6 leading-none rounded-lg highlight"
                 style={{
@@ -129,25 +184,38 @@ const ElectronicsAndSoftwareCard: React.FC<ElectronicsAndSoftwareCardProps> = ({
 
 const Products = () => {
     const [value, setValue] = React.useState(0);
+    const [currentCategory, setCurrentCategory] = React.useState('All');
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
+        setCurrentCategory(newValue === 0 ? 'All' : ['All', 'Automotive', 'AI', 'Electronic', 'Software'][newValue]);
     };
+
+    const filteredProducts = currentCategory === 'All' ? productData : productData.filter(product => product.category === currentCategory);
 
     return (
         <Layout>
             <Breadcrumb
                 pageName="Products"
-                heading = "Diverse Offerings, Solutions Galore Here."
+                heading="Diverse Offerings, Solutions Galore Here."
                 description="Explore our diverse range of offerings, where solutions abound for your every need."
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />
-            <div className='flex mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
-                <div className="space-x-8 mr-32">
+            <div className='flex flex-col lg:flex-row mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
+                <div className="lg:mr-32">
                     <h2 className="text-lg font-medium text-white">Popular Products</h2>
-                    {/* Render your popular products list here */}
+                    <div className="space-y-8">
+                        {popularProducts.map((product, index) => (
+                            <PopularProductCard
+                                key={index}
+                                productName={product.heading}
+                                price={product.price}
+                                imageUrl={product.imgSrc}
+                            />
+                        ))}
+                    </div>
                 </div>
-                <div>
+                <div className="flex-grow">
                     <StyledTabs
                         value={value}
                         onChange={handleChange}
@@ -160,19 +228,18 @@ const Products = () => {
                         <StyledTab label="Software" />
                     </StyledTabs>
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-y-20 mt-32" >
-                        {productdata.map((items, index) => (
+                        {filteredProducts.map((product, index) => (
                             <ul className="space-y-8" key={index}>
                                 <li className="text-sm leading-6">
                                     <ElectronicsAndSoftwareCard
-                                        productName={items.heading}
-                                        price={items.price}
-                                        imageUrl={items.imgSrc}
+                                        productName={product.heading}
+                                        price={product.price}
+                                        imageUrl={product.imgSrc}
                                     />
                                 </li>
                             </ul>
                         ))}
                     </div>
-
                 </div>
             </div>
         </Layout>
