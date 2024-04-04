@@ -39,7 +39,7 @@ const SignupPage = () => {
             Create your account
           </h2>
           <p className="mb-11 text-center text-maingray">
-            It's totally free and super easy
+            It&apos;s totally free and super easy
           </p>
           <button className="flex w-full text-lg text-white justify-center mainbutton rounded-md mb-4">
             <GoogleIcon className='mt-1 mr-3' />
