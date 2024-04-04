@@ -80,7 +80,7 @@ const SigninPage = () => {
             </div>
           </form>
           <p className="text-center text-maingray">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/signup" className="text-primary hover:underline">
               Sign up
             </Link>
