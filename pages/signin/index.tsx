@@ -55,7 +55,7 @@ const SigninPage = () => {
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="name" className="font-medium text-lg text-maingray">
-                Your Email:
+                Work Email:
               </label>
               <input type="email" id="email" value={formData.email} onChange={handleChange}
                 placeholder="Enter your email *"
@@ -65,7 +65,7 @@ const SigninPage = () => {
             </div>
             <div className="mb-8">
               <label htmlFor="password" className="font-medium text-lg text-maingray">
-                Your Password:
+                Password:
               </label>
               <input type="password" id="password" value={formData.password} onChange={handleChange}
                 placeholder="Enter your password *"

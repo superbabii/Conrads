@@ -75,7 +75,7 @@ const SignupPage = () => {
             </div>
             <div className="mb-8">
               <label htmlFor="password" className="font-medium text-lg text-maingray">
-                Your Password:
+                Password:
               </label>
               <input type="password" id="password" value={formData.password} onChange={handleChange}
                 placeholder="Enter your password *"
