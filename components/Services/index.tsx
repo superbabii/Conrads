@@ -53,7 +53,6 @@ const Services = () => {
                     At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
                 </p>
             </div>
-
             <div className='grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-y-12 mt-32'>
                 {servicedata.map((items, index) => (
                     <Link

@@ -11,28 +11,26 @@ interface SlideProps {
 }
 
 const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
-    <div className='mx-auto max-w-7xl pt-8 lg:pt-40 sm:pb-24 px-6'>
-        <div className='height-work'>
-            <div className='grid grid-cols-1 lg:grid-cols-12 mt-8'>
-                <div className='hero-text col-span-7'>
-                    <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
-                        {title}
-                    </h1>
-                    <p className='text-offwhite md:text-lg font-normal mb-10 md:text-start text-center'>
-                        {description}
-                    </p>
-                </div>
-                <div className='col-span-5 lg:-m-48'>
-                    <Image src={image} alt="nothing" width={1013} height={760} />
-                </div>
+    <div className='mx-auto max-w-7xl h-screen flex flex-col justify-center items-center p-4' style={{ height: 'calc(100vh - 120px)' }}>
+        <div className='grid grid-cols-1 lg:grid-cols-12 mt-8'>
+            <div className='col-span-5 lg:-m-48 sm:order-2'>
+                <Image src={image} alt="nothing" width={1013} height={760} />
             </div>
-            <div className='flex items-center justify-center md:justify-start space-x-4 mb-24'>
-                <Link href={"/contact"} className='text-lg text-white mainbutton' style={{ width: '180px' }}>
-                    CONTACT US
-                </Link>
-                <Link href={"/about-us"} className='text-lg text-white mainbutton' style={{ width: '180px' }}>
-                    ABOUT US
-                </Link>
+            <div className='hero-text col-span-7 sm:order-1'>
+                <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
+                    {title}
+                </h1>
+                <p className='text-offwhite md:text-lg font-normal mb-10 md:text-start text-center'>
+                    {description}
+                </p>
+                <div className='flex items-center justify-center md:justify-start space-x-4 mb-24 lg:mb-32'>
+                    <Link href={"/contact"} className='text-lg text-white mainbutton' style={{ width: '180px' }}>
+                        CONTACT US
+                    </Link>
+                    <Link href={"/about-us"} className='text-lg text-white mainbutton' style={{ width: '180px' }}>
+                        ABOUT US
+                    </Link>
+                </div>
             </div>
         </div>
     </div>
