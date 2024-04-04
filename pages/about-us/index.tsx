@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import Link from "next/link";
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Work from "@/components/Work";
 
 type Props = {
     // Define the props here
@@ -58,7 +59,34 @@ const postData: DataType[] = [
     },
 ]
 
-// CAROUSEL SETTINGS
+interface successdata {
+    imgSrc: string;
+    heading: string;
+    subheading: string;
+}
+
+const successdata: successdata[] = [
+    {
+        imgSrc: '/images/About/project.png',
+        heading: 'Successful Project',
+        subheading: '5620+',
+    },
+    {
+        imgSrc: '/images/About/expert.png',
+        heading: 'Expert Engineer',
+        subheading: '150+',
+    },
+    {
+        imgSrc: '/images/About/cup.png',
+        heading: 'Cup Of Cofee',
+        subheading: '96+',
+    },
+    {
+        imgSrc: '/images/About/satification.png',
+        heading: 'Client Satisfaction',
+        subheading: '3225+',
+    },
+]
 
 const AboutUs = () => {
     const settings = {
@@ -130,6 +158,29 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
+            <div className='mx-auto max-w-7xl grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 gap-y-12 my-24'>
+                {successdata.map((items, index) => (
+                    <div
+                        className="flex flex-col justify-between items-center bg-transparent"
+                        key={index}
+                    >
+                        <div className='work-card rounded-md flex'>
+                            <div className='rounded-md bg-primary opacity-95 p-4 w-1/3'>
+                                <Image src={items.imgSrc} alt={items.imgSrc} width={200} height={200} />
+                            </div>
+                            <div className='flex flex-col justify-center items-center w-2/3'>
+                                <h3 className='text-3xl font-semibold text-primary'>
+                                    {items.subheading}
+                                </h3>
+                                <div className="w-full h-[0.5px] bg-maingray mb-2"></div> {/* Line */}
+                                <p className="text-md text-maingray text-center">
+                                    {items.heading}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
             <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className="relative text-container">
@@ -169,7 +220,7 @@ const AboutUs = () => {
                     </Slider>
                 </div>
             </div>
-
+            <Work />
             <div className="about-wide-bg mt-32">
                 <div className="mx-auto max-w-5xl py-36 px-6">
                     <h3 className="text-center text-offwhite text-3xl lg:text-5xl font-semibold mb-6">

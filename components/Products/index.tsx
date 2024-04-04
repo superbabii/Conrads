@@ -71,7 +71,7 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageL
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             height: '240px',
-            opacity: 0.7,
+            opacity: 0.9,
             transition: 'opacity 0.4s ease-in-out',
           }}
         >
@@ -92,7 +92,7 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageL
 
 const Products = () => {
   return (
-    <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative'>
+    <div className='mx-auto max-w-7xl my-20 px-10 lg:px-6 relative'>
       <div className="radial-bgone hidden lg:block"></div>
       <div className='text-center mb-14'>
         <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
