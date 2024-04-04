@@ -19,6 +19,7 @@ module.exports = {
       'cardbg': '#7a1022',
       'offwhite': '#ECF2FF',
       'maingray': '#717375',
+      'graywhite': '#96919b',
       'navyblue': '#13224f',
       'lightwhite': '#d0d3db',
       'darkblue': '#091945',

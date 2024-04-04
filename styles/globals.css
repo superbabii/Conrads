@@ -232,7 +232,7 @@ html:not([data-scroll="0"]) .navbar {
 .red-band {
   position: absolute;
   background-color: #801022;
-  margin-top: 100px;
+  margin-top: 85px;
   width: 100%;
   height: 480px;
   opacity: 0.4;

@@ -18,6 +18,29 @@ export const metadata: Metadata = {
     description: "This is Contact Page for Conrads Consult & Engineering",
 };
 
+const contacts = [
+    {
+        icon: <HomeIcon style={{ color: '#801022', width: 100, height: 100 }} />,
+        title: 'Our Address',
+        content: 'Münderhäuser Straße 31, 36199 Rotenburg an der Fulda, Germany',
+    },
+    {
+        icon: <EmailIcon style={{ color: '#801022', width: 100, height: 100 }} />,
+        title: 'Email Address',
+        content: <a className="text-white font-normal text-center transition-colors duration-300 hover:text-[#801022]" href="mailto:info@conrads-engineering.com">info@conrads-engineering.com</a>,
+    },
+    {
+        icon: <CallIcon style={{ color: '#801022', width: 100, height: 100 }} />,
+        title: 'Phone Numbers',
+        content: <a className="text-white font-normal text-center transition-colors duration-300 hover:text-[#801022]" href="tel:+49-662-343-645-10">+49 (66) 234 3645 10</a>,
+    },
+    {
+        icon: <AccessTimeFilledIcon style={{ color: '#801022', width: 100, height: 100 }} />,
+        title: 'Office Hours',
+        content: 'Mon to Sat: 09.00am to 18.00pm. Sunday: Closed',
+    },
+];
+
 const Contact = () => {
     return (
         <Layout>
@@ -28,63 +51,30 @@ const Contact = () => {
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />
             <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4 my-12'>
-                <div className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-transparent rounded-lg contact-card">
-                    <div className='rounded-full flex justify-center p-3'>
-                        <HomeIcon style={{ color: '#801022', width: 100, height: 100 }} />
+                {contacts.map((contact, index) => (
+                    <div key={index} className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-transparent rounded-lg contact-card">
+                        <div className='rounded-full flex justify-center p-3'>
+                            {contact.icon}
+                        </div>
+                        <h3 className="text-2xl font-semibold text-white text-center">
+                            {contact.title}
+                        </h3>
+                        <div className='font-normal text-white text-center'>
+                            {contact.content}
+                        </div>
                     </div>
-                    <h3 className="text-2xl font-semibold text-white text-center">
-                        Our Address
-                    </h3>
-                    <p className='font-normal text-white text-center'>
-                        Münderhäuser Straße 31, 36199<br />
-                        Rotenburg an der Fulda,<br />
-                        Germany
-                    </p>
-                </div>
-                <div className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-transparent rounded-lg contact-card">
-                    <div className='rounded-full flex justify-center p-3'>
-                        <EmailIcon style={{ color: '#801022', width: 100, height: 100 }} />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-white text-center">
-                        Email Address
-                    </h3>
-                    <a className="text-white font-normal text-center transition-colors duration-300 hover:text-[#801022]" href="mailto:info@conrads-engineering.com">
-                        info@conrads-engineering.com
-                    </a>
-                </div>
-                <div className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-transparent rounded-lg contact-card">
-                    <div className='rounded-full flex justify-center p-3'>
-                        <CallIcon style={{ color: '#801022', width: 100, height: 100 }} />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-white text-center">
-                        Phone Numbers
-                    </h3>
-                    <a className="text-white font-normal text-center transition-colors duration-300 hover:text-[#801022]" href="tel:+49-662-343-645-10">
-                        +49 (66) 234 3645 10
-                    </a>
-                </div>
-                <div className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-transparent rounded-lg contact-card">
-                    <div className='rounded-full flex justify-center p-3'>
-                        <AccessTimeFilledIcon style={{ color: '#801022', width: 100, height: 100 }} />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-white text-center">
-                        Office Hours
-                    </h3>
-                    <p className='text-base font-normal text-white text-center'>
-                        Mon to Sat: 09.00am to 18.00pm <br />
-                        Sunday: Closed
-                    </p>
-                </div>
+                ))}
             </div>
             <div className="h-px mb-20 py-[1px] w-full opacity-40 bg-gradient-to-r from-transparent via-[#801022] to-transparent" />
             <div className="red-band"></div>
-            <div className="mx-auto max-w-7xl px-4 sm:py-4 lg:px-8">
+            <div className="contact-logo"></div>
+            <div className="mx-auto max-w-7xl lg:px-8">
                 <div className="py-4 lg:w-5/12">
                     <div
                         className="rounded-lg bg-transparent shadow-lg free-consultation px-16 py-12"
                         data-wow-delay=".15s"
                     >
-                        <h2 className="mb-8 text-2xl font-bold text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+                        <h2 className="mb-8 text-3xl font-bold text-white opacity-80">
                             Free Consultation
                         </h2>
                         <form>
@@ -94,7 +84,7 @@ const Contact = () => {
                                         <input
                                             type="text"
                                             placeholder="Enter your name *"
-                                            className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                            className="w-full rounded-md border border-transparent bg-white opacity-80 px-6 py-3 outline-none focus:border-primary"
                                             required
                                         />
                                     </div>
@@ -104,7 +94,7 @@ const Contact = () => {
                                         <input
                                             type="email"
                                             placeholder="Enter your email *"
-                                            className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                            className="w-full rounded-md border border-transparent bg-white opacity-80 px-6 py-3 outline-none focus:border-primary"
                                             required
                                         />
                                     </div>
@@ -114,7 +104,7 @@ const Contact = () => {
                                         <input
                                             type="tel"
                                             placeholder="Enter your phone number"
-                                            className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                            className="w-full rounded-md border border-transparent bg-white opacity-80 px-6 py-3 outline-none focus:border-primary"
                                         />
                                     </div>
                                 </div>
@@ -122,15 +112,16 @@ const Contact = () => {
                                     <div className="mb-8">
                                         <select
                                             name="subject"
-                                            className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                            className="w-full rounded-md border border-transparent bg-white opacity-80 text-black px-6 py-3 outline-none focus:border-primary"
                                         >
-                                            <option value="">Select a subject</option>
-                                            <option value="General Inquiry">General Inquiry</option>
-                                            <option value="Technical Support">Technical Support</option>
-                                            <option value="Feedback">Feedback</option>
-                                            <option value="Product Inquiry">Product Inquiry</option>
-                                            <option value="Partnership Opportunities">Partnership Opportunities</option>
+                                            <option value="" className="text-graywhite">Select a subject</option>
+                                            <option value="General Inquiry" className="text-graywhite">General Inquiry</option>
+                                            <option value="Technical Support" className="text-graywhite">Technical Support</option>
+                                            <option value="Feedback" className="text-graywhite">Feedback</option>
+                                            <option value="Product Inquiry" className="text-graywhite">Product Inquiry</option>
+                                            <option value="Partnership Opportunities" className="text-graywhite">Partnership Opportunities</option>
                                         </select>
+
                                     </div>
                                 </div>
                                 <div className="w-full px-4">
@@ -139,7 +130,7 @@ const Contact = () => {
                                             name="message"
                                             rows={4}
                                             placeholder="Enter your Message"
-                                            className="border-stroke w-full resize-none rounded-md border bg-[#f8f8f8] px-6 py-3 outline-none focus:border-primary"
+                                            className="w-full rounded-md border border-transparent bg-white opacity-80 px-6 py-3 outline-none focus:border-primary"
                                         ></textarea>
                                     </div>
                                 </div>
