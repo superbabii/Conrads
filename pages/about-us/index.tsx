@@ -21,41 +21,57 @@ export const metadata: Metadata = {
 // CAROUSEL DATA
 
 interface DataType {
-    profession: string;
+    role: string;
     name: string;
-    imgSrc: string;
+    imageUrl: string;
+    socialLinks: { name: string; url: string; }[];
 }
 
-const postData: DataType[] = [
+const teamMembers: DataType[] = [
     {
-        profession: 'Co-founder',
+        role: 'Co-founder',
         name: 'John Doe',
-        imgSrc: '/images/wework/avatar.svg',
+        imageUrl: '/images/wework/avatar.svg',
+        socialLinks: [
+            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/' },
+        ],
     },
     {
-        profession: 'Electronic Engineer',
+        role: 'Electronic Engineer',
         name: 'John Doe',
-        imgSrc: '/images/wework/avatar3.svg',
+        imageUrl: '/images/wework/avatar3.svg',
+        socialLinks: [
+            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/' },
+        ],
     },
     {
-        profession: 'FPGA Programmer',
+        role: 'FPGA Programmer',
         name: 'John Doe',
-        imgSrc: '/images/wework/avatar4.svg',
+        imageUrl: '/images/wework/avatar4.svg',
+        socialLinks: [
+            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/' },
+        ],
     },
     {
-        profession: 'Software Developer',
+        role: 'Software Developer',
         name: 'John Doe',
-        imgSrc: '/images/wework/avatar.svg',
+        imageUrl: '/images/wework/avatar.svg',
+        socialLinks: [
+            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/' },
+        ],
     },
     {
-        profession: 'Accountant',
+        role: 'Accountant',
         name: 'John Doe',
-        imgSrc: '/images/wework/avatar3.svg',
-    },
-    {
-        profession: 'Co-founder',
-        name: 'John Doe',
-        imgSrc: '/images/wework/avatar4.svg',
+        imageUrl: '/images/wework/avatar3.svg',
+        socialLinks: [
+            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/' },
+        ],
     },
 ]
 
@@ -93,13 +109,14 @@ const AboutUs = () => {
         dots: false,
         infinite: true,
         slidesToShow: 4,
-        // centerMode: true,
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        speed: 8000,
-        autoplaySpeed: 2000,
+        speed: 500,
+        autoplaySpeed: 5000,
         cssEase: "linear",
+        rtl: true,
+        pauseOnHover: true,
         responsive: [
             {
                 breakpoint: 1200,
@@ -205,15 +222,24 @@ const AboutUs = () => {
                 </div>
                 <div className="mx-auto max-w-7xl">
                     <Slider {...settings}>
-                        {postData.map((items, i) => (
+                        {teamMembers.map((items, i) => (
                             <div key={i}>
-                                <div className='bg-white m-3 py-14 my-10 text-center shadow-xl rounded-3xl'>
-                                    <div className='relative'>
-                                        <Image src={items.imgSrc} alt="gaby" width={182} height={182} className="inline-block m-auto" />
-                                        <Image src={'/images/wework/linkedin.svg'} alt="greenbg" width={120} height={120} className=" absolute inline-block position-linkedin" />
+                                <div className='bg-white mx-8 py-4 my-10 text-center shadow-xl rounded-3xl'>
+                                    <img className="w-full h-auto p-12 pb-4" src={items.imageUrl} alt={`${items.name}'s profile`} />
+                                    <div className="px-6 py-4">
+                                        <div className="font-bold text-3xl mb-2">{items.name}</div>
+                                        <p className="text-gray-700 text-base">{items.role}</p>
                                     </div>
-                                    <h4 className='text-3xl font-bold pt-14'>{items.name}</h4>
-                                    <h3 className='text-2xl font-normal pt-4 pb-2 opacity-50'>{items.profession}</h3>
+                                    <div className="px-6 pt-2 pb-4 overflow-hidden">
+                                        <div className="flex justify-center space-x-2 overflow-x-hidden">
+                                            {items.socialLinks.map((link, index) => (
+                                                <a key={index} href={link.url} target="_blank" rel="noopener noreferrer"
+                                                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 transition duration-300 ease-in-out transform hover:translate-x-2 hover:bg-gray-300 hover:text-gray-900">
+                                                    {link.name}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         ))}

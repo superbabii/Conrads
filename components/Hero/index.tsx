@@ -59,7 +59,17 @@ const Hero: React.FC = () => {
         <div className='bg-image relative' id="home-section">
             <div className='dance-text text-primary'>==== WE&apos;RE THE BEST ====</div>
             <div className='radial-hero hidden lg:block'></div>
-            <Carousel autoPlay={true} interval={5000} useKeyboardArrows={true} showStatus={false} infiniteLoop={true} stopOnHover={true} emulateTouch={true} showArrows={false} showThumbs={false}>
+            <Carousel
+                autoPlay={true}
+                interval={5000}
+                useKeyboardArrows={true}
+                showStatus={false}
+                infiniteLoop={true}
+                stopOnHover={true}
+                emulateTouch={true}
+                showArrows={false}
+                showThumbs={false}
+            >
                 {slides.map((slide, index) => (
                     <CarouselSlide key={index} {...slide} />
                 ))}
