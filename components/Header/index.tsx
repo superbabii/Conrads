@@ -176,11 +176,14 @@ const Header = () => {
         <Disclosure as="nav" className="navbar">
             <div className="mx-auto max-w-7xl p-3 md:p-2 lg:px-3">
                 <div className="relative flex h-12 sm:h-20 items-center">
-                    <div className="flex flex-1 items-center sm:justify-between">
+                    <div className="flex flex-1 items-center justify-between">
 
                         {/* LOGO */}
 
                         <div className="flex flex-shrink-0 items-center">
+                            <div className='block lg:hidden pr-3'>
+                                <Bars3Icon className="block h-10 w-10 text-white" aria-hidden="true" onClick={() => setIsOpen(true)} />
+                            </div>
                             <Link href="/">
                                 <img
                                     className="block h-10 w-20px lg:hidden"
@@ -214,7 +217,7 @@ const Header = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="hidden lg:flex items-center border-right">
+                        <div className="flex items-center">
                             <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                                 <IconButton
                                     onClick={handleAccountClick}
@@ -392,18 +395,6 @@ const Header = () => {
                             </StyledMenu>
 
                         </div>
-                        {/* <button className='hidden lg:flex justify-end text-xl font-semibold py-4 px-6 lg:px-12 mainbutton text-white'>
-                                Connect Wallet
-                            </button> */}
-                        {/* <Contactusform /> */}
-                    </div>
-
-                    {/* DRAWER FOR MOBILE VIEW */}
-
-                    {/* DRAWER ICON */}
-
-                    <div className='block lg:hidden'>
-                        <Bars3Icon className="block h-6 w-6 text-white" aria-hidden="true" onClick={() => setIsOpen(true)} />
                     </div>
 
                     {/* DRAWER LINKS DATA */}

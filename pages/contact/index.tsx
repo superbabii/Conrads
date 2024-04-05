@@ -50,7 +50,7 @@ const Contact = () => {
                 description="Don&apos;t hesitate to connect with us. Our team is readily available and eager to assist you with any inquiries or assistance you may need. Reach out to us today; we&apos;re here to help!"
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />
-            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4 my-12'>
+            <div className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4 my-12'>
                 {contacts.map((contact, index) => (
                     <div key={index} className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-transparent rounded-lg contact-card">
                         <div className='rounded-full flex justify-center p-3'>
