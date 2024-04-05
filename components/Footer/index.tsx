@@ -5,22 +5,22 @@ import EmailIcon from '@mui/icons-material/Email';
 import { useTranslation } from 'next-i18next'
 
 // MIDDLE LINKS DATA
-interface ProductType {
-  id: number;
-  section: string;
-  link: string[];
+interface LinkType {
+  name: string;
+  href: string;
+  current: boolean;
 }
 interface Social {
   imgsrc: string,
   href: string,
 }
 
-const products: ProductType[] = [
-  {
-    id: 1,
-    section: "Links",
-    link: ['About Us', 'Services', 'Products', 'Terms of Service', 'Privacy Policy'],
-  }
+const Links: LinkType[] = [
+  { name: 'About Us', href: '/about-us', current: false },
+  { name: 'Services', href: '/services', current: false },
+  { name: 'Products', href: '/products', current: false },
+  { name: 'Terms of Service', href: '/terms-of-service', current: false },
+  { name: 'Privacy Policy', href: '/privacy-policy', current: false },
 ]
 
 const socialLinks: Social[] = [
@@ -61,22 +61,20 @@ const Footer = () => {
 
           {/* CLOUMN-2/3 */}
 
-          {products.map((product) => (
-            <div key={product.id} className="group relative col-span-3">
-              <p className="text-white text-xl font-medium mb-9">
-                {t(product.section)}
-              </p>
-              <ul>
-                {product.link.map((link: string, index: number) => (
-                  <li key={index} className='mb-5'>
-                    <Link href="/" className="text-maingray text-sm font-normal mb-6 space-links">
-                      {link}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="group relative col-span-3">
+            <p className="text-white text-xl font-medium mb-9">
+              {t('Links')}
+            </p>
+            <ul>
+              {Links.map((item, index) => (
+                <li key={index} className='mb-5'>
+                  <Link href={item.href} className="text-maingray text-sm font-normal mb-6 space-links">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <div className="col-span-3">
             <h3 className="text-white text-xl font-medium mb-9">
