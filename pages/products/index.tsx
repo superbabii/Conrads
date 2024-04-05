@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Layout from "../layout";
@@ -7,6 +7,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import Image from 'next/image';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 type Props = {
     // Define the props here
@@ -81,6 +83,42 @@ const productData: Product[] = [
         price: 100,
         category: 'Electronic',
     },
+    {
+        imgSrc: '/images/Products/AI.jpg',
+        heading: 'Products-exm1',
+        price: 1000,
+        category: 'AI',
+    },
+    {
+        imgSrc: '/images/Products/simulation.jpg',
+        heading: 'Products-exm1',
+        price: 100,
+        category: 'Software',
+    },
+    {
+        imgSrc: '/images/Products/AI.jpg',
+        heading: 'Products-exm1',
+        price: 1000,
+        category: 'AI',
+    },
+    {
+        imgSrc: '/images/Products/simulation.jpg',
+        heading: 'Products-exm1',
+        price: 100,
+        category: 'Software',
+    },
+    {
+        imgSrc: '/images/Products/AI.jpg',
+        heading: 'Products-exm1',
+        price: 1000,
+        category: 'AI',
+    },
+    {
+        imgSrc: '/images/Products/simulation.jpg',
+        heading: 'Products-exm1',
+        price: 100,
+        category: 'Automotive',
+    },
     // Add more products with different categories
 ];
 
@@ -108,74 +146,56 @@ interface PopularProductCardProps {
 
 const PopularProductCard: React.FC<PopularProductCardProps> = ({ productName, imageUrl, price }) => {
     return (
-        <div className="relative group">
-            <div
-                className="relative space-y-6 leading-none rounded-lg highlight"
-                style={{
-                    backgroundImage: `url(${imageUrl})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    height: '240px',
-                    opacity: 1,
-                }}
-            ></div>
-            <div className="absolute bottom-0 left-0 right-0 p-2 bg-gray-800 bg-opacity-80">
-                <h3 className="text-md text-white border p-1 border-white rounded-md z-10 inline-block">
+        <div className='work-card rounded-md flex'>
+            <div className='rounded-md w-1/3'>
+                <img src={imageUrl} alt={productName} width={200} height={200} />
+            </div>
+            <div className='flex flex-col justify-center w-2/3 px-4'>
+                <h3 className='text-sm text-white rounded-md'>
                     {productName}
                 </h3>
-                <div className="flex justify-between items-center">
-                    <span className="text-white text-lg">
+                <div className='flex'>
+                    <p className="text-white text-lg">
                         Price: ${price}
-                    </span>
+                    </p>
+                    <button className="ml-6 hover:bg-primary text-white font-semibold rounded">
+                        <ShoppingCartIcon />
+                    </button>
                 </div>
-                <button className="mt-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded inline-block">
-                    Add to Cart
-                </button>
             </div>
         </div>
     );
 }
 
-interface ElectronicsAndSoftwareCardProps {
+interface ProductTabCardProps {
     productName: string;
     imageUrl: string;
     price: number;
     discount?: number;
 }
 
-const ElectronicsAndSoftwareCard: React.FC<ElectronicsAndSoftwareCardProps> = ({ productName, imageUrl, price, discount }) => {
+const ProductTabCard: React.FC<ProductTabCardProps> = ({ productName, imageUrl, price, discount }) => {
     return (
-        <div className="relative group">
-            <div
-                className="relative space-y-6 leading-none rounded-lg highlight"
-                style={{
-                    backgroundImage: `url(${imageUrl})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    height: '240px',
-                    opacity: 1,
-                }}
-            ></div>
-
-            {/* Product information */}
-            <div className="absolute bottom-0 left-0 right-0 p-2 bg-gray-800 bg-opacity-80">
-                <h3 className="text-md text-white border p-1 border-white rounded-md z-10 inline-block">
-                    {productName}
-                </h3>
-                <div className="flex justify-between items-center">
-                    <span className="text-white text-lg">
-                        Price: ${price}
-                    </span>
-                    {discount && (
-                        <span className="text-green-500 text-lg">
-                            Discount: {discount}%
-                        </span>
-                    )}
-                </div>
-                <button className="mt-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded inline-block">
-                    Add to Cart
+        <div className="relative w-full">
+            <div className="w-full h-72 overflow-hidden rounded-md">
+                <Image
+                    src={imageUrl}
+                    alt={productName}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110"
+                />
+            </div>
+            <h3 className="absolute top-2 left-2 bg-black bg-opacity-75 px-2 py-1 text-md text-white rounded-md z-10">
+                {productName}
+            </h3>
+            <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-75 px-2 py-1 text-white flex justify-between items-center">
+                <span className="text-lg">Price: ${price}</span>
+                {discount && (
+                    <span className="text-lg">Discount: {discount}%</span>
+                )}
+                <button className="hover:text-primary text-white font-semibold py-2 px-4 rounded">
+                    <ShoppingCartIcon />
                 </button>
             </div>
         </div>
@@ -201,10 +221,10 @@ const Products = () => {
                 description="Explore our diverse range of offerings, where solutions abound for your every need."
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />
-            <div className='flex flex-col lg:flex-row mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
-                <div className="lg:mr-32">
+            <div className='flex flex-col lg:flex-row mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
+                <div className="lg:mr-16 w-full lg:w-1/4">
                     <h2 className="text-lg font-medium text-white">Popular Products</h2>
-                    <div className="space-y-8">
+                    <div className="flex flex-col space-y-8 my-12">
                         {popularProducts.map((product, index) => (
                             <PopularProductCard
                                 key={index}
@@ -227,11 +247,11 @@ const Products = () => {
                         <StyledTab label="Electronic" />
                         <StyledTab label="Software" />
                     </StyledTabs>
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-y-20 mt-32" >
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-y-20 mt-8">
                         {filteredProducts.map((product, index) => (
                             <ul className="space-y-8" key={index}>
                                 <li className="text-sm leading-6">
-                                    <ElectronicsAndSoftwareCard
+                                    <ProductTabCard
                                         productName={product.heading}
                                         price={product.price}
                                         imageUrl={product.imgSrc}
