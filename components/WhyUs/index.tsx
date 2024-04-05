@@ -1,5 +1,5 @@
 "use client"
-import Typing from './Typing';
+import { Typing } from '../Effect/typing';
 import Link from 'next/link';
 
 const WhyUs = () => {

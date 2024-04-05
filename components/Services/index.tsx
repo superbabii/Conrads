@@ -1,6 +1,9 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
+import { TypingText } from '../Effect/typing';
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 interface servicedata {
     imgSrc: string;
@@ -46,12 +49,20 @@ const Services = () => {
         <div className='mx-auto max-w-7xl my-20 px-10 lg:px-6 relative'>
             <div className="radial-bgone hidden lg:block" />
             <div className='text-center mb-14'>
-                <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
-                    Services
-                </h3>
-                <p className='text-white md:text-lg font-normal leading-8'>
-                    At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
-                </p>
+                <motion.div
+                    variants={staggerContainer(0.25, 0.25)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, amount: 0.25 }}
+                    className="innerWidth mx-auto flexCenter flex-col"
+                >
+                    <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
+                        <TypingText title="Services" textStyles="text-center" />
+                    </h3>
+                    <p className='text-white md:text-lg font-normal leading-8'>
+                        At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
+                    </p>
+                </motion.div>
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-y-12 mt-32'>
                 {servicedata.map((items, index) => (

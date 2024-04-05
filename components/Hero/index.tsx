@@ -3,6 +3,7 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Link from 'next/link';
+// import fadeAnimationHandler from './fadeAnimationHandler';
 
 interface SlideProps {
     image: string;
@@ -11,10 +12,10 @@ interface SlideProps {
 }
 
 const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
-    <div className='mx-auto max-w-7xl h-screen flex flex-col justify-center items-center p-4' style={{ height: 'calc(100vh - 120px)' }}>
+    <div className='mx-auto max-w-7xl h-screen flex flex-col justify-center items-center p-6' style={{ height: 'calc(100vh - 120px)' }}>
         <div className='grid grid-cols-1 lg:grid-cols-12 mt-8'>
             <div className='col-span-5 lg:-m-48 sm:order-2'>
-                <Image src={image} alt="nothing" width={1013} height={760} />
+                <Image src={image} alt="nothing" width={1000} height={750} />
             </div>
             <div className='hero-text col-span-7 sm:order-1'>
                 <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-offwhite md:4px md:text-start text-center">
@@ -69,6 +70,7 @@ const Hero: React.FC = () => {
                 emulateTouch={true}
                 showArrows={false}
                 showThumbs={false}
+                // animationHandler={fadeAnimationHandler}
             >
                 {slides.map((slide, index) => (
                     <CarouselSlide key={index} {...slide} />
