@@ -135,7 +135,54 @@ const popularProducts = [
         price: 1200,
         category: 'Electronic',
     },
-    // Add more popular products as needed
+    {
+        imgSrc: '/images/Products/AI.jpg',
+        heading: 'Popular Product 1',
+        price: 1500,
+        category: 'AI',
+    },
+    {
+        imgSrc: '/images/Products/simulation.jpg',
+        heading: 'Popular Product 2',
+        price: 1200,
+        category: 'Electronic',
+    },
+    {
+        imgSrc: '/images/Products/AI.jpg',
+        heading: 'Popular Product 1',
+        price: 1500,
+        category: 'AI',
+    },
+    {
+        imgSrc: '/images/Products/simulation.jpg',
+        heading: 'Popular Product 2',
+        price: 1200,
+        category: 'Electronic',
+    },
+    {
+        imgSrc: '/images/Products/AI.jpg',
+        heading: 'Popular Product 1',
+        price: 1500,
+        category: 'AI',
+    },
+    {
+        imgSrc: '/images/Products/simulation.jpg',
+        heading: 'Popular Product 2',
+        price: 1200,
+        category: 'Electronic',
+    },
+    {
+        imgSrc: '/images/Products/AI.jpg',
+        heading: 'Popular Product 1',
+        price: 1500,
+        category: 'AI',
+    },
+    {
+        imgSrc: '/images/Products/simulation.jpg',
+        heading: 'Popular Product 2',
+        price: 1200,
+        category: 'Electronic',
+    },
 ];
 
 interface PopularProductCardProps {
