@@ -2,6 +2,9 @@
 "use client"
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { TypingText, TitleText } from '../Effect/typing';
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 // IMAGES DATA FOR CAROUSEL
 interface Data {
@@ -77,12 +80,20 @@ export default class MultipleItems extends Component {
         return (
             <div className='mx-auto my-20 px-6 relative'>
                 <div className='mx-auto max-w-7xl text-center mb-14'>
-                    <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
-                        Trusted by
-                    </h3>
-                    <p className='text-offwhite md:text-lg font-normal leading-8'>
-                        Trusted by leading businesses worldwide, including Fortune 500 companies and innovative startups, Conrads Consult & Engineering delivers expert consulting services in mechanical design, PCB development, and software integration, ensuring unparalleled quality and reliability.
-                    </p>
+                    <motion.div
+                        variants={staggerContainer(0.25, 0.25)}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: false, amount: 0.25 }}
+                        className="innerWidth mx-auto flexCenter flex-col"
+                    >
+                        <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
+                            <TypingText title="Trusted by" />
+                        </h3>
+                        <p className='text-offwhite md:text-lg font-normal leading-8'>
+                            Trusted by leading businesses worldwide, including Fortune 500 companies and innovative startups, Conrads Consult & Engineering delivers expert consulting services in mechanical design, PCB development, and software integration, ensuring unparalleled quality and reliability.
+                        </p>
+                    </motion.div>
                 </div>
                 <div className="mx-auto px-4 sm:px-6 mt-32">
                     <div>

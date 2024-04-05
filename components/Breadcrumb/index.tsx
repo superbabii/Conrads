@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { TypingText, TitleText } from '../Effect/typing';
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 const Breadcrumb = ({
     pageName,
@@ -28,12 +31,20 @@ const Breadcrumb = ({
                 <div className="-mx-4 flex flex-wrap items-center">
                     <div className="w-full px-4 md:w-8/12 lg:w-8/12">
                         <div className="mb-8 max-w-5xl md:mb-0 lg:mb-12">
-                            <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-white">
-                                {heading}
-                            </h1>
-                            <p className="text-md lg:text-lg leading-relaxed text-white opacity-80">
-                                {description}
-                            </p>
+                            <motion.div
+                                variants={staggerContainer(0.25, 0.25)}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ once: false, amount: 0.25 }}
+                                className="innerWidth mx-auto flexCenter flex-col"
+                            >
+                                <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-white">
+                                    <TitleText title={heading}/>
+                                </h1>
+                                <p className="text-md lg:text-lg leading-relaxed text-white opacity-80">
+                                    {description}
+                                </p>
+                            </motion.div>
                         </div>
                     </div>
                     <div className="w-full px-4 md:w-4/12 lg:w-4/12">

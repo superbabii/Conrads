@@ -1,5 +1,9 @@
 "use client"
 import Image from 'next/image';
+import { TypingText, TitleText } from '../Effect/typing';
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
+
 
 interface workdata {
     imgSrc: string;
@@ -35,12 +39,20 @@ const Work = () => {
         <div className='mx-auto max-w-7xl my-20 px-6 relative'>
             <div className="radial-bgone hidden lg:block" />
             <div className='text-center mb-14'>
-                <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
-                    Work Process
-                </h3>
-                <p className='text-white md:text-lg font-normal leading-8'>
-                    At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
-                </p>
+                <motion.div
+                    variants={staggerContainer(0.25, 0.25)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, amount: 0.25 }}
+                    className="innerWidth mx-auto flexCenter flex-col"
+                >
+                    <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
+                        <TypingText title="Work Process" />
+                    </h3>
+                    <p className='text-white md:text-lg font-normal leading-8'>
+                        At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
+                    </p>
+                </motion.div>
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 lg:gap-12 gap-y-20 mt-32'>
                 {workdata.map((items, index) => (

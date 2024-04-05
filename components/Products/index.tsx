@@ -1,5 +1,8 @@
 "use client"
 import Image from 'next/image';
+import { TypingText, TitleText } from '../Effect/typing';
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 interface productdata {
   imgSrc: string;
@@ -95,13 +98,21 @@ const Products = () => {
     <div className='mx-auto max-w-7xl my-20 px-10 lg:px-6 relative'>
       <div className="radial-bgone hidden lg:block"></div>
       <div className='text-center mb-14'>
-        <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
-          Products
-        </h3>
-        <p className='text-offwhite md:text-lg font-normal leading-8'>
-          Explore our range of cutting-edge solutions designed to drive innovation and enhance efficiency.<br />
-          From advanced printed circuit boards to custom software integrations, our products are meticulously crafted to meet the diverse needs of modern businesses, empowering you to stay ahead in today&apos;s dynamic market.
-        </p>
+        <motion.div
+          variants={staggerContainer(0.25, 0.25)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className="innerWidth mx-auto flexCenter flex-col"
+        >
+          <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
+            <TypingText title="Products" />
+          </h3>
+          <p className='text-offwhite md:text-lg font-normal leading-8'>
+            Explore our range of cutting-edge solutions designed to drive innovation and enhance efficiency.<br />
+            From advanced printed circuit boards to custom software integrations, our products are meticulously crafted to meet the diverse needs of modern businesses, empowering you to stay ahead in today&apos;s dynamic market.
+          </p>
+        </motion.div>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-32" >
         {productdata.map((items, index) => (

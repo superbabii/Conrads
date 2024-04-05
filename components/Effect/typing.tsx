@@ -10,11 +10,10 @@ type textProps = {
     textStyles?: string;
   };
   
-  export const TypingText = ({ title, textStyles }: textProps) => (
+  export const TypingText = ({ title }: textProps) => (
     <div>
       <motion.p
         variants={textContainer}
-        className={`${textStyles}`}
       >
         {typeof title === "string" &&
           Array.from(title).map((letter, index) => (
@@ -26,13 +25,12 @@ type textProps = {
     </div>
   );
   
-  export const TitleText = ({ title, textStyles }: textProps) => (
+  export const TitleText = ({ title }: textProps) => (
     <div>
       <motion.h2
         variants={textVariant2}
         initial="hidden"
         whileInView="show"
-        className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}
       >
         {title}
       </motion.h2>
