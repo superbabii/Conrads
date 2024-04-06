@@ -10,6 +10,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Work from "@/components/Work";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
+import { RepeatingText } from "../../components/Effect/typing"
 
 type Props = {
     // Define the props here
@@ -259,7 +260,7 @@ const AboutUs = () => {
             <div className="about-wide-bg mt-16 lg:mt-32">
                 <div className="mx-auto max-w-5xl py-36 px-6">
                     <h3 className="text-center text-offwhite text-3xl lg:text-5xl font-semibold mb-6">
-                        Endless possibilities & opportunities.
+                        Endless <RepeatingText title1 ='Possibilities' title2= 'Opportunities'/>
                     </h3>
                     <p className="text-center text-offwhite text-lg font-normal mb-8">
                         Anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
