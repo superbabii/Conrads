@@ -37,7 +37,7 @@ type textProps = {
     </div>
   );
 
-  export const Typing = () => {
+  export const RepeatingText = () => {
     const typedRef = useRef(null);
     
     useEffect(() => {

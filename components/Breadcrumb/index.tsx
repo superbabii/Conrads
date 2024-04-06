@@ -39,11 +39,14 @@ const Breadcrumb = ({
                                 className="innerWidth mx-auto flexCenter flex-col"
                             >
                                 <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-white">
-                                    <TitleText title={heading}/>
+                                    <TitleText title={heading} />
                                 </h1>
-                                <p className="text-md lg:text-lg leading-relaxed text-white opacity-80">
+                                <motion.p
+                                    variants={fadeIn("up", "tween", 0.2, 1)}
+                                    className="text-md lg:text-lg leading-relaxed text-white opacity-80"
+                                >
                                     {description}
-                                </p>
+                                </motion.p>
                             </motion.div>
                         </div>
                     </div>

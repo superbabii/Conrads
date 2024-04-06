@@ -49,15 +49,25 @@ const Work = () => {
                     <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
                         <TypingText title="Work Process" />
                     </h3>
-                    <p className='text-white md:text-lg font-normal leading-8'>
+                    <motion.p
+                        variants={fadeIn("up", "tween", 0.2, 1)}
+                        className='text-offwhite md:text-lg font-normal leading-8'
+                    >
                         At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
-                    </p>
+                    </motion.p>
                 </motion.div>
             </div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 lg:gap-12 gap-y-20 mt-32'>
+            <motion.div
+                variants={staggerContainer(0.25, 0.25)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.25 }}
+                className='grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 lg:gap-12 gap-y-20 mt-32'
+            >
                 {workdata.map((items, index) => (
-                    <div
-                        className="relative flex flex-col justify-between items-center bg-transparent"
+                    <motion.div
+                        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+                        className="relative flex flex-col justify-between items-center bg-transparent transition-[flex] duration-[0.7s] ease-out-flex"
                         key={index}
                     >
                         <div
@@ -80,9 +90,9 @@ const Work = () => {
                                 {items.subheading}
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     )
 }

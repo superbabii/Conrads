@@ -108,10 +108,13 @@ const Products = () => {
           <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
             <TypingText title="Products" />
           </h3>
-          <p className='text-offwhite md:text-lg font-normal leading-8'>
+          <motion.p
+            variants={fadeIn("up", "tween", 0.2, 1)}
+            className='text-offwhite md:text-lg font-normal leading-8'
+          >
             Explore our range of cutting-edge solutions designed to drive innovation and enhance efficiency.<br />
             From advanced printed circuit boards to custom software integrations, our products are meticulously crafted to meet the diverse needs of modern businesses, empowering you to stay ahead in today&apos;s dynamic market.
-          </p>
+          </motion.p>
         </motion.div>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-32" >

@@ -59,9 +59,12 @@ const Services = () => {
                     <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
                         <TypingText title="Services" textStyles="text-center" />
                     </h3>
-                    <p className='text-white md:text-lg font-normal leading-8'>
+                    <motion.p
+                        variants={fadeIn("up", "tween", 0.2, 1)}
+                        className='text-offwhite md:text-lg font-normal leading-8'
+                    >
                         At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
-                    </p>
+                    </motion.p>
                 </motion.div>
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-y-12 mt-32'>
