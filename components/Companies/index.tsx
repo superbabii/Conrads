@@ -99,7 +99,7 @@ export default class MultipleItems extends Component {
                         </motion.p>
                     </motion.div>
                 </div>
-                <div className="mx-auto px-4 sm:px-6 mt-32">
+                <div className="mx-auto px-4 sm:px-6 mt-16 lg:mt-32">
                     <div>
                         <Slider {...settings}>
                             {data.map((item, i) =>

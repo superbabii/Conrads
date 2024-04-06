@@ -67,7 +67,7 @@ const Services = () => {
                     </motion.p>
                 </motion.div>
             </div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-y-12 mt-32'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-y-12 mt-16 lg:mt-32'>
                 {servicedata.map((items, index) => (
                     <Link
                         className="flex flex-col justify-between p-5 transition bg-primary rounded-lg service-card"

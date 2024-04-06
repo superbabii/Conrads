@@ -256,7 +256,7 @@ const AboutUs = () => {
                 </div>
             </div>
             <Work />
-            <div className="about-wide-bg mt-32">
+            <div className="about-wide-bg mt-16 lg:mt-32">
                 <div className="mx-auto max-w-5xl py-36 px-6">
                     <h3 className="text-center text-offwhite text-3xl lg:text-5xl font-semibold mb-6">
                         Endless possibilities & opportunities.

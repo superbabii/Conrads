@@ -117,7 +117,7 @@ const Products = () => {
           </motion.p>
         </motion.div>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-32" >
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-16 lg:mt-32" >
         {productdata.map((items, index) => (
           <ul className="space-y-8" key={index}>
             <li className="text-sm leading-6">

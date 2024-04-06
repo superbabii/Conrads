@@ -36,7 +36,7 @@ const workdata: workdata[] = [
 
 const Work = () => {
     return (
-        <div className='mx-auto max-w-7xl my-20 px-6 relative'>
+        <div className='mx-auto max-w-7xl my-20 px-10 lg:px-6 relative'>
             <div className="radial-bgone hidden lg:block" />
             <div className='text-center mb-14'>
                 <motion.div
@@ -62,7 +62,7 @@ const Work = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
-                className='grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 lg:gap-12 gap-y-20 mt-32'
+                className='grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 lg:gap-12 gap-y-20 mt-16 lg:mt-32'
             >
                 {workdata.map((items, index) => (
                     <motion.div
