@@ -70,7 +70,7 @@ const Services = () => {
             <div className='grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-y-12 mt-32'>
                 {servicedata.map((items, index) => (
                     <Link
-                        className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-primary rounded-lg service-card"
+                        className="flex flex-col justify-between p-5 transition bg-primary rounded-lg service-card"
                         href={`/services#service-${index}`}
                         key={index}
                     >

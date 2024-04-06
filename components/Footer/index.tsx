@@ -4,7 +4,7 @@ import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import { useTranslation } from 'next-i18next';
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../../utils/motion";
+import { footerVariants } from "../../utils/motion";
 
 // MIDDLE LINKS DATA
 interface LinkType {
@@ -36,11 +36,10 @@ const Footer = () => {
   const { t } = useTranslation('footer')
 
   return (
-    <motion.div
-      variants={staggerContainer(0.25, 0.25)}
+    <motion.footer
+      variants={footerVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
       className="relative innerWidth mx-auto flexCenter flex-col"
     >
       <div className="radial-bg hidden lg:block"></div>
@@ -120,8 +119,7 @@ const Footer = () => {
           Copyright © 2024 Conrads Consult & Engineering | All rights reserved.
         </h3>
       </div>
-    </motion.div>
-
+    </motion.footer>
   )
 }
 

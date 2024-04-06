@@ -8,6 +8,8 @@ import Link from "next/link";
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Work from "@/components/Work";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 type Props = {
     // Define the props here
@@ -175,10 +177,17 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-            <div className='mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 gap-y-12 my-24'>
+            <motion.div
+                variants={staggerContainer(0.25, 0.25)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.25 }}
+                className='mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 gap-y-12 my-24'
+            >
                 {successdata.map((items, index) => (
-                    <div
-                        className="flex flex-col bg-transparent"
+                    <motion.div
+                        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+                        className="relative flex flex-col justify-between items-center bg-transparent transition-[flex] duration-[0.7s] ease-out-flex"
                         key={index}
                     >
                         <div className='work-card rounded-md flex'>
@@ -195,9 +204,9 @@ const AboutUs = () => {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
             <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className="relative text-container">

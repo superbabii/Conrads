@@ -8,6 +8,8 @@ import EmailIcon from '@mui/icons-material/Email';
 import CallIcon from '@mui/icons-material/Call';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 type Props = {
     // Define the props here
@@ -50,21 +52,36 @@ const Contact = () => {
                 description="Don&apos;t hesitate to connect with us. Our team is readily available and eager to assist you with any inquiries or assistance you may need. Reach out to us today; we&apos;re here to help!"
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />
-            <div className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4 my-12'>
+            <motion.div
+                variants={staggerContainer(0.25, 0.25)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.25 }}
+                className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4 my-12'
+            >
                 {contacts.map((contact, index) => (
-                    <div key={index} className="flex shadow-lg hover:shadow-[#c4243e] flex-col justify-between p-5 transition duration-400 bg-transparent rounded-lg contact-card">
-                        <div className='rounded-full flex justify-center p-3'>
-                            {contact.icon}
+                    // <motion.div
+                    //     variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+                    //     className="relative"
+                    //     key={index}
+                    // >
+                        <div
+                            key={index}
+                            className="flex flex-col p-5 rounded-lg justify-between contact-card"
+                        >
+                            <div className='flex justify-center p-3'>
+                                {contact.icon}
+                            </div>
+                            <h3 className="text-2xl font-semibold text-white text-center">
+                                {contact.title}
+                            </h3>
+                            <div className='font-normal text-white text-center'>
+                                {contact.content}
+                            </div>
                         </div>
-                        <h3 className="text-2xl font-semibold text-white text-center">
-                            {contact.title}
-                        </h3>
-                        <div className='font-normal text-white text-center'>
-                            {contact.content}
-                        </div>
-                    </div>
+                    // </motion.div>
                 ))}
-            </div>
+            </motion.div>
             <div className="h-px mb-20 py-[1px] w-full opacity-40 bg-gradient-to-r from-transparent via-[#801022] to-transparent" />
             <div className="red-band"></div>
             <div className="contact-logo rounded-lg bg-[#121212] shadow-lg p-4 hidden lg:block">
