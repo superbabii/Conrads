@@ -37,27 +37,27 @@ type textProps = {
     </div>
   );
 
-  export const RepeatingText = () => {
-    const typedRef = useRef(null);
+  export const RepeatingText = ({ title1, title2 }: { title1: string; title2: string }) => {
+    const typedRef = useRef<HTMLSpanElement>(null); // Specify the type of ref
     
     useEffect(() => {
       const options = {
-        strings: ['Choose', 'Need'],
+        strings: [title1, title2],
         typeSpeed: 65,
         backSpeed: 65,
         loop: true,
         showCursor: true,
         cursorChar: '|',
       };
-      
+  
       if (typedRef.current) {
-        const typed = new Typed(typedRef.current, options);
-        
+        const typed = new Typed(typedRef.current, options); // Access the current property of the ref
+  
         return () => {
           typed.destroy();
         };
       }
-    }, []);
+    }, [typedRef.current]); // Include typedRef.current in the dependency array
   
     return <span ref={typedRef} style={{ whiteSpace: 'pre' }} />;
   };
