@@ -10,7 +10,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Work from "@/components/Work";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
-import { RepeatingText } from "../../components/Effect/typing"
+import { RepeatingText } from "../../components/Effect/typing";
+import { TypingText } from "../../components/Effect/typing";
+import { textVariant2 } from "../../utils/motion";
 
 type Props = {
     // Define the props here
@@ -172,9 +174,15 @@ const AboutUs = () => {
                         <p className="font-medium text-lg mt-5 text-center text-maingray">
                             Dedicated to fulfilling people&apos;s needs, our mission is to provide innovative solutions that address challenges and enhance lives. With a commitment to customer satisfaction and social responsibility, we strive to make a positive impact in communities and empower individuals to thrive.
                         </p>
-                        <p className="text-lg font-semibold mt-12 lg:ml-32 preline text-center text-offwhite handwritten">
-                            Werner Conrads, CEO
-                        </p>
+                        <motion.div
+                            variants={staggerContainer(0.25, 0.25)}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: false, amount: 0.25 }}
+                            className="text-lg font-semibold mt-12 lg:ml-32 preline text-center text-offwhite handwritten"
+                        >
+                            <TypingText title="Werner Conrads, CEO" />
+                        </motion.div>
                     </div>
                 </div>
             </div>
@@ -225,11 +233,20 @@ const AboutUs = () => {
             </div>
 
             <div className="bg-wework py-4">
-                <div className='mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8 '>
-                    <div className="text-center">
-                        <h3 className="text-3xl sm:text-5xl font-bold text-white my-2">Meet our team members</h3>
-                    </div>
-                </div>
+                <motion.div
+                    variants={staggerContainer(0.25, 0.25)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, amount: 0.25 }}
+                    className="mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8"
+                >
+                    <h1 className='text-offwhite text-3xl md:text-5xl mb-3'
+                        style={{ fontFamily: 'Poppins, sans-serif' }}
+                    >
+                        <TypingText title="Meet Our Team Member" />
+                        <div className='bg-primary mt-1 w-[40px] md:w-[70px] h-[3px] md:h-[5px]' />
+                    </h1>
+                </motion.div>
                 <div className="mx-auto max-w-7xl">
                     <Slider {...settings}>
                         {teamMembers.map((items, i) => (
@@ -260,7 +277,7 @@ const AboutUs = () => {
             <div className="about-wide-bg mt-16 lg:mt-32">
                 <div className="mx-auto max-w-5xl py-36 px-6">
                     <h3 className="text-center text-offwhite text-3xl lg:text-5xl font-semibold mb-6">
-                        Endless <RepeatingText title1 ='Possibilities' title2= 'Opportunities'/>
+                        Endless <RepeatingText title1='Possibilities' title2='Opportunities' />
                     </h3>
                     <p className="text-center text-offwhite text-lg font-normal mb-8">
                         Anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
