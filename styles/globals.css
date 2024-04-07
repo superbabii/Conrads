@@ -148,16 +148,15 @@ html:not([data-scroll="0"]) .navbar {
   position: absolute;
   top: 5%;
   left: 5%;
-  transform: rotate(-20.06deg);
-  /* text-align: center; */
-  /* margin-left: -340px; */
+  transform: rotate(-25deg);
+  font-family: 'Segoe Script', sans-serif;
 }
 
-@media only screen and (max-width: 466px) {
+/* @media only screen and (max-width: 466px) {
   .dance-text {
     margin-left: -265px;
   }
-}
+} */
 
 .hero-text {
   z-index: 1;
