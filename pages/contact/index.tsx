@@ -39,7 +39,13 @@ const contacts = [
     {
         icon: <AccessTimeFilledIcon style={{ color: '#801022', width: 100, height: 100 }} />,
         title: 'Office Hours',
-        content: 'Mon to Sat: 09.00am to 18.00pm. Sunday: Closed',
+        content: (
+            <>
+                Mon - Sat: 09.00am to 18.00pm.
+                <br />
+                Sunday: Closed
+            </>
+        ),
     },
 ];
 
