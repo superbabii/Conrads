@@ -251,11 +251,15 @@ const AboutUs = () => {
                     <Slider {...settings}>
                         {teamMembers.map((items, i) => (
                             <div key={i}>
-                                <div className='bg-white mx-8 py-4 my-10 text-center shadow-xl rounded-3xl'>
+                                <div className='contact-card rounded-md mx-8 py-4 my-10 text-center'>
                                     <img className="w-full h-auto p-12 pb-4" src={items.imageUrl} alt={`${items.name}'s profile`} />
                                     <div className="px-6 py-4">
-                                        <div className="font-bold text-3xl mb-2">{items.name}</div>
-                                        <p className="text-gray-700 text-base">{items.role}</p>
+                                        <div className="text-white font-bold text-3xl mb-2">
+                                            {items.name}
+                                        </div>
+                                        <p className="text-maingray">
+                                            {items.role}
+                                        </p>
                                     </div>
                                     <div className="px-6 pt-2 pb-4 overflow-hidden">
                                         <div className="flex justify-center space-x-2 overflow-x-hidden">

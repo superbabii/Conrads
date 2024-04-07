@@ -22,26 +22,26 @@ export const metadata: Metadata = {
 
 const contacts = [
     {
-        icon: <HomeIcon style={{ color: '#801022', width: 100, height: 100 }} />,
+        icon: <HomeIcon style={{ color: '#801022', width: 80, height: 80 }} />,
         title: 'Our Address',
         content: 'Münderhäuser Straße 31, 36199 Rotenburg an der Fulda, Germany',
     },
     {
-        icon: <EmailIcon style={{ color: '#801022', width: 100, height: 100 }} />,
+        icon: <EmailIcon style={{ color: '#801022', width: 80, height: 80 }} />,
         title: 'Email Address',
         content: <a className="text-white font-normal text-center transition-colors duration-300 hover:text-[#801022]" href="mailto:info@conrads-engineering.com">info@conrads-engineering.com</a>,
     },
     {
-        icon: <CallIcon style={{ color: '#801022', width: 100, height: 100 }} />,
+        icon: <CallIcon style={{ color: '#801022', width: 80, height: 80 }} />,
         title: 'Phone Numbers',
         content: <a className="text-white font-normal text-center transition-colors duration-300 hover:text-[#801022]" href="tel:+49-662-343-645-10">+49 (66) 234 3645 10</a>,
     },
     {
-        icon: <AccessTimeFilledIcon style={{ color: '#801022', width: 100, height: 100 }} />,
+        icon: <AccessTimeFilledIcon style={{ color: '#801022', width: 80, height: 80 }} />,
         title: 'Office Hours',
         content: (
             <>
-                Mon - Sat: 09.00am to 18.00pm.
+                Mon to Sat: 09.00am to 18.00pm.
                 <br />
                 Sunday: Closed
             </>
@@ -63,20 +63,20 @@ const Contact = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
-                className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4 my-12'
+                className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 my-12'
             >
                 {contacts.map((contact, index) => (
                     <div
                         key={index}
-                        className="flex flex-col p-5 rounded-lg justify-between contact-card"
+                        className="flex flex-col p-6 rounded-lg justify-between contact-card"
                     >
                         <div className='flex justify-center p-3'>
                             {contact.icon}
                         </div>
-                        <h3 className="text-2xl font-semibold text-white text-center">
+                        <h3 className="text-2xl font-semibold text-white text-center pb-3">
                             {contact.title}
                         </h3>
-                        <div className='font-normal text-white text-center'>
+                        <div className='text-sm text-white text-center'>
                             {contact.content}
                         </div>
                     </div>

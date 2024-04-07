@@ -180,7 +180,7 @@ html:not([data-scroll="0"]) .navbar {
 .contact-card {
   opacity: 0.4;
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 1);
-  border-width: 2px;
+  border-width: 1px;
   border-color: #801022;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.4s;
