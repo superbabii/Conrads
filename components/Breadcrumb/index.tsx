@@ -7,23 +7,34 @@ const Breadcrumb = ({
     pageName,
     heading,
     description,
-    backgroundImageUrl
+    backgroundImageUrl,
+    backgroundSMImageUrl
 }: {
     pageName: string;
     heading: string;
     description: string;
-    backgroundImageUrl: string
+    backgroundImageUrl: string;
+    backgroundSMImageUrl: string;
 }) => {
     return (
-        <div className="relative overflow-hidden h-[320px]">
-            <div className="absolute inset-0 z-0">
+        <div className="relative overflow-hidden h-[330px]">
+            <div className="absolute inset-0 z-0 flex justify-center items-center">
                 <img
-                    className="absolute inset-0 w-full h-full object-cover object-bottom"
+                    className="absolute inset-0 w-full lg:h-full object-cover object-bottom hidden md:block"
                     src={backgroundImageUrl}
                     alt="Background"
                     style={{
-                        maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
-                        WebkitMaskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)'
+                        maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%)',
+                        WebkitMaskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%)'
+                    }}
+                />
+                <img
+                    className="absolute inset-0 w-full h-full object-cover object-bottom opacity-50 md:hidden"
+                    src={backgroundSMImageUrl}
+                    alt="Background"
+                    style={{
+                        maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%)',
+                        WebkitMaskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%)'
                     }}
                 />
             </div>
@@ -69,7 +80,6 @@ const Breadcrumb = ({
                 </div>
             </div>
         </div>
-
     );
 };
 

@@ -56,7 +56,8 @@ const Contact = () => {
                 pageName="Contact"
                 heading="Reach Out, We're Here!"
                 description="Don&apos;t hesitate to connect with us. Our team is readily available and eager to assist you with any inquiries or assistance you may need. Reach out to us today; we&apos;re here to help!"
-                backgroundImageUrl="/images/Breadcrumb/background.png"
+                backgroundImageUrl="/images/Breadcrumb/contact.png"
+                backgroundSMImageUrl="/images/Breadcrumb/contact_sm.png"
             />
             <motion.div
                 variants={staggerContainer(0.25, 0.25)}
@@ -93,7 +94,7 @@ const Contact = () => {
             </div>
             <div className="mx-auto max-w-7xl p-4 lg:px-8">
                 <div className="py-4 lg:w-5/12">
-                    <div className="rounded-lg bg-transparent shadow-lg form-board px-16 py-12">
+                    <div className="rounded-lg bg-transparent form-board px-16 py-12">
                         <h2 className="mb-8 text-3xl font-bold text-white opacity-80">
                             Free Consultation
                         </h2>

@@ -40,7 +40,7 @@ const teamMembers: DataType[] = [
     {
         role: 'Co-founder',
         name: 'John Doe',
-        imageUrl: '/images/wework/avatar.svg',
+        imageUrl: '/images/TeamMember/avatar.png',
         socialLinks: [
             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
@@ -51,7 +51,7 @@ const teamMembers: DataType[] = [
     {
         role: 'Electronic Engineer',
         name: 'John Doe',
-        imageUrl: '/images/wework/avatar3.svg',
+        imageUrl: '/images/TeamMember/avatar.png',
         socialLinks: [
             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
@@ -62,7 +62,7 @@ const teamMembers: DataType[] = [
     {
         role: 'FPGA Programmer',
         name: 'John Doe',
-        imageUrl: '/images/wework/avatar4.svg',
+        imageUrl: '/images/TeamMember/avatar1.png',
         socialLinks: [
             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
@@ -73,7 +73,7 @@ const teamMembers: DataType[] = [
     {
         role: 'Software Developer',
         name: 'John Doe',
-        imageUrl: '/images/wework/avatar.svg',
+        imageUrl: '/images/TeamMember/avatar1.png',
         socialLinks: [
             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
@@ -84,7 +84,7 @@ const teamMembers: DataType[] = [
     {
         role: 'Accountant',
         name: 'John Doe',
-        imageUrl: '/images/wework/avatar3.svg',
+        imageUrl: '/images/TeamMember/avatar.png',
         socialLinks: [
             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
@@ -173,13 +173,14 @@ const AboutUs = () => {
                 pageName="About Us"
                 heading="Versatile Experts - Solutions for All."
                 description="We pride ourselves on being versatile experts, ready to tackle any challenge and provide tailored solutions to meet the unique needs of our clients."
-                backgroundImageUrl="/images/Breadcrumb/background.png"
+                backgroundImageUrl="/images/Breadcrumb/about.png"
+                backgroundSMImageUrl="/images/Breadcrumb/about.png"
             />
             {/* <div className="radial-bgone hidden lg:block"></div> */}
             <div className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className='relative'>
-                        <img src="/images/About/ceo.jpg" alt="CEO-image" className="rounded-2xl sm:w-64 sm:h-auto lg:w-96 lg:h-auto mx-auto" />
+                        <img src="/images/About/ceo.png" alt="CEO-image" className="rounded-2xl sm:w-64 sm:h-auto lg:w-96 lg:h-auto mx-auto" />
                     </div>
                     <div className="relative text-container">
                         <h2 className="text-3xl lg:text-5xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">
@@ -265,8 +266,8 @@ const AboutUs = () => {
                     <Slider {...settings}>
                         {teamMembers.map((items, i) => (
                             <div key={i}>
-                                <div className='member-card rounded-md mx-8 py-4 my-10 text-center'>
-                                    <img className="w-full h-auto p-12 pb-4" src={items.imageUrl} alt={`${items.name}'s profile`} />
+                                <div className='member-card rounded-md mx-8 p-[1px] my-10 text-center'>
+                                    <img className="w-full h-auto rounded-t-md" src={items.imageUrl} alt={`${items.name}'s profile`} />
                                     <div className="px-6 py-4">
                                         <div className="text-white font-bold text-3xl mb-2">
                                             {items.name}
