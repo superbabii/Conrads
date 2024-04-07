@@ -13,6 +13,10 @@ import { fadeIn, staggerContainer } from "../../utils/motion";
 import { RepeatingText } from "../../components/Effect/typing";
 import { TypingText } from "../../components/Effect/typing";
 import { textVariant2 } from "../../utils/motion";
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TelegramIcon from '@mui/icons-material/Telegram';
 
 type Props = {
     // Define the props here
@@ -29,7 +33,7 @@ interface DataType {
     role: string;
     name: string;
     imageUrl: string;
-    socialLinks: { name: string; url: string; }[];
+    socialLinks: { name: string; url: string; icon: JSX.Element }[];
 }
 
 const teamMembers: DataType[] = [
@@ -38,8 +42,10 @@ const teamMembers: DataType[] = [
         name: 'John Doe',
         imageUrl: '/images/wework/avatar.svg',
         socialLinks: [
-            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/' },
+            { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
+            { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
+            { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
         ],
     },
     {
@@ -47,8 +53,10 @@ const teamMembers: DataType[] = [
         name: 'John Doe',
         imageUrl: '/images/wework/avatar3.svg',
         socialLinks: [
-            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/' },
+            { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
+            { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
+            { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
         ],
     },
     {
@@ -56,8 +64,10 @@ const teamMembers: DataType[] = [
         name: 'John Doe',
         imageUrl: '/images/wework/avatar4.svg',
         socialLinks: [
-            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/' },
+            { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
+            { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
+            { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
         ],
     },
     {
@@ -65,8 +75,10 @@ const teamMembers: DataType[] = [
         name: 'John Doe',
         imageUrl: '/images/wework/avatar.svg',
         socialLinks: [
-            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/' },
+            { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
+            { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
+            { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
         ],
     },
     {
@@ -74,8 +86,10 @@ const teamMembers: DataType[] = [
         name: 'John Doe',
         imageUrl: '/images/wework/avatar3.svg',
         socialLinks: [
-            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/' },
+            { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
+            { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
+            { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
         ],
     },
 ]
@@ -162,7 +176,7 @@ const AboutUs = () => {
                 backgroundImageUrl="/images/Breadcrumb/background.png"
             />
             {/* <div className="radial-bgone hidden lg:block"></div> */}
-            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
+            <div className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className='relative'>
                         <img src="/images/About/ceo.jpg" alt="CEO-image" className="rounded-2xl sm:w-64 sm:h-auto lg:w-96 lg:h-auto mx-auto" />
@@ -216,7 +230,7 @@ const AboutUs = () => {
                     </motion.div>
                 ))}
             </motion.div>
-            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
+            <div className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className="relative text-container">
                         <h2 className="text-3xl lg:text-5xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">
@@ -238,7 +252,7 @@ const AboutUs = () => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: false, amount: 0.25 }}
-                    className="mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8"
+                    className="mx-auto max-w-2xl lg:max-w-7xl sm:py-4 px-6 lg:px-8"
                 >
                     <h1 className='text-offwhite text-3xl md:text-5xl mb-3'
                         style={{ fontFamily: 'Poppins, sans-serif' }}
@@ -251,7 +265,7 @@ const AboutUs = () => {
                     <Slider {...settings}>
                         {teamMembers.map((items, i) => (
                             <div key={i}>
-                                <div className='contact-card rounded-md mx-8 py-4 my-10 text-center'>
+                                <div className='member-card rounded-md mx-8 py-4 my-10 text-center'>
                                     <img className="w-full h-auto p-12 pb-4" src={items.imageUrl} alt={`${items.name}'s profile`} />
                                     <div className="px-6 py-4">
                                         <div className="text-white font-bold text-3xl mb-2">
@@ -265,8 +279,8 @@ const AboutUs = () => {
                                         <div className="flex justify-center space-x-2 overflow-x-hidden">
                                             {items.socialLinks.map((link, index) => (
                                                 <a key={index} href={link.url} target="_blank" rel="noopener noreferrer"
-                                                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 transition duration-300 ease-in-out transform hover:translate-x-2 hover:bg-gray-300 hover:text-gray-900">
-                                                    {link.name}
+                                                    className="inline-block px-3 py-1 transition duration-300 ease-in-out text-white hover:text-primary">
+                                                    {link.icon}
                                                 </a>
                                             ))}
                                         </div>

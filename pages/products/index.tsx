@@ -205,7 +205,7 @@ const PopularProductCard: React.FC<PopularProductCardProps> = ({ productName, im
                     <p className="text-white text-lg">
                         Price: ${price}
                     </p>
-                    <button className="ml-6 hover:bg-primary text-white font-semibold rounded">
+                    <button className="ml-6 hover:text-primary text-white">
                         <ShoppingCartIcon />
                     </button>
                 </div>
