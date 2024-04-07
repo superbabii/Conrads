@@ -97,7 +97,7 @@ const Products = () => {
   return (
     <div className='mx-auto max-w-7xl my-20 px-10 lg:px-6 relative'>
       <div className="radial-bgone hidden lg:block"></div>
-      <div className='text-center mb-14'>
+      <div className='mb-16'>
         <motion.div
           variants={staggerContainer(0.25, 0.25)}
           initial="hidden"
@@ -105,19 +105,22 @@ const Products = () => {
           viewport={{ once: false, amount: 0.25 }}
           className="innerWidth mx-auto flexCenter flex-col"
         >
-          <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
-            <TypingText title="Products" />
-          </h3>
+          <h1 className='text-offwhite text-3xl md:text-5xl mb-3'
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            <TypingText title="Our Products" />
+            <div className='bg-primary mt-1 w-[40px] md:w-[70px] h-[3px] md:h-[5px]' />
+          </h1>
           <motion.p
             variants={fadeIn("up", "tween", 0.2, 1)}
-            className='text-offwhite md:text-lg font-normal leading-8'
+            className='text-maingray md:text-lg font-normal leading-8'
           >
-            Explore our range of cutting-edge solutions designed to drive innovation and enhance efficiency.<br />
+            Explore our range of cutting-edge solutions designed to drive innovation and enhance efficiency.
             From advanced printed circuit boards to custom software integrations, our products are meticulously crafted to meet the diverse needs of modern businesses, empowering you to stay ahead in today&apos;s dynamic market.
           </motion.p>
         </motion.div>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-16 lg:mt-32" >
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-16" >
         {productdata.map((items, index) => (
           <ul className="space-y-8" key={index}>
             <li className="text-sm leading-6">

@@ -81,7 +81,9 @@ const Hero: React.FC = () => {
 
     return (
         <div className='bg-image relative' id="home-section">
-            <div className="dance-text text-primary text-[12px] md:text-lg">
+            <div className="dance-text text-primary text-[12px] md:text-lg"
+            style={{ fontFamily: 'Segoe Script, sans-serif', letterSpacing: '4px' }}
+            >
                 ==== WE&apos;RE THE BEST ====
             </div>
             <div className='radial-hero hidden lg:block'></div>

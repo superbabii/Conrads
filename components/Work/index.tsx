@@ -38,7 +38,7 @@ const Work = () => {
     return (
         <div className='mx-auto max-w-7xl my-20 px-10 lg:px-6 relative'>
             <div className="radial-bgone hidden lg:block" />
-            <div className='text-center mb-14'>
+            <div className='mb-16'>
                 <motion.div
                     variants={staggerContainer(0.25, 0.25)}
                     initial="hidden"
@@ -46,12 +46,15 @@ const Work = () => {
                     viewport={{ once: false, amount: 0.25 }}
                     className="innerWidth mx-auto flexCenter flex-col"
                 >
-                    <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>
-                        <TypingText title="Work Process" />
-                    </h3>
+                    <h1 className='text-offwhite text-3xl md:text-5xl mb-3'
+                        style={{ fontFamily: 'Poppins, sans-serif' }}
+                    >
+                        <TypingText title="How we work" />
+                        <div className='bg-primary mt-1 w-[40px] md:w-[70px] h-[3px] md:h-[5px]' />
+                    </h1>
                     <motion.p
                         variants={fadeIn("up", "tween", 0.2, 1)}
-                        className='text-offwhite md:text-lg font-normal leading-8'
+                        className='text-maingray md:text-lg font-normal leading-8'
                     >
                         At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
                     </motion.p>
@@ -62,7 +65,7 @@ const Work = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
-                className='grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 lg:gap-12 gap-y-20 mt-16 lg:mt-32'
+                className='grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 lg:gap-12 gap-y-20 mt-16 lg:mt-24'
             >
                 {workdata.map((items, index) => (
                     <motion.div
