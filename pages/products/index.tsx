@@ -179,11 +179,11 @@ const PopularProductCard: React.FC<PopularProductCardProps> = ({ productName, im
                 <h3 className='text-sm text-maingray rounded-md'>
                     {productName}
                 </h3>
-                <div className='flex items-center'>
+                <div className='flex justify-between items-center'>
                     <p className="text-primary text-lg">
                         ${price}
                     </p>
-                    <button className="ml-6 hover:text-primary text-white">
+                    <button className="hover:text-primary text-white pr-4">
                         <ShoppingCartIcon />
                     </button>
                 </div>
@@ -203,7 +203,7 @@ const ProductTabCard: React.FC<ProductTabCardProps> = ({ productName, imageUrl, 
     return (
         <div className="relative work-card rounded-lg w-[250px]">
             <div className='overflow-hidden rounded-lg'>
-                <div className="transform transition-transform duration-300 hover:scale-110 h-[250px]">
+                <div className="transform transition-transform duration-300 hover:scale-150 h-[250px]">
                     <Image
                         src={imageUrl}
                         alt={productName}
@@ -271,7 +271,7 @@ const Products = () => {
                         scrollButtons="auto"
                         aria-label="styled tabs example"
                     >
-                        <StyledTab label="All" />
+                        <StyledTab label="All"/>
                         <StyledTab label="Automotive" />
                         <StyledTab label="AI" />
                         <StyledTab label="Electronic" />

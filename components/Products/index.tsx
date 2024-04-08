@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 import { TypingText, TitleText } from '../Effect/typing';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
@@ -122,7 +123,11 @@ const Products = () => {
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-16" >
         {productdata.map((items, index) => (
-          <ul className="space-y-8" key={index}>
+          <Link
+            className="space-y-8"
+            href='/products'
+            key={index}
+          >
             <li className="text-sm leading-6">
               <ProductsCard
                 heading={items.heading}
@@ -130,7 +135,7 @@ const Products = () => {
                 imageLink={items.imgSrc}
               />
             </li>
-          </ul>
+          </Link>
         ))}
       </div>
     </div>
