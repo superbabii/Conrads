@@ -23,8 +23,8 @@ interface StyledTabsProps {
     children?: React.ReactNode;
     value: number;
     onChange: (event: React.SyntheticEvent, newValue: number) => void;
-    variant?: 'standard' | 'scrollable' | 'fullWidth'; // Define variant prop
-    scrollButtons?: boolean | 'auto'; // Define scrollButtons prop
+    variant?: 'standard' | 'scrollable' | 'fullWidth';
+    scrollButtons?: boolean | 'auto';
     "aria-label"?: string;
 }
 
@@ -129,61 +129,61 @@ const popularProducts = [
     {
         imgSrc: '/images/Products/AI.jpg',
         heading: 'Popular Product 1',
-        price: 1500,
+        price: 1499.99,
         category: 'AI',
     },
     {
         imgSrc: '/images/Products/simulation.jpg',
         heading: 'Popular Product 2',
-        price: 1200,
+        price: 1199.99,
         category: 'Electronic',
     },
     {
         imgSrc: '/images/Products/AI.jpg',
         heading: 'Popular Product 1',
-        price: 1500,
+        price: 1499.99,
         category: 'AI',
     },
     {
         imgSrc: '/images/Products/simulation.jpg',
         heading: 'Popular Product 2',
-        price: 1200,
+        price: 1199.99,
         category: 'Electronic',
     },
     {
         imgSrc: '/images/Products/AI.jpg',
         heading: 'Popular Product 1',
-        price: 1500,
+        price: 1499.99,
         category: 'AI',
     },
     {
         imgSrc: '/images/Products/simulation.jpg',
         heading: 'Popular Product 2',
-        price: 1200,
+        price: 1199.99,
         category: 'Electronic',
     },
     {
         imgSrc: '/images/Products/AI.jpg',
         heading: 'Popular Product 1',
-        price: 1500,
+        price: 1499.99,
         category: 'AI',
     },
     {
         imgSrc: '/images/Products/simulation.jpg',
         heading: 'Popular Product 2',
-        price: 1200,
+        price: 1199.99,
         category: 'Electronic',
     },
     {
         imgSrc: '/images/Products/AI.jpg',
         heading: 'Popular Product 1',
-        price: 1500,
+        price: 1499.99,
         category: 'AI',
     },
     {
         imgSrc: '/images/Products/simulation.jpg',
         heading: 'Popular Product 2',
-        price: 1200,
+        price: 1199.99,
         category: 'Electronic',
     },
 ];
@@ -201,12 +201,12 @@ const PopularProductCard: React.FC<PopularProductCardProps> = ({ productName, im
                 <Image src={imageUrl} alt={productName} width={100} height={100} style={{ height: '100%' }} />
             </div>
             <div className='flex flex-col justify-center px-4 w-[200px] gap-y-4'>
-                <h3 className='text-sm text-white rounded-md'>
+                <h3 className='text-sm text-maingray rounded-md'>
                     {productName}
                 </h3>
                 <div className='flex items-center'>
-                    <p className="text-white text-lg">
-                        Price: ${price}
+                    <p className="text-primary text-lg">
+                        ${price}
                     </p>
                     <button className="ml-6 hover:text-primary text-white">
                         <ShoppingCartIcon />
@@ -226,8 +226,8 @@ interface ProductTabCardProps {
 
 const ProductTabCard: React.FC<ProductTabCardProps> = ({ productName, imageUrl, price, discount }) => {
     return (
-        <div className="relative w-full">
-            <div className="w-full h-72 overflow-hidden rounded-md">
+        <div className="relative work-card rounded-lg w-[250px]">
+            {/* <div className="w-full h-72 overflow-hidden rounded-md">
                 <Image
                     src={imageUrl}
                     alt={productName}
@@ -235,11 +235,22 @@ const ProductTabCard: React.FC<ProductTabCardProps> = ({ productName, imageUrl, 
                     objectFit="cover"
                     className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110"
                 />
+            </div> */}
+            <div className='overflow-hidden rounded-lg'>
+                <div className="transform transition-transform duration-300 hover:scale-110 h-[250px]">
+                    <Image
+                        src={imageUrl}
+                        alt={productName}
+                        width={250}
+                        height={250}
+                        style={{ height: '100%' }}
+                    />
+                </div>
             </div>
             <h3 className="absolute top-2 left-2 bg-black bg-opacity-75 px-2 py-1 text-md text-white rounded-md z-10">
                 {productName}
             </h3>
-            <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-75 px-2 py-1 text-white flex justify-between items-center">
+            <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-75 px-2 py-1 text-white flex justify-between items-center rounded-b-lg">
                 <span className="text-lg">Price: ${price}</span>
                 {discount && (
                     <span className="text-lg">Discount: {discount}%</span>
@@ -275,7 +286,7 @@ const Products = () => {
             <div className='flex flex-col lg:flex-row mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
                 <div className="lg:mr-16 w-full lg:w-1/4">
                     <h2 className="text-md text-white pt-2">Popular Products</h2>
-                    <div className="flex flex-col space-y-8 my-12">
+                    <div className="flex flex-col my-12 md:grid md:grid-cols-2 lg:grid-cols-1 md:gap-12 gap-y-12">
                         {popularProducts.map((product, index) => (
                             <PopularProductCard
                                 key={index}
@@ -300,10 +311,10 @@ const Products = () => {
                         <StyledTab label="Electronic" />
                         <StyledTab label="Software" />
                     </StyledTabs>
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-y-20 mt-8">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-y-12 mt-8">
                         {filteredProducts.map((product, index) => (
-                            <ul className="space-y-8" key={index}>
-                                <li className="text-sm leading-6">
+                            <ul className="flex space-y-8 justify-center" key={index}>
+                                <li className="text-sm ">
                                     <ProductTabCard
                                         productName={product.heading}
                                         price={product.price}

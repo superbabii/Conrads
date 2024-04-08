@@ -351,7 +351,7 @@ html:not([data-scroll="0"]) .navbar {
 }
 
 .contact-obj:hover {
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   color: #801022;
 }
 
