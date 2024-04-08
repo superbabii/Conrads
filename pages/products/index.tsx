@@ -75,25 +75,31 @@ interface Product {
 
 const productData: Product[] = [
     {
-        imgSrc: '/images/Products/AI.jpg',
+        imgSrc: '/images/Products/AI_product.png',
         heading: 'Products-exm1',
         price: 1000,
         category: 'AI',
     },
     {
-        imgSrc: '/images/Products/simulation.jpg',
+        imgSrc: '/images/Products/electronic_product.png',
         heading: 'Products-exm1',
         price: 100,
         category: 'Electronic',
     },
     {
-        imgSrc: '/images/Products/AI.jpg',
+        imgSrc: '/images/Products/AI_product2.png',
         heading: 'Products-exm1',
         price: 1000,
         category: 'AI',
     },
     {
-        imgSrc: '/images/Products/simulation.jpg',
+        imgSrc: '/images/Products/electronic_product2.png',
+        heading: 'Products-exm1',
+        price: 1000,
+        category: 'Electronic',
+    },
+    {
+        imgSrc: '/images/Products/software_product.png',
         heading: 'Products-exm1',
         price: 100,
         category: 'Software',
@@ -105,86 +111,55 @@ const productData: Product[] = [
         category: 'AI',
     },
     {
-        imgSrc: '/images/Products/simulation.jpg',
-        heading: 'Products-exm1',
-        price: 100,
-        category: 'Software',
-    },
-    {
-        imgSrc: '/images/Products/AI.jpg',
-        heading: 'Products-exm1',
-        price: 1000,
-        category: 'AI',
-    },
-    {
-        imgSrc: '/images/Products/simulation.jpg',
+        imgSrc: '/images/Products/automotive_product.png',
         heading: 'Products-exm1',
         price: 100,
         category: 'Automotive',
     },
-    // Add more products with different categories
 ];
 
 const popularProducts = [
     {
-        imgSrc: '/images/Products/AI.jpg',
-        heading: 'Popular Product 1',
-        price: 1499.99,
+        imgSrc: '/images/Products/AI_product.png',
+        heading: 'Products-exm1',
+        price: 1000,
         category: 'AI',
     },
     {
-        imgSrc: '/images/Products/simulation.jpg',
-        heading: 'Popular Product 2',
-        price: 1199.99,
+        imgSrc: '/images/Products/electronic_product.png',
+        heading: 'Products-exm1',
+        price: 100,
         category: 'Electronic',
     },
     {
-        imgSrc: '/images/Products/AI.jpg',
-        heading: 'Popular Product 1',
-        price: 1499.99,
+        imgSrc: '/images/Products/AI_product2.png',
+        heading: 'Products-exm1',
+        price: 1000,
         category: 'AI',
     },
     {
-        imgSrc: '/images/Products/simulation.jpg',
-        heading: 'Popular Product 2',
-        price: 1199.99,
+        imgSrc: '/images/Products/electronic_product2.png',
+        heading: 'Products-exm1',
+        price: 1000,
         category: 'Electronic',
+    },
+    {
+        imgSrc: '/images/Products/software_product.png',
+        heading: 'Products-exm1',
+        price: 100,
+        category: 'Software',
     },
     {
         imgSrc: '/images/Products/AI.jpg',
-        heading: 'Popular Product 1',
-        price: 1499.99,
+        heading: 'Products-exm1',
+        price: 1000,
         category: 'AI',
     },
     {
-        imgSrc: '/images/Products/simulation.jpg',
-        heading: 'Popular Product 2',
-        price: 1199.99,
-        category: 'Electronic',
-    },
-    {
-        imgSrc: '/images/Products/AI.jpg',
-        heading: 'Popular Product 1',
-        price: 1499.99,
-        category: 'AI',
-    },
-    {
-        imgSrc: '/images/Products/simulation.jpg',
-        heading: 'Popular Product 2',
-        price: 1199.99,
-        category: 'Electronic',
-    },
-    {
-        imgSrc: '/images/Products/AI.jpg',
-        heading: 'Popular Product 1',
-        price: 1499.99,
-        category: 'AI',
-    },
-    {
-        imgSrc: '/images/Products/simulation.jpg',
-        heading: 'Popular Product 2',
-        price: 1199.99,
-        category: 'Electronic',
+        imgSrc: '/images/Products/automotive_product.png',
+        heading: 'Products-exm1',
+        price: 100,
+        category: 'Automotive',
     },
 ];
 
@@ -198,7 +173,7 @@ const PopularProductCard: React.FC<PopularProductCardProps> = ({ productName, im
     return (
         <div className='work-card rounded-md flex'>
             <div className='rounded-md h-[100px]'>
-                <Image src={imageUrl} alt={productName} width={100} height={100} style={{ height: '100%' }} />
+                <Image src={imageUrl} alt={productName} width={100} height={100} style={{ height: '100%' }} className='rounded-l-md'/>
             </div>
             <div className='flex flex-col justify-center px-4 w-[200px] gap-y-4'>
                 <h3 className='text-sm text-maingray rounded-md'>
@@ -227,15 +202,6 @@ interface ProductTabCardProps {
 const ProductTabCard: React.FC<ProductTabCardProps> = ({ productName, imageUrl, price, discount }) => {
     return (
         <div className="relative work-card rounded-lg w-[250px]">
-            {/* <div className="w-full h-72 overflow-hidden rounded-md">
-                <Image
-                    src={imageUrl}
-                    alt={productName}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110"
-                />
-            </div> */}
             <div className='overflow-hidden rounded-lg'>
                 <div className="transform transition-transform duration-300 hover:scale-110 h-[250px]">
                     <Image
