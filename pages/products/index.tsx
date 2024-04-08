@@ -23,6 +23,9 @@ interface StyledTabsProps {
     children?: React.ReactNode;
     value: number;
     onChange: (event: React.SyntheticEvent, newValue: number) => void;
+    variant?: 'standard' | 'scrollable' | 'fullWidth'; // Define variant prop
+    scrollButtons?: boolean | 'auto'; // Define scrollButtons prop
+    "aria-label"?: string;
 }
 
 const StyledTabs = styled((props: StyledTabsProps) => (
@@ -194,14 +197,14 @@ interface PopularProductCardProps {
 const PopularProductCard: React.FC<PopularProductCardProps> = ({ productName, imageUrl, price }) => {
     return (
         <div className='work-card rounded-md flex'>
-            <div className='rounded-md w-1/3'>
-                <img src={imageUrl} alt={productName} width={200} height={200} />
+            <div className='rounded-md h-[100px]'>
+                <Image src={imageUrl} alt={productName} width={100} height={100} style={{ height: '100%' }} />
             </div>
-            <div className='flex flex-col justify-center w-2/3 px-4'>
+            <div className='flex flex-col justify-center px-4 w-[200px] gap-y-4'>
                 <h3 className='text-sm text-white rounded-md'>
                     {productName}
                 </h3>
-                <div className='flex'>
+                <div className='flex items-center'>
                     <p className="text-white text-lg">
                         Price: ${price}
                     </p>
@@ -271,7 +274,7 @@ const Products = () => {
             />
             <div className='flex flex-col lg:flex-row mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
                 <div className="lg:mr-16 w-full lg:w-1/4">
-                    <h2 className="text-lg font-medium text-white">Popular Products</h2>
+                    <h2 className="text-md text-white pt-2">Popular Products</h2>
                     <div className="flex flex-col space-y-8 my-12">
                         {popularProducts.map((product, index) => (
                             <PopularProductCard
@@ -287,6 +290,8 @@ const Products = () => {
                     <StyledTabs
                         value={value}
                         onChange={handleChange}
+                        variant="scrollable"
+                        scrollButtons="auto"
                         aria-label="styled tabs example"
                     >
                         <StyledTab label="All" />

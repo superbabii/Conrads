@@ -215,10 +215,10 @@ const AboutUs = () => {
                         key={index}
                     >
                         <div className='work-card rounded-md flex'>
-                            <div className='rounded-md bg-primary opacity-95 p-4 w-1/3'>
-                                <Image src={items.imgSrc} alt={items.imgSrc} width={200} height={200} />
+                            <div className='rounded-md bg-primary opacity-95 p-4'>
+                                <Image src={items.imgSrc} alt={items.imgSrc} width={75} height={75} />
                             </div>
-                            <div className='flex flex-col justify-center items-center w-2/3'>
+                            <div className='flex flex-col justify-center items-center w-[200px]'>
                                 <h3 className='text-3xl font-semibold text-primary'>
                                     {items.subheading}
                                 </h3>
