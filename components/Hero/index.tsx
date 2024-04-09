@@ -51,7 +51,7 @@ const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
                         className="relative flex flex-col justify-between items-center bg-transparent transition-[flex] duration-[0.7s] ease-out-flex"
                     >
                         <Link href={"/about-us"} className='text-lg text-white mainbutton' style={{ width: '180px' }}>
-                            ABOUT US
+                            Imprint
                         </Link>
                     </motion.div>
                 </div>

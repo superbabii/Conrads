@@ -170,7 +170,7 @@ const AboutUs = () => {
     return (
         <Layout>
             <Breadcrumb
-                pageName="About Us"
+                pageName="Imprint"
                 heading="Versatile Experts - Solutions for All."
                 description="We pride ourselves on being versatile experts, ready to tackle any challenge and provide tailored solutions to meet the unique needs of our clients."
                 backgroundImageUrl="/images/Breadcrumb/about.png"
