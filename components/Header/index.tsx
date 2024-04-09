@@ -6,12 +6,7 @@ import React, { useEffect } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
-// import Contactusform from './Contactus';
-import Box from '@mui/material/Box';
-import { Menu, MenuItem, MenuProps } from '@mui/material';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import TextField from '@mui/material/TextField';
+import { Box, Menu, MenuItem, MenuProps, Divider, IconButton, TextField } from '@mui/material';
 
 import PersonIcon from '@mui/icons-material/Person';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -333,6 +328,14 @@ const Header = () => {
                                     },
                                 }}>
                                     Deutsch
+                                </MenuItem>
+                                <MenuItem onClick={() => handleLanguageSelect('uk')} sx={{
+                                    '&:hover': {
+                                        textDecoration: "underline",
+                                        color: "white",
+                                    },
+                                }}>
+                                    українська
                                 </MenuItem>
                             </Menu>
                             <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>

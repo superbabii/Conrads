@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import { TypingText, TitleText } from '../Effect/typing';
+import { TypingText } from '../Effect/typing';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 

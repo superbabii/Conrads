@@ -16,43 +16,51 @@ export const metadata: Metadata = {
     description: "This is Services Page for Conrads Consult & Engineering",
 };
 
-interface servicedata {
-    imgSrc: string;
-    heading: string;
-    subheading: string;
-}
-
-const servicedata: servicedata[] = [
+const servicedata = [
     {
         imgSrc: '/images/Services/modernization.png',
         heading: 'Instrument Modernization Solutions',
         subheading: "Upgrade instruments for peak performance with our modernization services",
+        description: (
+            <>
+                Unlock the full potential of your existing instruments with Conrads Consult & Engineering&apos;s modernization and retrofit services.
+                <br />
+                Our expert team will thoroughly assess your equipment, providing a detailed overview of upgrade possibilities to align with today&apos;s standards.
+                <br />
+                Trust us to revitalize your instruments or production/testing capabilities, ensuring they are primed for future success.
+            </>
+        ),
     },
     {
         imgSrc: '/images/Services/decision.png',
         heading: 'Decision Support Simulation Services',
         subheading: 'Harness simulations for informed decisions in design, electronics, and mathematics',
+        description: ""
     },
     {
         imgSrc: '/images/Services/pcb.png',
         heading: 'Rapid PCB Development & Simulation Services',
         subheading: 'Efficient PCB development and simulation for optimal performance',
-    },  
+        description: ""
+    },
     {
         imgSrc: '/images/Services/cam.png',
         heading: 'Collaborative CAD/CAM Design Solutions',
         subheading: 'Expert design support for products, from small to complex',
+        description: ""
     },
     {
         imgSrc: '/images/Services/programming.png',
         heading: 'Tailored Programming Solutions',
         subheading: 'From firmware to GUI, we solve software challenges across platforms',
+        description: ""
     },
     {
         imgSrc: '/images/Services/consult.svg',
         heading: 'Strategic Business Consulting Solutions',
         subheading: 'Expert support for project, sales, and general management',
-    },  
+        description: ""
+    },
 ]
 
 const Services = () => {
@@ -78,7 +86,7 @@ const Services = () => {
         <Layout>
             <Breadcrumb
                 pageName="Services"
-                heading = "Efficient, Friendly, Expert Solutions Delivered."
+                heading="Efficient, Friendly, Expert Solutions Delivered."
                 description="We are dedicated to providing fast, high-quality service to ensure your satisfaction."
                 backgroundImageUrl="/images/Breadcrumb/service.png"
                 backgroundSMImageUrl="/images/Breadcrumb/service.png"
@@ -86,25 +94,22 @@ const Services = () => {
             <div className="mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12">
                 {servicedata.map((items, index) => (
                     <section id={`service-${index}`} className="mx-auto max-w-7xl mb-4 md:mb-8 px-4 sm:pb-4 lg:px-8" key={index}>
-                        <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                        <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 gap-x-20 ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
                             <div className={`col-span-1 md:col-span-2 flex flex-col justify-center text-container md:order-${index % 2 === 0 ? '2' : '1'}`}>
-                                <h2 className="text-2xl lg:text-4xl font-bold sm:leading-tight text-center text-white">
-                                    Our team believes you deserve <br /> only the best.
-                                </h2>
-                                <p className="text-lg font-medium text-center text-maingray pt-10">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor.
+                                <p className="text-lg text-center text-maingray">
+                                    {items.description}
                                 </p>
                             </div >
-                            <div className={`col-span-1 flex flex-col justify-center items-center p-5 transition duration-400 bg-primary rounded-lg opacity-40 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+                            <div className={`col-span-1 flex flex-col justify-center items-center p-5 work-card rounded-lg ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
                                 <div className='rounded-full flex justify-center p-3'>
                                     <Image src={items.imgSrc} alt={items.imgSrc} width={120} height={120} />
                                 </div>
-                                <h3 className="text-2xl font-semibold text-white text-center">
+                                <h3 className="text-2xl font-semibold text-white text-center py-3">
                                     {items.heading}
                                 </h3>
-                                <p className='text-base font-normal text-white text-center'>
+                                {/* <p className='text-maingray text-center'>
                                     {items.subheading}
-                                </p>
+                                </p> */}
                             </div>
                         </div>
                     </section>

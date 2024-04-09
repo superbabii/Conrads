@@ -83,7 +83,7 @@ const Services = () => {
                         <h3 className="text-2xl font-semibold text-white text-center">
                             {items.heading}
                         </h3>
-                        <p className='text-maingray text-center'>
+                        <p className='text-maingray text-center pt-3'>
                             {items.subheading}
                         </p>
                     </Link>
