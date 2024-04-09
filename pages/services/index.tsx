@@ -66,8 +66,8 @@ const servicedata = [
         description: (
             <>
                 Conrads Consult & Engineering offers expert product design services.
-                Collaborate with our team to innovate and create new solutions tailored to your company's needs.
-                From small components to complex instruments with thousands of parts, we're equipped to handle projects of any scale.
+                Collaborate with our team to innovate and create new solutions tailored to your company&apos;s needs.
+                From small components to complex instruments with thousands of parts, we&apos;re equipped to handle projects of any scale.
                 <br />
                 Trust us to support your endeavors now and in the long term.
             </>
@@ -80,7 +80,8 @@ const servicedata = [
         description: (
             <>
                 In an era where skilled programmers are in high demand, Conrads Consult & Engineering offers solutions to your software challenges.
-                Whether it's firmware or GUI development for Windows, OS-X, or Linux platforms, we've got you covered. Leveraging our expertise in MathWorks Matlab and Simulink, we tackle a wide range of contemporary workplace challenges.
+                Whether it&apos;s firmware or GUI development for Windows, OS-X, or Linux platforms, we&apos;ve got you covered. 
+                Leveraging our expertise in MathWorks Matlab and Simulink, we tackle a wide range of contemporary workplace challenges.
                 <br />
                 Embrace the power of machine learning and AI with our support, and watch your business thrive.
             </>
@@ -93,7 +94,8 @@ const servicedata = [
         description: (
             <>
                 At Conrads Consult & Engineering, our team of experts is dedicated to enhancing your business operations swiftly.
-                Whether you require project management, sales and marketing support, or general management assistance, we offer tailored solutions for short-term or long-term needs.
+                Whether you require project management, sales and marketing support, or general management assistance, 
+                we offer tailored solutions for short-term or long-term needs.
                 <br />
                 Let us optimize your business processes and propel your success to new heights.
             </>
