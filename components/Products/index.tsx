@@ -98,7 +98,7 @@ const Products = () => {
   return (
     <div className='mx-auto max-w-7xl my-20 px-10 lg:px-6 relative'>
       <div className="radial-bgone hidden lg:block"></div>
-      <div className='mb-16'>
+      <div className='mb-12'>
         <motion.div
           variants={staggerContainer(0.25, 0.25)}
           initial="hidden"
@@ -116,12 +116,11 @@ const Products = () => {
             variants={fadeIn("up", "tween", 0.2, 1)}
             className='text-maingray text-md'
           >
-            Explore our range of cutting-edge solutions designed to drive innovation and enhance efficiency.
-            From advanced printed circuit boards to custom software integrations, our products are meticulously crafted to meet the diverse needs of modern businesses, empowering you to stay ahead in today&apos;s dynamic market.
+            Experience the convergence of cutting-edge technology and expert craftsmanship with Conrads Consult & Engineering&apos;s innovative product solutions.
           </motion.p>
         </motion.div>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-16" >
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-12" >
         {productdata.map((items, index) => (
           <Link
             className="space-y-8"

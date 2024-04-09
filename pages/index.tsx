@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Work from "@/components/Work";
-import Companies from "@/components/Companies";
+import Companies from "@/components/Trusted";
 import Products from "@/components/Products";
 import WhyUs from "@/components/WhyUs";
 import { GetStaticProps } from 'next';

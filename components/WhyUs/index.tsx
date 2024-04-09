@@ -10,12 +10,18 @@ const WhyUs = () => {
                     Why <RepeatingText title1='Choose' title2='Need' /> Us
                 </h3>
                 <p className="text-center text-offwhite text-lg font-normal mb-8">
-                    Choose us for our exclusive Rapid Prototyping Program, ensuring swift development and top-notch quality, giving you the competitive edge.
+                    Choose Conrads Consult & Engineering for unparalleled expertise, rapid prototyping capabilities, 
+                    and innovative solutions tailored to elevate your instruments and operations to the forefront of industry standards.
                 </p>
-                <div className="flex justify-center ">
+                <div className="flex flex-col lg:flex-row justify-center items-center gap-y-8 lg:gap-x-16">
+                    <Link href="/services">
+                        <button className='text-lg text-white mainbutton' style={{ width: '200px' }}>
+                            Our Service
+                        </button>
+                    </Link>
                     <Link href="/about-us">
-                        <button className='text-lg py-4 px-6 lg:px-12 mainbutton'>
-                            Know more
+                        <button className='text-lg text-white mainbutton' style={{ width: '200px' }}>
+                            Our Company
                         </button>
                     </Link>
                 </div>
