@@ -24,35 +24,35 @@ interface servicedata {
 
 const servicedata: servicedata[] = [
     {
-        imgSrc: '/images/Services/consult.svg',
-        heading: 'Consulting',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        imgSrc: '/images/Services/modernization.png',
+        heading: 'Instrument Modernization Solutions',
+        subheading: "Upgrade instruments for peak performance with our modernization services",
     },
     {
-        imgSrc: '/images/Services/simulation.png',
-        heading: 'Simulation',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        imgSrc: '/images/Services/decision.png',
+        heading: 'Decision Support Simulation Services',
+        subheading: 'Harness simulations for informed decisions in design, electronics, and mathematics',
     },
     {
-        imgSrc: '/images/Services/Edesign.png',
-        heading: 'Electronics Design and Manufacturing CAE',
-        subheading: 'Lorem Ipsum has been the industry and this',
-    },
+        imgSrc: '/images/Services/pcb.png',
+        heading: 'Rapid PCB Development & Simulation Services',
+        subheading: 'Efficient PCB development and simulation for optimal performance',
+    },  
     {
         imgSrc: '/images/Services/cam.png',
-        heading: 'Mechanical Engineering CAD/CAM',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        heading: 'Collaborative CAD/CAM Design Solutions',
+        subheading: 'Expert design support for products, from small to complex',
     },
     {
-        imgSrc: '/images/Services/software.png',
-        heading: 'Software',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        imgSrc: '/images/Services/programming.png',
+        heading: 'Tailored Programming Solutions',
+        subheading: 'From firmware to GUI, we solve software challenges across platforms',
     },
     {
-        imgSrc: '/images/Services/blockchain.svg',
-        heading: 'Mechanical Engineering CAD/CAM',
-        subheading: 'Lorem Ipsum has been the industry and this',
-    },
+        imgSrc: '/images/Services/consult.svg',
+        heading: 'Strategic Business Consulting Solutions',
+        subheading: 'Expert support for project, sales, and general management',
+    },  
 ]
 
 const Services = () => {
