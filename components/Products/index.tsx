@@ -114,7 +114,7 @@ const Products = () => {
           </h1>
           <motion.p
             variants={fadeIn("up", "tween", 0.2, 1)}
-            className='text-maingray md:text-lg font-normal leading-8'
+            className='text-maingray text-md'
           >
             Explore our range of cutting-edge solutions designed to drive innovation and enhance efficiency.
             From advanced printed circuit boards to custom software integrations, our products are meticulously crafted to meet the diverse needs of modern businesses, empowering you to stay ahead in today&apos;s dynamic market.

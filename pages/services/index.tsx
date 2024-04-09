@@ -23,11 +23,11 @@ const servicedata = [
         subheading: "Upgrade instruments for peak performance with our modernization services",
         description: (
             <>
-                Unlock the full potential of your existing instruments with Conrads Consult & Engineering&apos;s modernization and retrofit services.
+                Unlock the full potential of your equipment with Conrads Consult & Engineering!
+                If your instruments are falling behind, our expert team is here to revitalize them for peak performance in today&apos;s fast-paced world.
+                From comprehensive assessments to tailored upgrade plans, we&apos;ve got you covered.
                 <br />
-                Our expert team will thoroughly assess your equipment, providing a detailed overview of upgrade possibilities to align with today&apos;s standards.
-                <br />
-                Trust us to revitalize your instruments or production/testing capabilities, ensuring they are primed for future success.
+                Elevate your operations and stay ahead of the curve with our cutting-edge solutions.
             </>
         ),
     },
@@ -35,31 +35,69 @@ const servicedata = [
         imgSrc: '/images/Services/decision.png',
         heading: 'Decision Support Simulation Services',
         subheading: 'Harness simulations for informed decisions in design, electronics, and mathematics',
-        description: ""
+        description: (
+            <>
+                At Conrads Consult & Engineering, we understand the challenge of turning ideas into successful realities.
+                Let us guide you in making informed decisions.
+                Through meticulous analysis and simulations across various platforms, we tackle design, electronics, and mathematical challenges head-on.
+                <br />
+                Embracing the future with AI and Machine Learning, we provide cutting-edge support to propel your projects forward with confidence.
+            </>
+        ),
     },
     {
         imgSrc: '/images/Services/pcb.png',
         heading: 'Rapid PCB Development & Simulation Services',
         subheading: 'Efficient PCB development and simulation for optimal performance',
-        description: ""
+        description: (
+            <>
+                At Conrads Consult and Engineering, our specialists excel in PCB development and assembly.
+                Leveraging our in-house PCB printers, we deliver rapid turnaround times, crafting bespoke PCBs in mere hours instead of weeks.
+                Utilizing industry-leading Autodesk products and advanced simulation software, we ensure that our designed products meet and exceed performance expectations.
+                <br />
+                Trust us to bring your visions to life with precision and efficiency.
+            </>
+        ),
     },
     {
         imgSrc: '/images/Services/cam.png',
         heading: 'Collaborative CAD/CAM Design Solutions',
         subheading: 'Expert design support for products, from small to complex',
-        description: ""
+        description: (
+            <>
+                Conrads Consult & Engineering offers expert product design services.
+                Collaborate with our team to innovate and create new solutions tailored to your company's needs.
+                From small components to complex instruments with thousands of parts, we're equipped to handle projects of any scale.
+                <br />
+                Trust us to support your endeavors now and in the long term.
+            </>
+        )
     },
     {
         imgSrc: '/images/Services/programming.png',
         heading: 'Tailored Programming Solutions',
         subheading: 'From firmware to GUI, we solve software challenges across platforms',
-        description: ""
+        description: (
+            <>
+                In an era where skilled programmers are in high demand, Conrads Consult & Engineering offers solutions to your software challenges.
+                Whether it's firmware or GUI development for Windows, OS-X, or Linux platforms, we've got you covered. Leveraging our expertise in MathWorks Matlab and Simulink, we tackle a wide range of contemporary workplace challenges.
+                <br />
+                Embrace the power of machine learning and AI with our support, and watch your business thrive.
+            </>
+        )
     },
     {
         imgSrc: '/images/Services/consult.svg',
         heading: 'Strategic Business Consulting Solutions',
         subheading: 'Expert support for project, sales, and general management',
-        description: ""
+        description: (
+            <>
+                At Conrads Consult & Engineering, our team of experts is dedicated to enhancing your business operations swiftly.
+                Whether you require project management, sales and marketing support, or general management assistance, we offer tailored solutions for short-term or long-term needs.
+                <br />
+                Let us optimize your business processes and propel your success to new heights.
+            </>
+        )
     },
 ]
 

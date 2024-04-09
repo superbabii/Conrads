@@ -95,7 +95,7 @@ export default class MultipleItems extends Component {
                         </h1>
                         <motion.p
                             variants={fadeIn("up", "tween", 0.2, 1)}
-                            className='text-maingray md:text-lg font-normal leading-8'
+                            className='text-maingray text-md'
                         >
                             Trusted by leading businesses worldwide, including Fortune 500 companies and innovative startups, Conrads Consult & Engineering delivers expert consulting services in mechanical design, PCB development, and software integration, ensuring unparalleled quality and reliability.
                         </motion.p>

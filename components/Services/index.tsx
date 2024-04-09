@@ -26,7 +26,7 @@ const servicedata: servicedata[] = [
         imgSrc: '/images/Services/pcb.png',
         heading: 'Rapid PCB Development & Simulation Services',
         subheading: 'Efficient PCB development and simulation for optimal performance',
-    },  
+    },
     {
         imgSrc: '/images/Services/cam.png',
         heading: 'Collaborative CAD/CAM Design Solutions',
@@ -41,7 +41,7 @@ const servicedata: servicedata[] = [
         imgSrc: '/images/Services/consult.svg',
         heading: 'Strategic Business Consulting Solutions',
         subheading: 'Expert support for project, sales, and general management',
-    },  
+    },
 ]
 
 const Services = () => {
@@ -64,9 +64,11 @@ const Services = () => {
                     </h1>
                     <motion.p
                         variants={fadeIn("up", "tween", 0.2, 1)}
-                        className='text-maingray md:text-lg font-normal leading-8'
+                        className='text-maingray text-md'
                     >
-                        At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
+                        Conrads Consult & Engineering offers end-to-end solutions 
+                        encompassing technical analysis, rapid PCB development, innovative product design, and software solutions integrating AI and machine learning, 
+                        ensuring optimized performance and future-proofing for your business.
                     </motion.p>
                 </motion.div>
             </div>

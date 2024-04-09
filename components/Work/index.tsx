@@ -4,33 +4,26 @@ import { TypingText } from '../Effect/typing';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 
-
-interface workdata {
-    imgSrc: string;
-    heading: string;
-    subheading: string;
-}
-
-const workdata: workdata[] = [
+const workdata = [
     {
         imgSrc: '/images/Work/research.png',
         heading: 'Research Problem',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        subheading: 'Unveiling opportunities through meticulous research and analysis.',
     },
     {
         imgSrc: '/images/Work/identification.png',
         heading: 'Identify Problem',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        subheading: 'Pinpointing challenges with laser-sharp precision and insight.',
     },
     {
         imgSrc: '/images/Work/solution.png',
         heading: 'Solution Problem',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        subheading: 'Crafting innovative solutions tailored to your needs.',
     },
     {
         imgSrc: '/images/Work/success.png',
         heading: 'Success Business',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        subheading: 'Empowering your business to thrive and excel.',
     },
 ]
 
@@ -54,9 +47,10 @@ const Work = () => {
                     </h1>
                     <motion.p
                         variants={fadeIn("up", "tween", 0.2, 1)}
-                        className='text-maingray md:text-lg font-normal leading-8'
+                        className='text-maingray text-md'
                     >
-                        At Conrads Consult & Engineering, we provide tailored outsourcing solutions in mechanical design, PCB development, and software integration, leveraging advanced simulations to optimize business operations.
+                        At Conrads Consult & Engineering, our workflow begins with thorough research to understand the problem, 
+                        followed by precise problem identification, comprehensive solution development, and ultimately, driving success for your business.
                     </motion.p>
                 </motion.div>
             </div>
@@ -86,10 +80,10 @@ const Work = () => {
                             STEP {index + 1}
                         </div>
                         <div className='work-card rounded-md p-3 pt-24 pb-12'>
-                            <h3 className="text-xl font-semibold text-white text-center">
+                            <h3 className="text-xl font-semibold text-white text-center pb-2">
                                 {items.heading}
                             </h3>
-                            <p className='text-sm text-maingray text-center'>
+                            <p className='text-sm text-maingray text-center px-1'>
                                 {items.subheading}
                             </p>
                         </div>
