@@ -13,41 +13,41 @@ interface servicedata {
 
 const servicedata: servicedata[] = [
     {
-        imgSrc: '/images/Services/consult.svg',
-        heading: 'Business Consulting',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        imgSrc: '/images/Services/modernization.png',
+        heading: 'Instrument Modernization Solutions',
+        subheading: "Upgrade instruments for peak performance with our modernization services",
     },
     {
-        imgSrc: '/images/Services/simulation.png',
-        heading: 'Simulation',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        imgSrc: '/images/Services/decision.png',
+        heading: 'Decision Support Simulation Services',
+        subheading: 'Harness simulations for informed decisions in design, electronics, and mathematics',
     },
     {
-        imgSrc: '/images/Services/Edesign.png',
-        heading: 'Electronics Design and Manufacturing CAE',
-        subheading: 'Lorem Ipsum has been the industry and this',
-    },
+        imgSrc: '/images/Services/pcb.png',
+        heading: 'Rapid PCB Development & Simulation Services',
+        subheading: 'Efficient PCB development and simulation for optimal performance',
+    },  
     {
         imgSrc: '/images/Services/cam.png',
-        heading: 'Mechanical Engineering CAD/CAM',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        heading: 'Collaborative CAD/CAM Design Solutions',
+        subheading: 'Expert design support for products, from small to complex',
     },
     {
-        imgSrc: '/images/Services/software.png',
-        heading: 'Software',
-        subheading: 'Lorem Ipsum has been the industry and this',
+        imgSrc: '/images/Services/programming.png',
+        heading: 'Tailored Programming Solutions',
+        subheading: 'From firmware to GUI, we solve software challenges across platforms',
     },
     {
-        imgSrc: '/images/Services/blockchain.svg',
-        heading: 'Mechanical Engineering CAD/CAM',
-        subheading: 'Lorem Ipsum has been the industry and this',
-    },
+        imgSrc: '/images/Services/consult.svg',
+        heading: 'Strategic Business Consulting Solutions',
+        subheading: 'Expert support for project, sales, and general management',
+    },  
 ]
 
 const Services = () => {
     return (
         <div className='mx-auto max-w-7xl my-20 px-10 lg:px-6 relative'>
-            <div className="radial-bgone hidden lg:block" />
+            {/* <div className="radial-bgone hidden lg:block" /> */}
             <div className='mb-16'>
                 <motion.div
                     variants={staggerContainer(0.25, 0.25)}
@@ -73,7 +73,7 @@ const Services = () => {
             <div className='grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-y-12 mt-16'>
                 {servicedata.map((items, index) => (
                     <Link
-                        className="flex flex-col justify-between p-5 transition bg-primary rounded-lg service-card"
+                        className="flex flex-col justify-between p-5 transition bg-transparent rounded-lg service-card"
                         href={`/services#service-${index}`}
                         key={index}
                     >
@@ -83,7 +83,7 @@ const Services = () => {
                         <h3 className="text-2xl font-semibold text-white text-center">
                             {items.heading}
                         </h3>
-                        <p className='text-base font-normal text-white text-center'>
+                        <p className='text-maingray text-center'>
                             {items.subheading}
                         </p>
                     </Link>
