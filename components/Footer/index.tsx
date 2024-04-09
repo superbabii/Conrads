@@ -18,11 +18,9 @@ interface Social {
 }
 
 const Links: LinkType[] = [
-  { name: 'Imprint', href: '/about-us', current: false },
+  { name: 'Imprint', href: '/imprint', current: false },
+  { name: 'About Us', href: '/about-us', current: false },
   { name: 'Services', href: '/services', current: false },
-  { name: 'Products', href: '/products', current: false },
-  { name: 'Terms of Service', href: '/terms-of-service', current: false },
-  { name: 'Privacy Policy', href: '/privacy-policy', current: false },
 ]
 
 const socialLinks: Social[] = [

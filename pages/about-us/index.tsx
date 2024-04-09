@@ -27,16 +27,7 @@ export const metadata: Metadata = {
     description: "This is About Page for Conrads Consult & Engineering",
 };
 
-// CAROUSEL DATA
-
-interface DataType {
-    role: string;
-    name: string;
-    imageUrl: string;
-    socialLinks: { name: string; url: string; icon: JSX.Element }[];
-}
-
-const teamMembers: DataType[] = [
+const teamMembers = [
     {
         role: 'Co-founder',
         name: 'John Doe',

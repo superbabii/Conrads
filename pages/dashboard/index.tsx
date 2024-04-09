@@ -46,8 +46,8 @@ const Dashboard = () => {
                 pageName="My Account"
                 heading="Profile"
                 description="Conrads Consult & Engineering is a company working in the field of consulting for sales and management support. Our company has a team of expert for the mechanical design of test instrument and equipment."
-                backgroundImageUrl="/images/Breadcrumb/background.png"
-                backgroundSMImageUrl="/images/Breadcrumb/background.png"
+                backgroundImageUrl="/images/Breadcrumb/contact.png"
+                backgroundSMImageUrl="/images/Breadcrumb/contact_sm.png"
             />
             {/* <div className="radial-bgone hidden lg:block"></div> */}
             <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
