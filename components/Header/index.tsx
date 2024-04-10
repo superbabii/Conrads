@@ -169,241 +169,243 @@ const Header = () => {
     const { t } = useTranslation('header')
     return (
         <Disclosure as="nav" className="navbar">
-            <div className="relative mx-auto max-w-7xl p-3 md:p-2 lg:px-3 flex h-12 sm:h-20 items-center">
-                <div className="flex flex-1 items-center justify-between">
+            <div className="mx-auto max-w-7xl p-3 md:p-2 lg:px-3">
+                <div className="relative flex h-12 sm:h-20 items-center">
+                    <div className="flex flex-1 items-center justify-between">
 
-                    {/* LOGO */}
+                        {/* LOGO */}
 
-                    <div className="flex flex-shrink-0 items-center">
-                        <div className='block lg:hidden pr-3'>
-                            <Bars3Icon className="block h-10 w-10 text-white" aria-hidden="true" onClick={() => setIsOpen(true)} />
+                        <div className="flex flex-shrink-0 items-center">
+                            <div className='block lg:hidden pr-3'>
+                                <Bars3Icon className="block h-10 w-10 text-white" aria-hidden="true" onClick={() => setIsOpen(true)} />
+                            </div>
+                            <Link href="/">
+                                <img
+                                    className="block h-10 w-20px lg:hidden"
+                                    src={'/images/Logo/logo.png'}
+                                    alt="Conrards-Logo"
+                                />
+                                <img
+                                    className="hidden h-48px w-48px lg:block"
+                                    src={'/images/Logo/logo.png'}
+                                    alt="Conrards-Logo"
+                                />
+                            </Link>
                         </div>
-                        <Link href="/">
-                            <img
-                                className="block h-10 w-20px lg:hidden"
-                                src={'/images/Logo/logo.png'}
-                                alt="Conrards-Logo"
-                            />
-                            <img
-                                className="hidden h-48px w-48px lg:block"
-                                src={'/images/Logo/logo.png'}
-                                alt="Conrards-Logo"
-                            />
-                        </Link>
-                    </div>
 
-                    {/* LINKS */}
+                        {/* LINKS */}
 
-                    <div className="hidden lg:flex items-center border-right ">
-                        <div className="flex justify-end space-x-4">
-                            {navigation.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className={classNames(
-                                        item.current ? 'bg-gray-900' : 'navlinks text-white hover:text-offwhite hover-underline',
-                                        'px-3 py-4 rounded-md text-md font-normal'
-                                    )}
-                                    aria-current={item.href ? 'page' : undefined}
+                        <div className="hidden lg:flex items-center border-right ">
+                            <div className="flex justify-end space-x-4">
+                                {navigation.map((item) => (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        className={classNames(
+                                            item.current ? 'bg-gray-900' : 'navlinks text-white hover:text-offwhite hover-underline',
+                                            'px-3 py-4 rounded-md text-md font-normal'
+                                        )}
+                                        aria-current={item.href ? 'page' : undefined}
+                                    >
+                                        {t(item.name)}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="flex items-center">
+                            <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+                                <IconButton
+                                    onClick={handleAccountClick}
+                                    size="small"
+                                    sx={{
+                                        ml: 2,
+                                        '&:hover': {
+                                            bgcolor: 'rgba(39, 40, 43, 0.7)',
+                                        },
+                                    }}
+                                    aria-controls={open_account ? 'account-menu' : undefined}
+                                    aria-haspopup="true"
+                                    aria-expanded={open_account ? 'true' : undefined}
                                 >
-                                    {t(item.name)}
+                                    <PersonIcon style={{ color: 'white' }} />
+                                </IconButton>
+                            </Box>
+                            <Menu
+                                anchorEl={anchorEl_account}
+                                id="account-menu"
+                                open={open_account}
+                                onClose={handleClose}
+                                onClick={handleClose}
+                                PaperProps={{
+                                    elevation: 2,
+                                    sx: {
+                                        overflow: 'visible',
+                                        filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
+                                        mt: 1,
+                                        backgroundColor: 'rgba(39, 40, 43, 0.9)',
+                                        color: 'white',
+                                    },
+                                }}
+                                BackdropProps={{
+                                    sx: { backdropFilter: 'blur(8px)' }, // Add blur effect to the backdrop
+                                }}
+                                transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                            >
+                                <Link href={"/dashboard"}>
+                                    <MenuItem onClick={handleClose} sx={{
+                                        '&:hover': {
+                                            textDecoration: "underline",
+                                            color: "white",
+                                        },
+                                    }}>
+                                        {t('My Account')}
+                                    </MenuItem>
                                 </Link>
-                            ))}
+                                <Divider variant="middle" component="li" style={{ borderBottom: "1px solid #323639" }} />
+                                <Link href={"/signup"}>
+                                    <MenuItem onClick={handleClose} sx={{
+                                        '&:hover': {
+                                            textDecoration: "underline",
+                                            color: "white",
+                                        },
+                                    }}>
+                                        {t('Create Account')}
+                                    </MenuItem>
+                                </Link>
+                            </Menu>
+                            <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+                                <IconButton
+                                    onClick={handlelanguageClick}
+                                    size="small"
+                                    sx={{
+                                        ml: 2,
+                                        '&:hover': {
+                                            bgcolor: 'rgba(39, 40, 43, 0.7)',
+                                        },
+                                    }}
+                                    aria-controls={open_language ? 'language-menu' : undefined}
+                                    aria-haspopup="true"
+                                    aria-expanded={open_language ? 'true' : undefined}
+                                >
+                                    <LanguageIcon style={{ color: 'white' }} />
+                                </IconButton>
+                            </Box>
+                            <Menu
+                                anchorEl={anchorEl_language}
+                                id="language-menu"
+                                open={open_language}
+                                onClose={handleClose}
+                                onClick={handleClose}
+                                PaperProps={{
+                                    elevation: 2,
+                                    sx: {
+                                        overflow: 'visible',
+                                        filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
+                                        mt: 1,
+                                        backgroundColor: 'rgba(39, 40, 43, 0.9)',
+                                        color: 'white',
+                                    },
+                                }}
+                                BackdropProps={{
+                                    sx: { backdropFilter: 'blur(8px)' }, // Add blur effect to the backdrop
+                                }}
+                                transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                            >
+                                <MenuItem onClick={() => handleLanguageSelect('en')} sx={{
+                                    '&:hover': {
+                                        textDecoration: "underline",
+                                        color: "white",
+                                    },
+                                }}>
+                                    English
+                                </MenuItem>
+                                <MenuItem onClick={() => handleLanguageSelect('de')} sx={{
+                                    '&:hover': {
+                                        textDecoration: "underline",
+                                        color: "white",
+                                    },
+                                }}>
+                                    Deutsch
+                                </MenuItem>
+                                <MenuItem onClick={() => handleLanguageSelect('uk')} sx={{
+                                    '&:hover': {
+                                        textDecoration: "underline",
+                                        color: "white",
+                                    },
+                                }}>
+                                    українська
+                                </MenuItem>
+                            </Menu>
+                            <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+                                <IconButton
+                                    onClick={handleClick}
+                                    size="small"
+                                    sx={{
+                                        ml: 2,
+                                        '&:hover': {
+                                            bgcolor: 'rgba(39, 40, 43, 0.7)',
+                                        },
+                                    }}
+                                    aria-controls={anchorEl_search ? 'search-menu' : undefined}
+                                    aria-haspopup="true"
+                                    aria-expanded={anchorEl_search ? 'true' : undefined}
+                                >
+                                    <SearchIcon style={{ color: 'white' }} />
+                                </IconButton>
+                            </Box>
+                            <StyledMenu
+                                anchorEl={anchorEl_search}
+                                id="search-menu"
+                                open={Boolean(anchorEl_search)}
+                                onClose={handleClose}
+                                style={{ padding: '0px !important' }}
+                                PaperProps={{
+                                    elevation: 2,
+                                    sx: {
+                                        overflow: 'visible',
+                                        filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
+                                        mt: 1,
+                                        backgroundColor: 'rgba(39, 40, 43, 0.9)',
+                                        color: 'white',
+                                        padding: '0px !important',
+                                        borderRadius: '4px',
+                                    },
+                                }}
+                                BackdropProps={{
+                                    sx: { backdropFilter: 'blur(8px)' },
+                                }}
+                            >
+                                <SearchTextField
+                                    label={t("Search")}
+                                    value={searchQuery}
+                                    id="custom-css-outlined-input"
+                                    onChange={handleInputChange}
+                                    onKeyPress={handleSearchKeyPress}
+                                    fullWidth
+                                    InputProps={{
+                                        style: {
+                                            color: 'white',
+                                        },
+                                    }}
+                                    InputLabelProps={{
+                                        style: {
+                                            color: 'white',
+                                        },
+                                    }}
+                                />
+                            </StyledMenu>
+
                         </div>
                     </div>
-                    <div className="flex items-center">
-                        <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-                            <IconButton
-                                onClick={handleAccountClick}
-                                size="small"
-                                sx={{
-                                    ml: 2,
-                                    '&:hover': {
-                                        bgcolor: 'rgba(39, 40, 43, 0.7)',
-                                    },
-                                }}
-                                aria-controls={open_account ? 'account-menu' : undefined}
-                                aria-haspopup="true"
-                                aria-expanded={open_account ? 'true' : undefined}
-                            >
-                                <PersonIcon style={{ color: 'white' }} />
-                            </IconButton>
-                        </Box>
-                        <Menu
-                            anchorEl={anchorEl_account}
-                            id="account-menu"
-                            open={open_account}
-                            onClose={handleClose}
-                            onClick={handleClose}
-                            PaperProps={{
-                                elevation: 2,
-                                sx: {
-                                    overflow: 'visible',
-                                    filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
-                                    mt: 1,
-                                    backgroundColor: 'rgba(39, 40, 43, 0.9)',
-                                    color: 'white',
-                                },
-                            }}
-                            BackdropProps={{
-                                sx: { backdropFilter: 'blur(8px)' }, // Add blur effect to the backdrop
-                            }}
-                            transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                            anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-                        >
-                            <Link href={"/dashboard"}>
-                                <MenuItem onClick={handleClose} sx={{
-                                    '&:hover': {
-                                        textDecoration: "underline",
-                                        color: "white",
-                                    },
-                                }}>
-                                    {t('My Account')}
-                                </MenuItem>
-                            </Link>
-                            <Divider variant="middle" component="li" style={{ borderBottom: "1px solid #323639" }} />
-                            <Link href={"/signup"}>
-                                <MenuItem onClick={handleClose} sx={{
-                                    '&:hover': {
-                                        textDecoration: "underline",
-                                        color: "white",
-                                    },
-                                }}>
-                                    {t('Create Account')}
-                                </MenuItem>
-                            </Link>
-                        </Menu>
-                        <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-                            <IconButton
-                                onClick={handlelanguageClick}
-                                size="small"
-                                sx={{
-                                    ml: 2,
-                                    '&:hover': {
-                                        bgcolor: 'rgba(39, 40, 43, 0.7)',
-                                    },
-                                }}
-                                aria-controls={open_language ? 'language-menu' : undefined}
-                                aria-haspopup="true"
-                                aria-expanded={open_language ? 'true' : undefined}
-                            >
-                                <LanguageIcon style={{ color: 'white' }} />
-                            </IconButton>
-                        </Box>
-                        <Menu
-                            anchorEl={anchorEl_language}
-                            id="language-menu"
-                            open={open_language}
-                            onClose={handleClose}
-                            onClick={handleClose}
-                            PaperProps={{
-                                elevation: 2,
-                                sx: {
-                                    overflow: 'visible',
-                                    filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
-                                    mt: 1,
-                                    backgroundColor: 'rgba(39, 40, 43, 0.9)',
-                                    color: 'white',
-                                },
-                            }}
-                            BackdropProps={{
-                                sx: { backdropFilter: 'blur(8px)' }, // Add blur effect to the backdrop
-                            }}
-                            transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                            anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-                        >
-                            <MenuItem onClick={() => handleLanguageSelect('en')} sx={{
-                                '&:hover': {
-                                    textDecoration: "underline",
-                                    color: "white",
-                                },
-                            }}>
-                                English
-                            </MenuItem>
-                            <MenuItem onClick={() => handleLanguageSelect('de')} sx={{
-                                '&:hover': {
-                                    textDecoration: "underline",
-                                    color: "white",
-                                },
-                            }}>
-                                Deutsch
-                            </MenuItem>
-                            <MenuItem onClick={() => handleLanguageSelect('uk')} sx={{
-                                '&:hover': {
-                                    textDecoration: "underline",
-                                    color: "white",
-                                },
-                            }}>
-                                українська
-                            </MenuItem>
-                        </Menu>
-                        <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-                            <IconButton
-                                onClick={handleClick}
-                                size="small"
-                                sx={{
-                                    ml: 2,
-                                    '&:hover': {
-                                        bgcolor: 'rgba(39, 40, 43, 0.7)',
-                                    },
-                                }}
-                                aria-controls={anchorEl_search ? 'search-menu' : undefined}
-                                aria-haspopup="true"
-                                aria-expanded={anchorEl_search ? 'true' : undefined}
-                            >
-                                <SearchIcon style={{ color: 'white' }} />
-                            </IconButton>
-                        </Box>
-                        <StyledMenu
-                            anchorEl={anchorEl_search}
-                            id="search-menu"
-                            open={Boolean(anchorEl_search)}
-                            onClose={handleClose}
-                            style={{ padding: '0px !important' }}
-                            PaperProps={{
-                                elevation: 2,
-                                sx: {
-                                    overflow: 'visible',
-                                    filter: 'drop-shadow(0px 8px 4px rgba(0,0,0,0.5))',
-                                    mt: 1,
-                                    backgroundColor: 'rgba(39, 40, 43, 0.9)',
-                                    color: 'white',
-                                    padding: '0px !important',
-                                    borderRadius: '4px',
-                                },
-                            }}
-                            BackdropProps={{
-                                sx: { backdropFilter: 'blur(8px)' },
-                            }}
-                        >
-                            <SearchTextField
-                                label={t("Search")}
-                                value={searchQuery}
-                                id="custom-css-outlined-input"
-                                onChange={handleInputChange}
-                                onKeyPress={handleSearchKeyPress}
-                                fullWidth
-                                InputProps={{
-                                    style: {
-                                        color: 'white',
-                                    },
-                                }}
-                                InputLabelProps={{
-                                    style: {
-                                        color: 'white',
-                                    },
-                                }}
-                            />
-                        </StyledMenu>
 
-                    </div>
+                    {/* DRAWER LINKS DATA */}
+
+                    <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
+                        <Drawerdata />
+                    </Drawer>
                 </div>
-
-                {/* DRAWER LINKS DATA */}
-
-                <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-                    <Drawerdata />
-                </Drawer>
             </div>
         </Disclosure>
     )
