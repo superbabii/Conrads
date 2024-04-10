@@ -22,29 +22,30 @@ const Imprint = () => {
                 pageName="Imprint"
                 heading="Imprint"
                 description="This is the Impressum page for Conrads Consult & Engineering"
-                backgroundImageUrl="/images/Breadcrumb/contact.png"
-                backgroundSMImageUrl="/images/Breadcrumb/contact_sm.png"
+                backgroundImageUrl="/images/Breadcrumb/contactt.png"
+                backgroundSMImageUrl="/images/Breadcrumb/contactt_sm.png"
             />
-            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12 text-maingray'>
-                <h1>Impressum</h1>
-                <p><strong>Name:</strong> Conrads Consult & Engineering</p>
-                <p><strong>Address:</strong> 123 Main Street, Berlin, Germany</p>
-                <p><strong>Email:</strong> info@conrads-consult.com</p>
-                <p><strong>Phone:</strong> +49 123 456789</p>
-                <p><strong>Register Court:</strong> Amtsgericht Berlin</p>
-                <p><strong>Register Number:</strong> HRB 123456</p>
-                <p><strong>VAT Number:</strong> DE123456789</p>
-                <p><strong>Managing Director:</strong> John Smith</p>
-                <p><strong>Regulatory Authority:</strong> Bezirksamt Berlin-Mitte</p>
-                <p><strong>Disclaimer:</strong> Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.</p>
-                <p><strong>Copyright:</strong> © {new Date().getFullYear()} Conrads Consult & Engineering. All rights reserved.</p>
-                <h2>Professional Liability Insurance:</h2>
+            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 text-maingray text-center'>
+                <p><strong className='text-white'>Name:</strong> Conrads Consult & Engineering</p>
+                <p><strong className='text-white'>Address:</strong> Münderhäuser Straße 31, 36199 <br /> Rotenburg an der Fulda, <br /> Germany </p>
+                <p><strong className='text-white'>Email:</strong> info@conrads-engineering.com</p>
+                <p><strong className='text-white'>Phone:</strong> +49 (66) 234 3645 10</p>
+                <p><strong className='text-white'>Register Court:</strong> Amtsgericht Berlin</p>
+                <p><strong className='text-white'>Register Number:</strong> HRB 123456</p>
+                <p><strong className='text-white'>VAT Number:</strong> DE123456789</p>
+                <p><strong className='text-white'>Managing Director:</strong> Werner Conrads</p>
+                <p><strong className='text-white'>Regulatory Authority:</strong> Bezirksamt Berlin-Mitte</p>
+                <p><strong className='text-white'>Disclaimer:</strong> Despite careful content control, we assume no liability for the content of external links. <br />
+                The operators of the linked pages are solely responsible for their content.</p>
+                <p><strong className='text-white'>Copyright:</strong> © {new Date().getFullYear()} Conrads Consult & Engineering. All rights reserved.</p>
+                <h2 className='text-lg text-white'>Professional Liability Insurance:</h2>
                 <p>Provider: XYZ Insurance Company</p>
                 <p>Policy Number: 123456789</p>
                 <p>Scope: Germany</p>
-                <h2>EU Dispute Resolution</h2>
-                <p>The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>. Our email address can be found above in the Impressum.</p>
-                <h2>Consumer Dispute Resolution</h2>
+                <h2 className='text-lg text-white'>EU Dispute Resolution</h2>
+                <p>The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>. <br />
+                Our email address can be found above in the Impressum.</p>
+                <h2 className='text-lg text-white'>Consumer Dispute Resolution</h2>
                 <p>We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
             </div>
         </Layout>
