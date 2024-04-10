@@ -22,32 +22,85 @@ const Imprint = () => {
                 pageName="imprint"
                 heading="Imprint"
                 description=""
-                backgroundImageUrl="/images/Breadcrumb/imprint.png"
-                backgroundSMImageUrl="/images/Breadcrumb/contactt_sm.png"
-                height="200px"
+                backgroundImageUrl=""
+                backgroundSMImageUrl=""
+                height="150px"
             />
-            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 text-maingray text-center'>
-                <p><strong className='text-white'>Name:</strong> Conrads Consult & Engineering</p>
-                <p><strong className='text-white'>Address:</strong> Münderhäuser Straße 31, 36199 <br /> Rotenburg an der Fulda, <br /> Germany </p>
-                <p><strong className='text-white'>Email:</strong> info@conrads-engineering.com</p>
-                <p><strong className='text-white'>Phone:</strong> +49 (66) 234 3645 10</p>
-                <p><strong className='text-white'>Register Court:</strong> Amtsgericht Berlin</p>
-                <p><strong className='text-white'>Register Number:</strong> HRB 123456</p>
-                <p><strong className='text-white'>VAT Number:</strong> DE123456789</p>
-                <p><strong className='text-white'>Managing Director:</strong> Werner Conrads</p>
-                <p><strong className='text-white'>Regulatory Authority:</strong> Bezirksamt Berlin-Mitte</p>
-                <p><strong className='text-white'>Disclaimer:</strong> Despite careful content control, we assume no liability for the content of external links. <br />
-                The operators of the linked pages are solely responsible for their content.</p>
-                <p><strong className='text-white'>Copyright:</strong> © {new Date().getFullYear()} Conrads Consult & Engineering. All rights reserved.</p>
-                <h2 className='text-lg text-white'>Professional Liability Insurance:</h2>
-                <p>Provider: XYZ Insurance Company</p>
-                <p>Policy Number: 123456789</p>
-                <p>Scope: Germany</p>
-                <h2 className='text-lg text-white'>EU Dispute Resolution</h2>
-                <p>The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>. <br />
-                Our email address can be found above in the Impressum.</p>
-                <h2 className='text-lg text-white'>Consumer Dispute Resolution</h2>
-                <p>We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 text-maingray text-lg my-12'>
+                <div className='flex gap-x-4'>
+                    <span className='text-white inline-block'>Owner:</span>
+                    <span>Conrads Consult & Engineering</span>
+                </div>
+                <br />
+                <div className='flex gap-x-4'>
+                    <span className='text-white inline-block'>Address:</span>
+                    <span>Münderhäuser Straße 31, 36199 <br /> Rotenburg an der Fulda, <br /> Germany</span>
+                </div>
+                <div className='flex gap-x-4'>
+                    <span className='text-white inline-block'>Email:</span>
+                    <span>info@conrads-engineering.com</span>
+                </div>
+                <div className='flex gap-x-4'>
+                    <span className='text-white inline-block'>Phone:</span>
+                    <span>+49 (66) 234 3645 10</span>
+                </div>
+                <br />
+                <div className='flex gap-x-4'>
+                    <span className='text-white inline-block'>Register Court:</span>
+                    <span>Amtsgericht Berlin</span>
+                </div>
+                <div className='flex gap-x-4'>
+                    <span className='text-white inline-block'>Register Number:</span>
+                    <span>HRB 123456</span>
+                </div>
+                <div className='flex gap-x-4'>
+                    <span className='text-white inline-block'>VAT Number:</span>
+                    <span>DE123456789</span>
+                </div>
+                <br />
+                <div className='flex gap-x-4'>
+                    <span className='text-white inline-block'>CEO:</span>
+                    <span>Werner Conrads</span>
+                </div>
+                <br />
+                <div className='flex gap-x-4'>
+                    <span className='text-white inline-block'>Regulatory Authority:</span>
+                    <span>Bezirksamt Berlin-Mitte</span>
+                </div>
+                <br />
+
+                <div className='inline-block'>
+                    <span>Website developed with NextJs by Nazar Babii and Conrads Consult & Engineering.</span>
+                </div>
+                <br />
+                <div className='inline-block'>
+                    <span>Images designed by Nazar Babii and freepik.com</span>
+                </div>
+                <br />
+                <br />
+
+                <h2 className='text-white text-2xl lg:text-4xl mb-3'>Disclaimer</h2>
+                <div className='text-lg'>
+                    Despite careful content control, we assume no liability for the content of external links. <br />
+                    The operators of the linked pages are solely responsible for their content.
+                </div>
+                <br />
+                <h2 className='text-white text-2xl lg:text-4xl mb-3'>Copyright</h2>
+                <div className='text-lg'>
+                    Copyright © {new Date().getFullYear()} Conrads Consult & Engineering. All rights reserved.
+                </div>
+                <br />
+                <h2 className='text-white text-2xl lg:text-4xl mb-3'>Professional Liability Insurance</h2>
+                <div className='text-lg'>Provider: XYZ Insurance Company</div>
+                <div className='text-lg'>Policy Number: 123456789</div>
+                <div className='text-lg'>Scope: Germany</div>
+                <br />
+                <h2 className='text-white text-2xl lg:text-4xl mb-3'>EU Dispute Resolution</h2>
+                <div className='text-lg'>The European Commission provides a platform for online dispute resolution (ODR): <a className='text-primary' href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>. <br />
+                    Our email address can be found above in the Impressum.</div>
+                <br />
+                <h2 className='text-white text-2xl lg:text-4xl mb-3'>Consumer Dispute Resolution</h2>
+                <div className='text-lg'>We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</div>
             </div>
         </Layout>
     );
