@@ -15,7 +15,7 @@ interface SlideProps {
 
 const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
     <div className='md:h-screen flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat'
-        style={{backgroundImage: `url(${image})`}}>
+        style={{ backgroundImage: `url(${image})` }}>
         <motion.div
             variants={staggerContainer(0.25, 0.25)}
             initial="hidden"
@@ -23,12 +23,9 @@ const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
             viewport={{ once: false, amount: 0.25 }}
             className='mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 p-6 mt-8'
         >
-            {/* <div className="col-span-5 lg:-m-48 sm:order-2">
-                <Image src={image} alt="nothing" width={1000} height={750} />
-            </div> */}
-
+            <div className='radial-hero hidden lg:block'></div>
             <div className='hero-text col-span-8 sm:order-1'>
-                <motion.h1 variants={textVariant(1)} className="text-4xl lg:text-7xl font-thin mb-5 text-offwhite md:4px md:text-start text-center">
+                <motion.h1 variants={textVariant(1)} className="text-4xl md:text-7xl font-thin mb-5 text-offwhite md:4px md:text-start text-center">
                     {title}
                 </motion.h1>
                 <motion.p
@@ -86,7 +83,6 @@ const Hero: React.FC = () => {
             >
                 ==== WE&apos;RE THE BEST ====
             </div>
-            <div className='radial-hero hidden lg:block'></div>
             <Carousel
                 autoPlay={true}
                 interval={5000}

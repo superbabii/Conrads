@@ -22,7 +22,7 @@ html[data-scroll="0"] .navbar {
   position: absolute;
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-  z-index: 20;
+  z-index: 10;
 }
 
 html:not([data-scroll="0"]) .navbar {
@@ -34,7 +34,7 @@ html:not([data-scroll="0"]) .navbar {
   opacity: 1.9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: background-color 1s linear, opacity 1s linear, box-shadow 1s linear;
-  z-index: 20;
+  z-index: 10;
 }
 
 .mainbutton {
@@ -285,15 +285,15 @@ html:not([data-scroll="0"]) .navbar {
 
 .radial-hero {
   position: absolute;
-  background: linear-gradient(90deg, #801022 0%, #801022 97.15%);
-  opacity: 0.5;
-  filter: blur(392px);
-  border-radius: 400px;
-  width: 40rem;
-  height: 40rem;
-  left: -5%;
-  top: -40%;
-  z-index: -2;
+  background: #000;
+  opacity: 1;
+  filter: blur(360px);
+  border-radius: 500px;
+  width: 50rem;
+  height: 50rem;
+  left: -10%;
+  top: -20%;
+  z-index: 1;
 }
 
 .radial-center {
