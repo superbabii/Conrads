@@ -95,22 +95,26 @@ function classNames(...classes: string[]) {
 const Header = () => {
 
     const router = useRouter();
+    const { t } = useTranslation('header');
 
     const [isOpen, setIsOpen] = React.useState(false);
 
     const [anchorEl_account, setAnchorEl_account] = React.useState<HTMLButtonElement | null>(null);
     const [anchorEl_language, setAnchorEl_language] = React.useState<HTMLButtonElement | null>(null);
     const [anchorEl_search, setAnchorEl_search] = React.useState<HTMLButtonElement | null>(null);
+
     const [searchQuery, setSearchQuery] = React.useState('');
 
     const open_account = Boolean(anchorEl_account);
     const open_language = Boolean(anchorEl_language);
+
     const handleAccountClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl_account(event.currentTarget);
     };
     const handlelanguageClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl_language(event.currentTarget);
     };
+    
     const handleClose = () => {
         setAnchorEl_account(null);
         setAnchorEl_language(null);
@@ -130,7 +134,7 @@ const Header = () => {
 
     const handleSearch = () => {
         console.log('Searching for:', searchQuery);
-        handleClose(); // Close the menu after search
+        handleClose();
         setSearchQuery('');
     };
 
@@ -162,11 +166,9 @@ const Header = () => {
         }
 
         document.addEventListener('scroll', debounce(storeScroll), { passive: true });
-
         storeScroll();
     }, [])
 
-    const { t } = useTranslation('header')
     return (
         <Disclosure as="nav" className="navbar">
             <div className="mx-auto max-w-7xl p-3 md:p-2 lg:px-3">

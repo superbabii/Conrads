@@ -198,7 +198,7 @@ const AboutUs = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
-                className='mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 gap-y-12 my-24'
+                className='mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 gap-y-12 my-12 lg:my-24'
             >
                 {successdata.map((items, index) => (
                     <motion.div

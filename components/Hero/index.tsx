@@ -21,7 +21,7 @@ const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
-            className='mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 p-6 mt-8'
+            className='mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 p-6 mt-8 md:mt-20'
         >
             <div className='radial-hero hidden lg:block'></div>
             <div className='hero-text col-span-8 sm:order-1'>
@@ -73,7 +73,17 @@ const Hero: React.FC = () => {
             image: "/images/Hero/3.png",
             title: "Best Grow Your Business",
             description: "Precision Engineering for Reliable, High-Performance Printed Circuit Boards"
-        }
+        },
+        {
+            image: "/images/Hero/4.png",
+            title: "Your Growth is Our Target",
+            description: "With over 10 years of experience helping companies to find comprehensive solution"
+        },
+        {
+            image: "/images/Hero/5.png",
+            title: "Your Growth is Our Target",
+            description: "With over 10 years of experience helping companies to find comprehensive solution"
+        },
     ];
 
     return (

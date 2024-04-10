@@ -19,7 +19,7 @@ const Breadcrumb = ({
     height: string;
 }) => {
     return (
-        <div className={`relative overflow-hidden h-[${height}]`}>
+        <div className={`relative overflow-hidden h-[${height}] pt-[60px]`}>
             <div className="absolute inset-0 z-0 flex justify-center items-center">
                 <img
                     className="absolute inset-0 w-full lg:h-full object-cover object-bottom hidden md:block"
