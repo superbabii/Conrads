@@ -27,63 +27,63 @@ export const metadata: Metadata = {
     description: "This is About Page for Conrads Consult & Engineering",
 };
 
-const teamMembers = [
-    {
-        role: 'Co-founder',
-        name: 'John Doe',
-        imageUrl: '/images/TeamMember/avatar.png',
-        socialLinks: [
-            { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
-            { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
-            { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
-        ],
-    },
-    {
-        role: 'Electronic Engineer',
-        name: 'John Doe',
-        imageUrl: '/images/TeamMember/avatar.png',
-        socialLinks: [
-            { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
-            { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
-            { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
-        ],
-    },
-    {
-        role: 'FPGA Programmer',
-        name: 'John Doe',
-        imageUrl: '/images/TeamMember/avatar1.png',
-        socialLinks: [
-            { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
-            { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
-            { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
-        ],
-    },
-    {
-        role: 'Software Developer',
-        name: 'John Doe',
-        imageUrl: '/images/TeamMember/avatar1.png',
-        socialLinks: [
-            { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
-            { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
-            { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
-        ],
-    },
-    {
-        role: 'Accountant',
-        name: 'John Doe',
-        imageUrl: '/images/TeamMember/avatar.png',
-        socialLinks: [
-            { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
-            { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
-            { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
-        ],
-    },
-]
+// const teamMembers = [
+//     {
+//         role: 'Co-founder',
+//         name: 'John Doe',
+//         imageUrl: '/images/TeamMember/avatar.png',
+//         socialLinks: [
+//             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
+//             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
+//             { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
+//             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
+//         ],
+//     },
+//     {
+//         role: 'Electronic Engineer',
+//         name: 'John Doe',
+//         imageUrl: '/images/TeamMember/avatar.png',
+//         socialLinks: [
+//             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
+//             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
+//             { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
+//             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
+//         ],
+//     },
+//     {
+//         role: 'FPGA Programmer',
+//         name: 'John Doe',
+//         imageUrl: '/images/TeamMember/avatar1.png',
+//         socialLinks: [
+//             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
+//             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
+//             { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
+//             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
+//         ],
+//     },
+//     {
+//         role: 'Software Developer',
+//         name: 'John Doe',
+//         imageUrl: '/images/TeamMember/avatar1.png',
+//         socialLinks: [
+//             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
+//             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
+//             { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
+//             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
+//         ],
+//     },
+//     {
+//         role: 'Accountant',
+//         name: 'John Doe',
+//         imageUrl: '/images/TeamMember/avatar.png',
+//         socialLinks: [
+//             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
+//             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
+//             { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
+//             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
+//         ],
+//     },
+// ]
 
 interface successdata {
     imgSrc: string;
@@ -115,48 +115,48 @@ const successdata: successdata[] = [
 ]
 
 const AboutUs = () => {
-    const settings = {
-        dots: false,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: false,
-        autoplay: true,
-        speed: 500,
-        autoplaySpeed: 5000,
-        cssEase: "linear",
-        rtl: true,
-        pauseOnHover: true,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 450,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            }
-        ]
-    };
+    // const settings = {
+    //     dots: false,
+    //     infinite: true,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     arrows: false,
+    //     autoplay: true,
+    //     speed: 500,
+    //     autoplaySpeed: 5000,
+    //     cssEase: "linear",
+    //     rtl: true,
+    //     pauseOnHover: true,
+    //     responsive: [
+    //         {
+    //             breakpoint: 1200,
+    //             settings: {
+    //                 slidesToShow: 3,
+    //                 slidesToScroll: 1,
+    //                 infinite: true,
+    //                 dots: false
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 800,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 1,
+    //                 infinite: true,
+    //                 dots: false
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 450,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 infinite: true,
+    //                 dots: false
+    //             }
+    //         }
+    //     ]
+    // };
 
     return (
         <Layout>
@@ -168,7 +168,7 @@ const AboutUs = () => {
                 backgroundSMImageUrl="/images/Breadcrumb/about.png"
             />
             {/* <div className="radial-bgone hidden lg:block"></div> */}
-            <div className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
+            {/* <div className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className='relative'>
                         <img src="/images/About/ceo.png" alt="CEO-image" className="rounded-2xl sm:w-64 sm:h-auto lg:w-96 lg:h-auto mx-auto" />
@@ -191,7 +191,7 @@ const AboutUs = () => {
                         </motion.div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <motion.div
                 variants={staggerContainer(0.25, 0.25)}
                 initial="hidden"
@@ -238,7 +238,7 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            <div className="bg-wework py-4">
+            {/* <div className="bg-wework py-4">
                 <motion.div
                     variants={staggerContainer(0.25, 0.25)}
                     initial="hidden"
@@ -282,7 +282,7 @@ const AboutUs = () => {
                         ))}
                     </Slider>
                 </div>
-            </div>
+            </div> */}
             <Work />
             <div className="about-wide-bg mt-16 lg:mt-32">
                 <div className="mx-auto max-w-5xl py-36 px-6">
