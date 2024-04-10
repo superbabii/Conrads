@@ -43,7 +43,7 @@ export default function Layout({
                 <meta name="description" content='Conrads Consult & Engineering' />
                 <link rel="shortcut icon" href="/logo.svg" />
             </Head>
-            <main className={`${inter.className}`}>
+            <main className={`relative ${inter.className}`}>
                 <style>{scrollbarStyles}</style>
                 <Header />
                 {children}
