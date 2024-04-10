@@ -18,8 +18,8 @@ export default function Home() {
         <Hero />
         <Services />
         <Work />
-        <Products />
         <Companies />
+        <Products />
         <WhyUs />
     </Layout>
   );

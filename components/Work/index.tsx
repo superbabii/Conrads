@@ -29,7 +29,7 @@ const workdata = [
 
 const Work = () => {
     return (
-        <div className='mx-auto max-w-7xl my-20 px-10 lg:px-6 relative'>
+        <div className='mx-auto max-w-7xl my-20 lg:my-32 px-10 lg:px-6 relative'>
             <div className="radial-bgone hidden lg:block" />
             <div className='mb-16'>
                 <motion.div

@@ -52,43 +52,19 @@ interface ProductsCardProps {
 
 const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageLink }) => {
   return (
-    <div className="relative group">
-      <div className="absolute transition opacity-40 -inset-1 bg-gradient-to-r from-[#592693] to-[#96225f] blur duration-400 group-hover:opacity-100 group-hover:duration-200" />
-      <div className='relative'
-        onMouseOver={(e) => {
-          const highlightElement = e.currentTarget.querySelector('.highlight') as HTMLElement | null;
-          if (highlightElement) {
-            highlightElement.style.opacity = '1';
-          }
-        }}
-        onMouseOut={(e) => {
-          const highlightElement = e.currentTarget.querySelector('.highlight') as HTMLElement | null;
-          if (highlightElement) {
-            highlightElement.style.opacity = '0.7';
-          }
-        }}
+    <div className='relative rounded-lg product-card'>
+      <div
+        className="relative rounded-lg bg-cover bg-center bg-no-repeat h-[240px] opacity-70 hover:opacity-100 transition-opacity duration-400"
+        style={{ backgroundImage: `url(${imageLink})`}}
       >
-        <div className="relative space-y-6 leading-none rounded-lg ring-1 ring-gray-900/5 highlight"
-          style={{
-            backgroundImage: `url(${imageLink})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            height: '240px',
-            opacity: 0.9,
-            transition: 'opacity 0.4s ease-in-out',
-          }}
-        >
-        </div>
-        {/* Text content */}
-        <div className="absolute bottom-0 left-0 right-0 p-2">
-          <h3 className="text-md text-white border p-1 border-white rounded-md z-10 inline-block">
-            {heading}
-          </h3>
-          <p className="leading-normal text-white text-lg py-3">
-            {subheading}
-          </p>
-        </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 p-2">
+        <h3 className="text-md text-white border p-1 border-white rounded-md z-10 inline-block">
+          {heading}
+        </h3>
+        <p className="leading-normal text-white text-lg py-3">
+          {subheading}
+        </p>
       </div>
     </div>
   );
@@ -96,8 +72,7 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageL
 
 const Products = () => {
   return (
-    <div className='mx-auto max-w-7xl my-20 px-10 lg:px-6 relative'>
-      <div className="radial-bgone hidden lg:block"></div>
+    <div className='mx-auto max-w-7xl my-20 lg:my-32 px-10 lg:px-6 relative'>
       <div className='mb-12'>
         <motion.div
           variants={staggerContainer(0.25, 0.25)}
@@ -120,20 +95,18 @@ const Products = () => {
           </motion.p>
         </motion.div>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 mt-12" >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12" >
         {productdata.map((items, index) => (
           <Link
             className="space-y-8"
             href='/products'
             key={index}
           >
-            <li className="text-sm leading-6">
-              <ProductsCard
-                heading={items.heading}
-                subheading={items.subheading}
-                imageLink={items.imgSrc}
-              />
-            </li>
+            <ProductsCard
+              heading={items.heading}
+              subheading={items.subheading}
+              imageLink={items.imgSrc}
+            />
           </Link>
         ))}
       </div>

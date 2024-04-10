@@ -71,8 +71,8 @@ const Trusted = () => {
     };
 
     return (
-        <div className='mx-auto my-20 px-6 relative'>
-            <div className='mx-auto max-w-7xl mb-16'>
+        <div className='mx-auto my-20 lg:my-32 relative'>
+            <div className='mx-auto max-w-7xl px-10 lg:px-6 mb-16 '>
                 <motion.div
                     variants={staggerContainer(0.25, 0.25)}
                     initial="hidden"
