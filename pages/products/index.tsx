@@ -248,6 +248,7 @@ const Products = () => {
                 description="Explore our diverse range of offerings, where solutions abound for your every need."
                 backgroundImageUrl="/images/Breadcrumb/product.png"
                 backgroundSMImageUrl="/images/Breadcrumb/product_sm.png"
+                height="320px"
             />
             <div className='flex flex-col lg:flex-row mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
                 <div className="lg:mr-16 w-full lg:w-1/4">

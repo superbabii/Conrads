@@ -58,6 +58,7 @@ const Contact = () => {
                 description="Don&apos;t hesitate to connect with us. Our team is readily available and eager to assist you with any inquiries or assistance you may need. Reach out to us today; we&apos;re here to help!"
                 backgroundImageUrl="/images/Breadcrumb/contact.png"
                 backgroundSMImageUrl="/images/Breadcrumb/contact_sm.png"
+                height="320px"
             />
             <motion.div
                 variants={staggerContainer(0.25, 0.25)}
@@ -87,8 +88,8 @@ const Contact = () => {
             <div className="red-band"></div>
             <div className="contact-logo rounded-lg bg-[#121212] shadow-lg p-4 hidden lg:block">
                 <img
-                    className="h-32 w-24px"
-                    src={'/images/Logo/logo.png'}
+                    className="h-auto w-480px"
+                    src={'/images/Logo/logo.svg'}
                     alt="conrads-engineering-Logo"
                 />
             </div>

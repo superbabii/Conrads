@@ -19,11 +19,12 @@ const Imprint = () => {
     return (
         <Layout>
             <Breadcrumb
-                pageName="Imprint"
+                pageName="imprint"
                 heading="Imprint"
-                description="This is the Impressum page for Conrads Consult & Engineering"
-                backgroundImageUrl="/images/Breadcrumb/contactt.png"
+                description=""
+                backgroundImageUrl="/images/Breadcrumb/imprint.png"
                 backgroundSMImageUrl="/images/Breadcrumb/contactt_sm.png"
+                height="200px"
             />
             <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 text-maingray text-center'>
                 <p><strong className='text-white'>Name:</strong> Conrads Consult & Engineering</p>

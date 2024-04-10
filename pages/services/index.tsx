@@ -130,6 +130,7 @@ const Services = () => {
                 description="We are dedicated to providing fast, high-quality service to ensure your satisfaction."
                 backgroundImageUrl="/images/Breadcrumb/service.png"
                 backgroundSMImageUrl="/images/Breadcrumb/service.png"
+                height="320px"
             />
             <div className="mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12">
                 {servicedata.map((items, index) => (

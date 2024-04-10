@@ -8,16 +8,18 @@ const Breadcrumb = ({
     heading,
     description,
     backgroundImageUrl,
-    backgroundSMImageUrl
+    backgroundSMImageUrl,
+    height
 }: {
     pageName: string;
     heading: string;
     description: string;
     backgroundImageUrl: string;
     backgroundSMImageUrl: string;
+    height: string;
 }) => {
     return (
-        <div className="relative overflow-hidden h-[330px]">
+        <div className={`relative overflow-hidden h-[${height}]`}>
             <div className="absolute inset-0 z-0 flex justify-center items-center">
                 <img
                     className="absolute inset-0 w-full lg:h-full object-cover object-bottom hidden md:block"

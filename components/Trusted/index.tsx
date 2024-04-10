@@ -1,6 +1,6 @@
 
 "use client"
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import { TypingText } from '../Effect/typing';
 import { motion } from "framer-motion";
@@ -28,8 +28,6 @@ const companydata = [
     },
 ]
 
-
-// CAROUSEL SETTINGS
 const Trusted = () => {
     const settings = {
         dots: false,
