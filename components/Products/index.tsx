@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { TypingText, TitleText } from '../Effect/typing';
 import { motion } from "framer-motion";
@@ -13,23 +14,23 @@ interface productdata {
 
 const productdata: productdata[] = [
   {
-    imgSrc: '/images/Products/AI.jpg',
-    heading: 'Products-exm1',
+    imgSrc: '/images/Products/AI.png',
+    heading: 'Artificial Intelligence',
     subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
-    imgSrc: '/images/Products/simulation.jpg',
-    heading: 'Products-exm1',
-    subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry and this',
+    imgSrc: '/images/Products/software.png',
+    heading: 'Software',
+    subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     imgSrc: '/images/Products/electronic2.jpg',
-    heading: 'Products-exm1',
+    heading: 'Electronic',
     subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     imgSrc: '/images/Products/IC.jpg',
-    heading: 'Products-exm1',
+    heading: 'Automotive',
     subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
@@ -51,13 +52,25 @@ interface ProductsCardProps {
 }
 
 const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageLink }) => {
+  const [isScaled, setisScaled] = useState(false);
   return (
-    <div className='relative rounded-lg product-card'>
-      <div
-        className="relative rounded-lg bg-cover bg-center bg-no-repeat h-[240px] opacity-70 hover:opacity-100 transition-opacity duration-400"
-        style={{ backgroundImage: `url(${imageLink})`}}
-      >
+    <div
+      className='relative rounded-lg product-card'
+      onMouseEnter={() => setisScaled(true)}
+      onMouseLeave={() => setisScaled(false)}
+    >
+      <div className='overflow-hidden rounded-lg'>
+        <div
+          className="relative rounded-lg bg-cover bg-center bg-no-repeat opacity-70 h-[240px] transition-transform duration-1000"
+          style={{
+            backgroundImage: `url(${imageLink})`,
+            transform: isScaled ? 'scale(1.5)' : 'scale(1)',
+            filter: isScaled ? 'brightness(90%) sepia(100%) saturate(100%) hue-rotate(10deg)' : 'none',
+          }}
+        >
+        </div>
       </div>
+
       <div className="absolute bottom-0 left-0 right-0 p-2">
         <h3 className="text-md text-white border p-1 border-white rounded-md z-10 inline-block">
           {heading}
@@ -69,7 +82,7 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageL
     </div>
   );
 }
-
+//opacity-70 hover:opacity-100 transition-opacity duration-400
 const Products = () => {
   return (
     <div className='mx-auto max-w-7xl my-20 lg:my-32 px-10 lg:px-6 relative'>

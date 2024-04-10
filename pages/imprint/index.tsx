@@ -34,7 +34,7 @@ const Imprint = () => {
                 <br />
                 <div className='flex gap-x-4'>
                     <span className='text-white inline-block'>Address:</span>
-                    <span>Münderhäuser Straße 31, 36199 <br /> Rotenburg an der Fulda, <br /> Germany</span>
+                    <span>Münderhäuser Straße 31, <br />36199 Rotenburg an der Fulda, <br /> Germany</span>
                 </div>
                 <div className='flex gap-x-4'>
                     <span className='text-white inline-block'>Email:</span>
@@ -47,15 +47,15 @@ const Imprint = () => {
                 <br />
                 <div className='flex gap-x-4'>
                     <span className='text-white inline-block'>Register Court:</span>
-                    <span>Amtsgericht Berlin</span>
+                    <span>Amtgericht Bad Hersfeld</span>
                 </div>
                 <div className='flex gap-x-4'>
                     <span className='text-white inline-block'>Register Number:</span>
-                    <span>HRB 123456</span>
+                    <span>HRB 22634154</span>
                 </div>
                 <div className='flex gap-x-4'>
                     <span className='text-white inline-block'>VAT Number:</span>
-                    <span>DE123456789</span>
+                    <span>DE 275478059</span>
                 </div>
                 <br />
                 <div className='flex gap-x-4'>
@@ -65,12 +65,12 @@ const Imprint = () => {
                 <br />
                 <div className='flex gap-x-4'>
                     <span className='text-white inline-block'>Regulatory Authority:</span>
-                    <span>Bezirksamt Berlin-Mitte</span>
+                    <span>Bad Hersfeld - Rotenburg</span>
                 </div>
                 <br />
 
                 <div className='inline-block'>
-                    <span>Website developed with NextJs by Nazar Babii and Conrads Consult & Engineering.</span>
+                    <span>Website developed with Next.js by Nazar Babii and Conrads Consult & Engineering.</span>
                 </div>
                 <br />
                 <div className='inline-block'>
@@ -91,9 +91,9 @@ const Imprint = () => {
                 </div>
                 <br />
                 <h2 className='text-white text-2xl lg:text-4xl mb-3'>Professional Liability Insurance</h2>
-                <div className='text-lg'>Provider: XYZ Insurance Company</div>
+                <div className='text-lg'>Provider: Taunussparkasse (Bad Homburg)</div>
                 <div className='text-lg'>Policy Number: 123456789</div>
-                <div className='text-lg'>Scope: Germany</div>
+                <div className='text-lg'>Scope: Europe</div>
                 <br />
                 <h2 className='text-white text-2xl lg:text-4xl mb-3'>EU Dispute Resolution</h2>
                 <div className='text-lg'>The European Commission provides a platform for online dispute resolution (ODR): <a className='text-primary' href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>. <br />

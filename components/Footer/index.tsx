@@ -88,8 +88,8 @@ const Footer = () => {
             <h4 className="text-maingray text-sm font-normal mb-6 flex gap-2" style={{ alignItems: 'flex-start' }}>
               <HomeIcon style={{ verticalAlign: 'top', color: 'white' }} />
               <span>
-                Münderhäuser Straße 31, 36199<br />
-                Rotenburg an der Fulda,<br />
+                Münderhäuser Straße 31,<br />
+                36199 Rotenburg an der Fulda,<br />
                 Germany
               </span>
             </h4>
