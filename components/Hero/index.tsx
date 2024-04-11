@@ -14,8 +14,19 @@ interface SlideProps {
 }
 
 const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
-    <div className='md:h-screen flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat'
-        style={{ backgroundImage: `url(${image})` }}>
+    <div className='h-screen flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat custom-bg'>
+        <style jsx>{`
+        .custom-bg {
+          background-image: url(${image});
+          height: 100vh;
+        }
+
+        @media (max-width: 640px) {
+          .custom-bg {
+            height: 70vh;
+          }
+        }
+      `}</style>
         <motion.div
             variants={staggerContainer(0.25, 0.25)}
             initial="hidden"
@@ -34,7 +45,7 @@ const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
                 >
                     {description}
                 </motion.p>
-                <div className='flex items-center justify-center md:justify-start space-x-4 mb-24 lg:mb-32'>
+                <div className='flex flex-col md:flex-row items-center justify-center md:justify-start space-y-8 md:space-y-0 space-x-0 md:space-x-4 mb-6 md:mb-32'>
                     <motion.div
                         variants={fadeIn("right", "spring", 0 * 0.5, 0.75)}
                         className="relative flex flex-col justify-between items-center bg-transparent transition-[flex] duration-[0.7s] ease-out-flex"
