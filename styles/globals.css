@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #0E0E0E;
+  background-color: #0d0d0d;
   /* background-image: linear-gradient(90deg, #BD24DF 0%, #2D6ADE 97.15%); */
   /* background-image: linear-gradient(90deg, rgba(189, 36, 223, 0.5) 0%, rgba(45, 106, 222, 0.5) 97.15%); */
   background-blend-mode: overlay;
@@ -74,10 +74,11 @@ html:not([data-scroll="0"]) .navbar {
 
 .dance-text {
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 20%;
+  left: 0%;
   transform: rotate(-25deg);
   font-family: 'Segoe Script', sans-serif;
+  z-index: 2;
 }
 
 .hero-text {
@@ -287,12 +288,12 @@ html:not([data-scroll="0"]) .navbar {
   position: absolute;
   background: #000;
   opacity: 1;
-  filter: blur(360px);
+  filter: blur(392px);
   border-radius: 500px;
-  width: 50rem;
-  height: 50rem;
+  width: 40rem;
+  height: 40rem;
   left: -10%;
-  top: -20%;
+  top: -30%;
   z-index: 1;
 }
 
