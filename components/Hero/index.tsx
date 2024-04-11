@@ -50,7 +50,7 @@ const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
                         variants={fadeIn("right", "spring", 0 * 0.5, 0.75)}
                         className="relative flex flex-col justify-between items-center bg-transparent transition-[flex] duration-[0.7s] ease-out-flex"
                     >
-                        <Link href={"/contact"} className='text-lg text-white mainbutton' style={{ width: '180px' }}>
+                        <Link href={"/contact"} className='text-lg text-white mainbutton rounded-full' style={{ width: '180px' }}>
                             CONTACT US
                         </Link>
                     </motion.div>
@@ -58,7 +58,7 @@ const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
                         variants={fadeIn("right", "spring", 1 * 0.5, 0.75)}
                         className="relative flex flex-col justify-between items-center bg-transparent transition-[flex] duration-[0.7s] ease-out-flex"
                     >
-                        <Link href={"/about-us"} className='text-lg text-white mainbutton' style={{ width: '180px' }}>
+                        <Link href={"/about-us"} className='text-lg text-white mainbutton rounded-full' style={{ width: '180px' }}>
                             ABOUT US
                         </Link>
                     </motion.div>

@@ -22,22 +22,22 @@ export const metadata: Metadata = {
 
 const contacts = [
     {
-        icon: <HomeIcon style={{ color: '#801022', width: 80, height: 80 }} />,
+        icon: <HomeIcon style={{ color: '#710010', width: 80, height: 80 }} />,
         title: 'Our Address',
         content: 'Münderhäuser Straße 31, 36199 Rotenburg an der Fulda, Germany',
     },
     {
-        icon: <EmailIcon style={{ color: '#801022', width: 80, height: 80 }} />,
+        icon: <EmailIcon style={{ color: '#710010', width: 80, height: 80 }} />,
         title: 'Email Address',
-        content: <a className="text-white font-normal text-center transition-colors duration-300 hover:text-[#801022]" href="mailto:info@conrads-engineering.com">info@conrads-engineering.com</a>,
+        content: <a className="text-white font-normal text-center transition-colors duration-300 hover:text-[#710010]" href="mailto:info@conrads-engineering.com">info@conrads-engineering.com</a>,
     },
     {
-        icon: <CallIcon style={{ color: '#801022', width: 80, height: 80 }} />,
+        icon: <CallIcon style={{ color: '#710010', width: 80, height: 80 }} />,
         title: 'Phone Numbers',
-        content: <a className="text-white font-normal text-center transition-colors duration-300 hover:text-[#801022]" href="tel:+49-662-343-645-10">+49 (66) 234 3645 10</a>,
+        content: <a className="text-white font-normal text-center transition-colors duration-300 hover:text-[#710010]" href="tel:+49-662-343-645-10">+49 (66) 234 3645 10</a>,
     },
     {
-        icon: <AccessTimeFilledIcon style={{ color: '#801022', width: 80, height: 80 }} />,
+        icon: <AccessTimeFilledIcon style={{ color: '#710010', width: 80, height: 80 }} />,
         title: 'Office Hours',
         content: (
             <>
@@ -84,7 +84,7 @@ const Contact = () => {
                     </div>
                 ))}
             </motion.div>
-            <div className="h-px mb-20 py-[1px] w-full opacity-40 bg-gradient-to-r from-transparent via-[#801022] to-transparent" />
+            <div className="h-px mb-20 py-[1px] w-full opacity-40 bg-gradient-to-r from-transparent via-[#710010] to-transparent" />
             <div className="red-band"></div>
             <div className="contact-logo rounded-lg bg-[#121212] shadow-lg p-4 hidden lg:block">
                 <img

@@ -22,7 +22,7 @@ html[data-scroll="0"] .navbar {
   position: absolute;
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-  z-index: 10;
+  z-index: 20;
 }
 
 html:not([data-scroll="0"]) .navbar {
@@ -34,18 +34,18 @@ html:not([data-scroll="0"]) .navbar {
   opacity: 1.9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: background-color 1s linear, opacity 1s linear, box-shadow 1s linear;
-  z-index: 10;
+  z-index: 20;
 }
 
 .mainbutton {
   position: relative;
   overflow: hidden;
-  background: #801022;
-  color: white;
+  background: transparent;
+  border-width: 1px;
+  border-color: #fff;
+  color: #fff;
   text-align: center;
   padding: 10px 20px;
-  border-radius: 4px;
-  opacity: 0.9;
   transition: 0.7s;
   z-index: 0;
 }
@@ -57,7 +57,7 @@ html:not([data-scroll="0"]) .navbar {
   left: 50%;
   width: 0;
   height: 100%;
-  background: white;
+  background: #710010;
   transition: width 0.5s;
   transform: translateX(-50%);
   z-index: -1;
@@ -68,8 +68,8 @@ html:not([data-scroll="0"]) .navbar {
 }
 
 .mainbutton:hover {
-  color: #801022;
-  opacity: 1;
+  /* /* color: #710010; */
+  border-color: #710010;
 }
 
 .dance-text {
@@ -116,7 +116,7 @@ html:not([data-scroll="0"]) .navbar {
   opacity: 0.4;
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 1);
   border-width: 1px;
-  border-color: #801022;
+  border-color: #710010;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.4s;
 }
@@ -155,7 +155,7 @@ html:not([data-scroll="0"]) .navbar {
 
 .red-band {
   position: absolute;
-  background-color: #801022;
+  background-color: #710010;
   margin-top: 100px;
   width: 100%;
   height: 480px;
@@ -251,7 +251,7 @@ html:not([data-scroll="0"]) .navbar {
 
 .space-links:hover {
   letter-spacing: 1px;
-  color: #801022;
+  color: #710010;
 }
 
 .contact-obj {
@@ -260,7 +260,7 @@ html:not([data-scroll="0"]) .navbar {
 
 .contact-obj:hover {
   /* letter-spacing: 1px; */
-  color: #801022;
+  color: #710010;
 }
 
 .footer-icons {
@@ -273,7 +273,7 @@ html:not([data-scroll="0"]) .navbar {
 
 .radial-bgone {
   position: absolute;
-  background: linear-gradient(90deg, #801022 0%, #801022 97.15%);
+  background: linear-gradient(90deg, #710010 0%, #710010 97.15%);
   opacity: 0.3;
   filter: blur(392px);
   border-radius: 200px;
@@ -298,7 +298,7 @@ html:not([data-scroll="0"]) .navbar {
 
 .radial-center {
   position: absolute;
-  background: linear-gradient(90deg, #801022 0%, #801022 97.15%);
+  background: linear-gradient(90deg, #710010 0%, #710010 97.15%);
   opacity: 0.5;
   filter: blur(392px);
   border-radius: 400px;
@@ -312,7 +312,7 @@ html:not([data-scroll="0"]) .navbar {
 
 .radial-bg {
   position: absolute;
-  background: linear-gradient(90deg, #801022 0%, #801022 97.15%);
+  background: linear-gradient(90deg, #710010 0%, #710010 97.15%);
   opacity: 1;
   filter: blur(392px);
   border-radius: 400px;

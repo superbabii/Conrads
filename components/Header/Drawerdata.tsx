@@ -28,7 +28,7 @@ const Data = () => {
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="block text-white mainbutton"
+                                className="block text-white mainbutton rounded-full"
                                 aria-current={item.current ? 'page' : undefined}
                             >
                                 {item.name}

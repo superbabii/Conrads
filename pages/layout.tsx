@@ -19,7 +19,7 @@ const scrollbarStyles = `
     border-radius: 6px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #801022;
+    background-color: #710010;
   }
 
 ::-webkit-scrollbar-thumb:horizontal {

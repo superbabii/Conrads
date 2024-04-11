@@ -15,12 +15,12 @@ const WhyUs = () => {
                 </p>
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-y-8 lg:gap-x-16">
                     <Link href="/services">
-                        <button className='text-lg text-white mainbutton' style={{ width: '200px' }}>
+                        <button className='text-lg text-white mainbutton rounded-full' style={{ width: '200px' }}>
                             Our Service
                         </button>
                     </Link>
                     <Link href="/about-us">
-                        <button className='text-lg text-white mainbutton' style={{ width: '200px' }}>
+                        <button className='text-lg text-white mainbutton rounded-full' style={{ width: '200px' }}>
                             Our Company
                         </button>
                     </Link>
