@@ -186,7 +186,7 @@ const AboutUs = () => {
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: false, amount: 0.25 }}
-                            className="text-lg font-semibold mt-12 lg:ml-32 preline text-center text-offwhite handwritten"
+                            className="text-lg font-semibold mt-12 lg:ml-32 preline text-center text-white handwritten"
                         >
                             <TypingText title="Werner Conrads, CEO" />
                         </motion.div>
@@ -247,7 +247,7 @@ const AboutUs = () => {
                     viewport={{ once: false, amount: 0.25 }}
                     className="mx-auto max-w-2xl lg:max-w-7xl sm:py-4 px-6 lg:px-8"
                 >
-                    <h1 className='text-offwhite text-3xl md:text-5xl mb-3'
+                    <h1 className='text-white text-3xl md:text-5xl mb-3'
                         style={{ fontFamily: 'Poppins, sans-serif' }}
                     >
                         <TypingText title="Meet Our Team Member" />
@@ -287,10 +287,10 @@ const AboutUs = () => {
             <Work />
             <div className="about-wide-bg mt-16 lg:mt-32">
                 <div className="mx-auto max-w-5xl py-36 px-6">
-                    <h3 className="text-center text-offwhite text-3xl lg:text-5xl font-semibold mb-6">
+                    <h3 className="text-center text-white text-3xl lg:text-5xl font-semibold mb-6">
                         Endless <RepeatingText title1='Possibilities' title2='Opportunities' />
                     </h3>
-                    <p className="text-center text-offwhite text-lg font-normal mb-8">
+                    <p className="text-center text-white text-lg font-normal mb-8">
                         Anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
                         occur in which toil and pain can procure him some great pleasure.
                     </p>

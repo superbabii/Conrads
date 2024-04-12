@@ -80,7 +80,7 @@ const Trusted = () => {
                     viewport={{ once: false, amount: 0.25 }}
                     className="innerWidth mx-auto flexCenter flex-col"
                 >
-                    <h1 className='text-offwhite text-3xl md:text-5xl mb-3'
+                    <h1 className='text-white text-3xl md:text-5xl mb-3'
                         style={{ fontFamily: 'Poppins, sans-serif' }}
                     >
                         <TypingText title="Trusted by" />

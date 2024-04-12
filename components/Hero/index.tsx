@@ -37,12 +37,12 @@ const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
         >
             <div className='radial-hero hidden lg:block'></div>
             <div className='hero-text col-span-8 sm:order-1'>
-                <motion.h1 variants={textVariant(1)} className="text-4xl md:text-7xl font-thin mb-5 text-offwhite md:4px md:text-start text-center">
+                <motion.h1 variants={textVariant(1)} className="text-4xl md:text-7xl font-thin mb-5 text-white md:4px md:text-start text-center">
                     {title}
                 </motion.h1>
                 <motion.p
                     variants={fadeIn("up", "tween", 0.2, 1)}
-                    className="text-offwhite md:text-xl font-normal mb-10 md:text-start text-center"
+                    className="text-white md:text-xl font-normal mb-10 md:text-start text-center"
                 >
                     {description}
                 </motion.p>
