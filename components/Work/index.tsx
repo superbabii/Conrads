@@ -51,7 +51,7 @@ const Work = () => {
                         variants={fadeIn("up", "tween", 0.2, 1)}
                         className='text-maingray text-md'
                     >
-                        Let us reveal the blueprint behind the smooth process. At Conrads Consult & Engineering, we believe in clarity, collaboration, and client-centricity. Here's how we transform your vision into reality.
+                        Let us reveal the blueprint behind the smooth process. At Conrads Consult & Engineering, we believe in clarity, collaboration, and client-centricity. Here&apos;s how we transform your vision into reality.
                     </motion.p>
                 </motion.div>
             </div>

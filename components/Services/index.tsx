@@ -79,13 +79,13 @@ const Services = () => {
                         href={`/services#service-${index}`}
                         key={index}
                     >
-                        <div className='rounded-full flex justify-center p-3'>
-                            <Image src={items.imgSrc} alt={items.imgSrc} width={120} height={120} />
+                        <div className='rounded-full flex justify-center p-2'>
+                            <Image src={items.imgSrc} alt={items.imgSrc} width={80} height={80} />
                         </div>
-                        <h3 className="text-2xl font-light text-white text-center">
+                        <h3 className="text-xl font-semibold text-white text-center">
                             {items.heading}
                         </h3>
-                        <p className='text-maingray text-center pt-3'>
+                        <p className='text-sm text-maingray text-center pt-2'>
                             {items.subheading}
                         </p>
                     </Link>
