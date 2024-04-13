@@ -1,8 +1,13 @@
 "use client"
 import { RepeatingText } from '../Effect/typing';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useTranslation, Trans } from 'next-i18next';
 
 const WhyUs = () => {
+    const router = useRouter();
+    const { t } = useTranslation('whyus');
+
     return (
         <div className="why-bg mt-16 lg:mt-32">
             <div className="mx-auto max-w-5xl py-36 px-6">
@@ -11,18 +16,17 @@ const WhyUs = () => {
                     Unlock a World of Possibilities
                 </h3>
                 <p className="text-center text-white text-lg font-normal mb-8">
-                    With a steadfast commitment to customer satisfaction, a legacy of unparalleled service,
-                    and a vision for tomorrow's needs, we stand as your trusted partner.
+                    {t("description")}
                 </p>
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-y-8 lg:gap-x-16">
                     <Link href="/services">
                         <button className='text-lg text-white mainbutton rounded-full' style={{ width: '200px' }}>
-                            Our Service
+                            {t("Our Service")}
                         </button>
                     </Link>
                     <Link href="/about-us">
                         <button className='text-lg text-white mainbutton rounded-full' style={{ width: '200px' }}>
-                            Our Company
+                            {t("Our Company")}
                         </button>
                     </Link>
                 </div>

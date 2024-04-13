@@ -1,5 +1,7 @@
 "use client"
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useTranslation, Trans } from 'next-i18next';
 import { TypingText } from '../Effect/typing';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";

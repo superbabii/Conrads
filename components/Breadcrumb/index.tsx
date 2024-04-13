@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useRouter } from 'next/router';
+import { useTranslation, Trans } from 'next-i18next';
 import { TypingText, TitleText } from '../Effect/typing';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";

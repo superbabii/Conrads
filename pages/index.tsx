@@ -33,6 +33,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({
       'common',
       'header',
       'footer',
+      'whyus',
     ])),
   },
 })
