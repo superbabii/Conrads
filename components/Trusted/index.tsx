@@ -2,6 +2,8 @@
 "use client"
 import React from "react";
 import Slider from "react-slick";
+import { useRouter } from 'next/router';
+import { useTranslation, Trans } from 'next-i18next';
 import { TypingText } from '../Effect/typing';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
@@ -70,6 +72,8 @@ const Trusted = () => {
         ]
     };
 
+    const router = useRouter();
+    const { t } = useTranslation('trusted');
     return (
         <div className='mx-auto my-20 lg:my-32 relative'>
             <div className='mx-auto max-w-7xl px-10 lg:px-6 mb-16 '>

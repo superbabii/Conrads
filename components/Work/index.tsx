@@ -9,27 +9,29 @@ import { fadeIn, staggerContainer } from "../../utils/motion";
 const workdata = [
     {
         imgSrc: '/images/Work/research.png',
-        heading: 'Research Problem',
-        subheading: 'Unveiling opportunities through meticulous research and analysis.',
+        heading: 'heading-1',
+        subheading: 'Discover opportunities through careful research and analysis.',
     },
     {
         imgSrc: '/images/Work/identification.png',
-        heading: 'Identify Problem',
-        subheading: 'Pinpointing challenges with laser-sharp precision and insight.',
+        heading: 'heading-2',
+        subheading: 'Pinpoint challenges with razor-sharp precision and insight.',
     },
     {
         imgSrc: '/images/Work/solution.png',
-        heading: 'Solution Problem',
-        subheading: 'Crafting innovative solutions tailored to your needs.',
+        heading: 'heading-3',
+        subheading: 'Craft innovative solutions tailored to your needs.',
     },
     {
         imgSrc: '/images/Work/success.png',
-        heading: 'Success Business',
-        subheading: 'Empowering your business to thrive and excel.',
+        heading: 'heading-4',
+        subheading: 'Help your business great succeed and excel.',
     },
 ]
 
 const Work = () => {
+    const router = useRouter();
+    const { t } = useTranslation('work');
     return (
         <div className='mx-auto max-w-7xl my-20 lg:my-32 px-10 lg:px-6 relative'>
             <div className="radial-bgone hidden lg:block" />
@@ -49,8 +51,7 @@ const Work = () => {
                         variants={fadeIn("up", "tween", 0.2, 1)}
                         className='text-maingray text-md'
                     >
-                        At Conrads Consult & Engineering, our workflow begins with thorough research to understand the problem,
-                        followed by precise problem identification, comprehensive solution development, and ultimately, driving success for your business.
+                        Let us reveal the blueprint behind the smooth process. At Conrads Consult & Engineering, we believe in clarity, collaboration, and client-centricity. Here's how we transform your vision into reality.
                     </motion.p>
                 </motion.div>
             </div>
@@ -77,11 +78,11 @@ const Work = () => {
                             className='absolute rounded-md text-black bg-white opacity-90 z-10 py-2 px-16'
                             style={{ bottom: '-20px' }}
                         >
-                            STEP {index + 1}
+                            {t("STEP")} {index + 1}
                         </div>
                         <div className='work-card rounded-md p-3 pt-24 pb-12'>
                             <h3 className="text-xl font-semibold text-white text-center pb-2">
-                                {items.heading}
+                                {t(items.heading)}
                             </h3>
                             <p className='text-sm text-maingray text-center px-1'>
                                 {items.subheading}

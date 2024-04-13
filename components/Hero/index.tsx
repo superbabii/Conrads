@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useTranslation, Trans } from 'next-i18next';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { staggerContainer } from '../../utils/motion';
@@ -37,7 +39,10 @@ const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
         >
             <div className='radial-hero hidden lg:block'></div>
             <div className='hero-text col-span-8 sm:order-1'>
-                <motion.h1 variants={textVariant(1)} className="text-5xl md:text-7xl font-thin mb-5 text-white md:4px md:text-start text-center">
+                <motion.h1
+                    variants={textVariant(1)}
+                    className="text-5xl md:text-7xl font-thin mb-5 text-white md:4px md:text-start text-center"
+                >
                     {title}
                 </motion.h1>
                 <motion.p
@@ -98,7 +103,8 @@ const slides = [
 ];
 
 const Hero: React.FC = () => {
-
+    const router = useRouter();
+    const { t } = useTranslation('hero');
     return (
         <div className='relative'>
             <div className="dance-text text-primary text-[12px] md:text-lg"
