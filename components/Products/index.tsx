@@ -94,9 +94,7 @@ const Products = () => {
           viewport={{ once: false, amount: 0.25 }}
           className="innerWidth mx-auto flexCenter flex-col"
         >
-          <h1 className='text-white text-3xl md:text-5xl mb-3'
-            style={{ fontFamily: 'Poppins, sans-serif' }}
-          >
+          <h1 className='text-white text-3xl md:text-5xl mb-3 font-thin'>
             <TypingText title="Our Products" />
             <div className='bg-primary mt-1 w-[40px] md:w-[70px] h-[3px] md:h-[5px]' />
           </h1>

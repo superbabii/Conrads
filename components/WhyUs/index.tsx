@@ -6,12 +6,13 @@ const WhyUs = () => {
     return (
         <div className="why-bg mt-16 lg:mt-32">
             <div className="mx-auto max-w-5xl py-36 px-6">
-                <h3 className="text-center text-white text-3xl lg:text-5xl font-semibold mb-6">
-                    Why <RepeatingText title1='Choose' title2='Need' /> Us
+                <h3 className="text-center text-white text-3xl lg:text-5xl font-thin mb-6">
+                    Why <RepeatingText title1='Choose' title2='Need' /> Us <br />
+                    Unlock a World of Possibilities
                 </h3>
                 <p className="text-center text-white text-lg font-normal mb-8">
-                    Choose Conrads Consult & Engineering for unparalleled expertise, rapid prototyping capabilities, 
-                    and innovative solutions tailored to elevate your instruments and operations to the forefront of industry standards.
+                    With a steadfast commitment to customer satisfaction, a legacy of unparalleled service,
+                    and a vision for tomorrow's needs, we stand as your trusted partner.
                 </p>
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-y-8 lg:gap-x-16">
                     <Link href="/services">

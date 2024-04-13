@@ -46,7 +46,7 @@ const servicedata: servicedata[] = [
 
 const Services = () => {
     return (
-        <div className='mx-auto max-w-7xl my-20 lg:my-32 px-10 lg:px-6 relative'>
+        <div className='mx-auto max-w-7xl mb-20 lg:mb-32 mt-12 lg:mt-20 px-10 lg:px-6 relative'>
             {/* <div className="radial-bgone hidden lg:block" /> */}
             <div className='mb-16'>
                 <motion.div
@@ -56,9 +56,7 @@ const Services = () => {
                     viewport={{ once: false, amount: 0.25 }}
                     className="innerWidth mx-auto flexCenter flex-col"
                 >
-                    <h1 className='text-white text-3xl md:text-5xl mb-3'
-                        style={{ fontFamily: 'Poppins, sans-serif' }}
-                    >
+                    <h1 className='text-white text-3xl md:text-5xl mb-3 font-thin'>
                         <TypingText title="Our Services" />
                         <div className='bg-primary mt-1 w-[40px] md:w-[70px] h-[3px] md:h-[5px]' />
                     </h1>
@@ -66,9 +64,7 @@ const Services = () => {
                         variants={fadeIn("up", "tween", 0.2, 1)}
                         className='text-maingray text-md'
                     >
-                        Conrads Consult & Engineering offers end-to-end solutions 
-                        encompassing technical analysis, rapid PCB development, innovative product design, and software solutions integrating AI and machine learning, 
-                        ensuring optimized performance and future-proofing for your business.
+                        Explore our range of premium services, backed by years of experience and a passion for perfection.
                     </motion.p>
                 </motion.div>
             </div>

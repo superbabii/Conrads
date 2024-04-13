@@ -78,7 +78,7 @@ html:not([data-scroll="0"]) .navbar {
   left: 0%;
   transform: rotate(-25deg);
   font-family: 'Segoe Script', sans-serif;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero-text {
@@ -251,7 +251,7 @@ html:not([data-scroll="0"]) .navbar {
 }
 
 .space-links:hover {
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   color: #710010;
 }
 

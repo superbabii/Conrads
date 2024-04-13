@@ -39,9 +39,7 @@ const Work = () => {
                     viewport={{ once: false, amount: 0.25 }}
                     className="innerWidth mx-auto flexCenter flex-col"
                 >
-                    <h1 className='text-white text-3xl md:text-5xl mb-3'
-                        style={{ fontFamily: 'Poppins, sans-serif' }}
-                    >
+                    <h1 className='text-white text-3xl md:text-5xl mb-3 font-thin'>
                         <TypingText title="How we work" />
                         <div className='bg-primary mt-1 w-[40px] md:w-[70px] h-[3px] md:h-[5px]' />
                     </h1>
@@ -49,7 +47,7 @@ const Work = () => {
                         variants={fadeIn("up", "tween", 0.2, 1)}
                         className='text-maingray text-md'
                     >
-                        At Conrads Consult & Engineering, our workflow begins with thorough research to understand the problem, 
+                        At Conrads Consult & Engineering, our workflow begins with thorough research to understand the problem,
                         followed by precise problem identification, comprehensive solution development, and ultimately, driving success for your business.
                     </motion.p>
                 </motion.div>
