@@ -6,24 +6,13 @@ import { useTranslation } from 'next-i18next';
 import { motion } from "framer-motion";
 import { footerVariants } from "../../utils/motion";
 
-// MIDDLE LINKS DATA
-interface LinkType {
-  name: string;
-  href: string;
-  current: boolean;
-}
-interface Social {
-  imgsrc: string,
-  href: string,
-}
-
-const Links: LinkType[] = [
+const Links = [
   { name: 'Imprint', href: '/imprint', current: false },
   { name: 'About Us', href: '/about-us', current: false },
   { name: 'Services', href: '/services', current: false },
 ]
 
-const socialLinks: Social[] = [
+const socialLinks = [
   { imgsrc: '/images/Footer/insta.svg', href: "https://instagram.com/" },
   { imgsrc: '/images/Footer/dribble.svg', href: "https://dribble.com/" },
   { imgsrc: '/images/Footer/twitter.svg', href: "https://twitter.com/" },
@@ -74,7 +63,7 @@ const Footer = () => {
               {Links.map((item, index) => (
                 <li key={index} className='mb-5'>
                   <Link href={item.href} className="text-maingray text-sm font-normal mb-6 space-links">
-                    {item.name}
+                    {t(item.name)}
                   </Link>
                 </li>
               ))}
