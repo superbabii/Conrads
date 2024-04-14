@@ -105,12 +105,6 @@ const productData: Product[] = [
         category: 'Software',
     },
     {
-        imgSrc: '/images/Products/AI.jpg',
-        heading: 'Products-exm1',
-        price: 1000,
-        category: 'AI',
-    },
-    {
         imgSrc: '/images/Products/automotive_product.png',
         heading: 'Products-exm1',
         price: 100,
@@ -148,12 +142,6 @@ const popularProducts = [
         heading: 'Products-exm1',
         price: 100,
         category: 'Software',
-    },
-    {
-        imgSrc: '/images/Products/AI.jpg',
-        heading: 'Products-exm1',
-        price: 1000,
-        category: 'AI',
     },
     {
         imgSrc: '/images/Products/automotive_product.png',
