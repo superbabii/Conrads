@@ -21,7 +21,7 @@ const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
         .hero-bg {
             background-image: url(${image});
             height: 100vh;
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
         }
 
         @media (max-width: 640px) {
@@ -89,16 +89,6 @@ const slides = [
         image: "/images/Hero/3.png",
         title: "Best Grow Your Business",
         description: "Precision Engineering for Reliable, High-Performance Printed Circuit Boards"
-    },
-    {
-        image: "/images/Hero/4.png",
-        title: "Your Growth is Our Target",
-        description: "With over 10 years of experience helping companies to find comprehensive solution"
-    },
-    {
-        image: "/images/Hero/5.png",
-        title: "Your Growth is Our Target",
-        description: "With over 10 years of experience helping companies to find comprehensive solution"
     },
 ];
 
