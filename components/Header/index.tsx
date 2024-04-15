@@ -5,7 +5,6 @@ import { useTranslation, Trans } from 'next-i18next';
 import React, { useEffect } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
-import Drawerdata from "./Drawerdata";
 import { Box, Menu, MenuItem, MenuProps, Divider, IconButton, TextField } from '@mui/material';
 
 import PersonIcon from '@mui/icons-material/Person';
@@ -114,7 +113,7 @@ const Header = () => {
     const handlelanguageClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl_language(event.currentTarget);
     };
-    
+
     const handleClose = () => {
         setAnchorEl_account(null);
         setAnchorEl_language(null);
@@ -183,13 +182,13 @@ const Header = () => {
                             </div>
                             <Link href="/">
                                 <img
-                                    className="block h-10 w-20px lg:hidden"
-                                    src={'/images/Logo/logo.png'}
+                                    className="block h-12 w-20px lg:hidden"
+                                    src={'/images/Logo/logo.svg'}
                                     alt="Conrards-Logo"
                                 />
                                 <img
-                                    className="hidden h-48px w-48px lg:block"
-                                    src={'/images/Logo/logo.png'}
+                                    className="hidden h-20 w-48px lg:block"
+                                    src={'/images/Logo/logo.svg'}
                                     alt="Conrards-Logo"
                                 />
                             </Link>
@@ -405,7 +404,25 @@ const Header = () => {
                     {/* DRAWER LINKS DATA */}
 
                     <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-                        <Drawerdata />
+                        <div className="rounded-md w-full">
+                            <div className="flex-1 space-y-4 py-1">
+                                <div className="sm:block">
+                                    <div className="space-y-5 px-5 pt-2 pb-3">
+                                        {navigation.map((item) => (
+                                            <Link
+                                                key={item.name}
+                                                href={item.href}
+                                                className="block text-white mainbutton rounded-full"
+                                                aria-current={item.current ? 'page' : undefined}
+                                            >
+                                                {t(item.name)}
+                                            </Link>
+                                        ))}
+                                        <div className="mt-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </Drawer>
                 </div>
             </div>

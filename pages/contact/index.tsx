@@ -65,7 +65,7 @@ const Contact = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
-                className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 my-12'
+                className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 my-12'
             >
                 {contacts.map((contact, index) => (
                     <div

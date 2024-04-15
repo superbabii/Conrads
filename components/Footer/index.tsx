@@ -37,8 +37,8 @@ const Footer = () => {
 
           <div className='col-span-6'>
             <img
-              className="block h-12 lg:h-16 w-24px mb-4"
-              src={'/images/Logo/logo.png'}
+              className="block h-12 lg:h-20 w-24px mb-4"
+              src={'/images/Logo/logo.svg'}
               alt="conrads-engineering-Logo"
             />
             <h3 className='text-maingray text-sm font-normal leading-9 mb-4 lg:mb-16'>
