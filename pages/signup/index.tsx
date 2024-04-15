@@ -5,8 +5,8 @@ import GoogleIcon from '@mui/icons-material/Google';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sign Up Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Sign Up Page for Startup Nextjs Template",
+  title: "Sign Up Page | Conrads Consult & Engineering",
+  description: "This is Sign Up Page for Conrads Consult & Engineering",
 };
 
 const SignupPage = () => {
@@ -43,7 +43,7 @@ const SignupPage = () => {
           </p>
           <button className="flex w-full text-lg text-white justify-center mainbutton rounded-md mb-4">
             <GoogleIcon className='mt-1 mr-3' />
-            Sign in with Google
+            Sign up with Google
           </button>
           <div className="mb-4 flex items-center justify-center">
             <span className="hidden h-[1px] w-full max-w-[60px] bg-body-color/50 sm:block"></span>

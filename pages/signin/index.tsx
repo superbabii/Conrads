@@ -4,8 +4,8 @@ import GoogleIcon from '@mui/icons-material/Google';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sign In Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Sign In Page for Startup Nextjs Template",
+  title: "Sign In Page | Conrads Consult & Engineering",
+  description: "This is Sign In Page for Conrads Consult & Engineering",
   // other metadata
 };
 
