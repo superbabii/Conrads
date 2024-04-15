@@ -238,7 +238,7 @@ const Products = () => {
                 backgroundSMImageUrl="/images/Breadcrumb/product_sm.png"
                 height="320px"
             />
-            <div className='flex flex-col lg:flex-row mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
+            <div className='flex flex-col lg:flex-row mx-auto max-w-[1360px] px-6 sm:py-4 lg:px-8 my-12'>
                 <div className="lg:mr-16 w-full lg:w-1/4">
                     <h2 className="text-md text-white pt-2">Popular Products</h2>
                     <div className="flex flex-col my-12 md:grid md:grid-cols-2 lg:grid-cols-1 md:gap-12 gap-y-12">

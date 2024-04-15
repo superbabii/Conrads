@@ -169,7 +169,7 @@ const AboutUs = () => {
                 height="320px"
             />
             {/* <div className="radial-bgone hidden lg:block"></div> */}
-            {/* <div className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
+            {/* <div className='mx-auto max-w-[1360px] px-6 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className='relative'>
                         <img src="/images/About/ceo.png" alt="CEO-image" className="rounded-2xl sm:w-64 sm:h-auto lg:w-96 lg:h-auto mx-auto" />
@@ -198,7 +198,7 @@ const AboutUs = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
-                className='mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 gap-y-12 my-12 lg:my-24'
+                className='mx-auto max-w-[1360px] px-6 grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 gap-y-12 my-12 lg:my-24'
             >
                 {successdata.map((items, index) => (
                     <motion.div
@@ -223,7 +223,7 @@ const AboutUs = () => {
                     </motion.div>
                 ))}
             </motion.div>
-            <div className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 my-12'>
+            <div className='mx-auto max-w-[1360px] px-6 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
                     <div className="relative text-container">
                         <h2 className="text-3xl lg:text-5xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">
@@ -245,7 +245,7 @@ const AboutUs = () => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: false, amount: 0.25 }}
-                    className="mx-auto max-w-2xl lg:max-w-7xl sm:py-4 px-6 lg:px-8"
+                    className="mx-auto max-w-2xl lg:max-w-[1360px] sm:py-4 px-6 lg:px-8"
                 >
                     <h1 className='text-white text-3xl md:text-5xl mb-3'
                         style={{ fontFamily: 'Poppins, sans-serif' }}
@@ -254,7 +254,7 @@ const AboutUs = () => {
                         <div className='bg-primary mt-1 w-[40px] md:w-[70px] h-[3px] md:h-[5px]' />
                     </h1>
                 </motion.div>
-                <div className="mx-auto max-w-7xl">
+                <div className="mx-auto max-w-[1360px]">
                     <Slider {...settings}>
                         {teamMembers.map((items, i) => (
                             <div key={i}>

@@ -33,7 +33,7 @@ const Work = () => {
     const router = useRouter();
     const { t } = useTranslation('work');
     return (
-        <div className='mx-auto max-w-7xl my-20 lg:my-32 px-10 lg:px-6 relative'>
+        <div className='mx-auto max-w-[1360px] my-20 lg:my-32 px-10 lg:px-6 relative'>
             <div className="radial-bgone hidden lg:block" />
             <div className='mb-16'>
                 <motion.div
@@ -75,7 +75,7 @@ const Work = () => {
                             <Image src={items.imgSrc} alt={items.imgSrc} width={50} height={50} />
                         </div>
                         <div
-                            className='absolute rounded-md text-black bg-white opacity-90 z-10 py-2 px-16'
+                            className='absolute rounded-md text-black bg-white opacity-90 z-10 py-2 px-12'
                             style={{ bottom: '-20px' }}
                         >
                             {t("STEP")} {index + 1}

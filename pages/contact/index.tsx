@@ -65,7 +65,7 @@ const Contact = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
-                className='mx-auto max-w-7xl px-6 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 my-12'
+                className='mx-auto max-w-[1360px] px-6 sm:py-4 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 my-12'
             >
                 {contacts.map((contact, index) => (
                     <div
@@ -93,7 +93,7 @@ const Contact = () => {
                     alt="conrads-engineering-Logo"
                 />
             </div>
-            <div className="mx-auto max-w-7xl p-4 lg:px-8">
+            <div className="mx-auto max-w-[1360px] p-4 lg:px-8">
                 <div className="py-4 lg:w-5/12">
                     <div className="rounded-lg bg-transparent form-board px-16 py-12">
                         <h2 className="mb-8 text-3xl font-bold text-white opacity-80">

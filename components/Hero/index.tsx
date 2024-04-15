@@ -35,7 +35,7 @@ const CarouselSlide: React.FC<SlideProps> = ({ image, title, description }) => (
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
-            className='mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 p-6 mt-8 md:mt-20'
+            className='mx-auto max-w-[1360px] grid grid-cols-1 lg:grid-cols-12 p-6 mt-8 md:mt-20'
         >
             <div className='radial-hero hidden lg:block'></div>
             <div className='hero-text col-span-8 sm:order-1'>

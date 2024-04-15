@@ -170,7 +170,7 @@ const Header = () => {
 
     return (
         <Disclosure as="nav" className="navbar">
-            <div className="mx-auto max-w-7xl p-3 md:p-2 lg:px-3">
+            <div className="mx-auto max-w-[1360px] p-3 md:p-2 lg:px-3">
                 <div className="relative flex h-12 sm:h-20 items-center">
                     <div className="flex flex-1 items-center justify-between">
 

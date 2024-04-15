@@ -7,13 +7,7 @@ import { TypingText, TitleText } from '../Effect/typing';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 
-interface servicedata {
-    imgSrc: string;
-    heading: string;
-    subheading: string;
-}
-
-const servicedata: servicedata[] = [
+const servicedata = [
     {
         imgSrc: '/images/Services/modernization.png',
         heading: 'Instrument Modernization Solutions',
@@ -50,7 +44,7 @@ const Services = () => {
     const router = useRouter();
     const { t } = useTranslation('service');
     return (
-        <div className='mx-auto max-w-7xl mb-20 lg:mb-32 mt-12 lg:mt-20 px-10 lg:px-6 relative'>
+        <div className='mx-auto max-w-[1360px] mb-20 lg:mb-32 mt-12 lg:mt-20 px-10 lg:px-6 relative'>
             {/* <div className="radial-bgone hidden lg:block" /> */}
             <div className='mb-16'>
                 <motion.div
@@ -80,12 +74,12 @@ const Services = () => {
                         key={index}
                     >
                         <div className='rounded-full flex justify-center p-2'>
-                            <Image src={items.imgSrc} alt={items.imgSrc} width={80} height={80} />
+                            <Image src={items.imgSrc} alt={items.imgSrc} width={120} height={120} />
                         </div>
-                        <h3 className="text-xl font-semibold text-white text-center">
+                        <h3 className="text-2xl font-semibold text-white text-center">
                             {items.heading}
                         </h3>
-                        <p className='text-sm text-maingray text-center pt-2'>
+                        <p className='text-sm text-maingray text-center pt-3'>
                             {items.subheading}
                         </p>
                     </Link>

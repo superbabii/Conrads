@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const ErrorPage = () => {
   return (
     <div className="relative z-10 pb-16 pt-36 mt-16 lg:mt-32 md:pb-20 lg:pb-28 lg:pt-32">
-      <div className="mx-auto max-w-7xl text-center">
+      <div className="mx-auto max-w-[1360px] text-center">
         <h1 className="text-9xl font-bold text-primary mb-32">404</h1>
         <h3 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
           Sorry, the page can&apos;t be found

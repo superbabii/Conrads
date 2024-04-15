@@ -33,7 +33,7 @@ const SigninPage = () => {
   return (
     <>
       <div className='radial-center hidden lg:block'></div>
-      <div className='mx-auto max-w-7xl h-screen flex flex-col justify-center items-center p-4'>
+      <div className='mx-auto max-w-[1360px] h-screen flex flex-col justify-center items-center p-4'>
         <div className="max-w-[500px] rounded-lg bg-transparent shadow-lg form-board px-12 py-8">
           <h2 className="mb-4 text-3xl font-bold text-white opacity-80 text-center">
             Sign in to your account

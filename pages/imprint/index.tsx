@@ -26,7 +26,7 @@ const Imprint = () => {
                 backgroundSMImageUrl=""
                 height="150px"
             />
-            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 text-maingray text-lg my-12'>
+            <div className='mx-auto max-w-[1360px] px-4 sm:py-4 lg:px-8 text-maingray text-lg my-12'>
                 <div className='flex gap-x-4'>
                     <span className='text-white inline-block'>Owner:</span>
                     <span>Conrads Consult & Engineering</span>

@@ -63,7 +63,7 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageL
     >
       <div className='overflow-hidden rounded-lg'>
         <div
-          className="relative rounded-lg bg-cover bg-center bg-no-repeat opacity-70 h-[240px] transition-transform duration-1000"
+          className="relative rounded-lg bg-cover bg-center bg-no-repeat opacity-70 h-[280px] transition-transform duration-1000"
           style={{
             backgroundImage: `url(${imageLink})`,
             transform: isScaled ? 'scale(1.5)' : 'scale(1)',
@@ -74,7 +74,7 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageL
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 p-2">
-        <h3 className="text-md text-white border p-1 border-white rounded-md z-10 inline-block">
+        <h3 className="text-md font-bold text-white border p-1 border-white rounded-md z-10 inline-block">
           {heading}
         </h3>
         <p className="leading-normal text-white text-lg py-3">
@@ -89,7 +89,7 @@ const Products = () => {
   const router = useRouter();
   const { t } = useTranslation('product');
   return (
-    <div className='mx-auto max-w-7xl my-20 lg:my-32 px-10 lg:px-6 relative'>
+    <div className='mx-auto max-w-[1360px] my-20 lg:my-32 px-10 lg:px-6 relative'>
       <div className='mb-12'>
         <motion.div
           variants={staggerContainer(0.25, 0.25)}

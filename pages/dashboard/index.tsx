@@ -51,7 +51,7 @@ const Dashboard = () => {
                 height="320px"
             />
             {/* <div className="radial-bgone hidden lg:block"></div> */}
-            <div className='mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12'>
+            <div className='mx-auto max-w-[1360px] px-4 sm:py-4 lg:px-8 my-12'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                     <div className='relative'>
                         <div className='flex justify-center items-center h-120 bg-gray-200 overflow-hidden'>

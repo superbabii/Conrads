@@ -132,9 +132,9 @@ const Services = () => {
                 backgroundSMImageUrl="/images/Breadcrumb/service.png"
                 height="320px"
             />
-            <div className="mx-auto max-w-7xl px-4 sm:py-4 lg:px-8 my-12">
+            <div className="mx-auto max-w-[1360px] px-4 sm:py-4 lg:px-8 my-12">
                 {servicedata.map((items, index) => (
-                    <section id={`service-${index}`} className="mx-auto max-w-7xl mb-4 md:mb-8 px-4 sm:pb-4 lg:px-8" key={index}>
+                    <section id={`service-${index}`} className="mx-auto max-w-[1360px] mb-4 md:mb-8 px-4 sm:pb-4 lg:px-8" key={index}>
                         <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 gap-x-20 ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
                             <div className={`col-span-1 md:col-span-2 flex flex-col justify-center text-container md:order-${index % 2 === 0 ? '2' : '1'}`}>
                                 <p className="text-lg text-center text-maingray">
