@@ -34,7 +34,10 @@ export const getStaticProps: GetStaticProps<Props> = async ({
       'header',
       'footer',
       'whyus',
-      'work'
+      'service',
+      'product',
+      'work',
+      'trusted'
     ])),
   },
 })

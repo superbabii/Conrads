@@ -44,7 +44,7 @@ const Work = () => {
                     className="innerWidth mx-auto flexCenter flex-col"
                 >
                     <h1 className='text-white text-3xl md:text-5xl mb-3 font-thin'>
-                        <TypingText title="How we work" />
+                        <TypingText title={t("How we work")} />
                         <div className='bg-primary mt-1 w-[40px] md:w-[70px] h-[3px] md:h-[5px]' />
                     </h1>
                     <motion.p
