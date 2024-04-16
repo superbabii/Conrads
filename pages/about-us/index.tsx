@@ -319,6 +319,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({
             'header',
             'footer',
             'work',
+            'breadcrumb'
         ])),
     },
 })

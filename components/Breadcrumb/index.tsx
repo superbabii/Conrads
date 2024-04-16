@@ -20,8 +20,9 @@ const Breadcrumb = ({
     backgroundSMImageUrl: string;
     height: string;
 }) => {
+    const { t } = useTranslation('breadcrumb');
     return (
-        <div className={`relative overflow-hidden h-[${height}] pt-[60px]`}>
+        <div className={`relative overflow-hidden h-[${height}] pt-[120px]`}>
             <div className="absolute inset-0 z-0 flex justify-center items-center">
                 <img
                     className="absolute inset-0 w-full lg:h-full object-cover object-bottom hidden md:block"
@@ -72,12 +73,12 @@ const Breadcrumb = ({
                                     href="/"
                                     className="pr-1 font-medium text-white hover:text-primary"
                                 >
-                                    Home
+                                    {t("Home")}
                                 </Link>
                                 <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-white"></span>
                             </li>
                             <li className="font-medium text-primary">
-                                {pageName}
+                                {t(pageName)}
                             </li>
                         </ul>
                     </div>

@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useTranslation, Trans } from 'next-i18next';
 import { TypingText, TitleText } from '../Effect/typing';
 import { motion } from "framer-motion";
@@ -84,9 +83,8 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageL
     </div>
   );
 }
-//opacity-70 hover:opacity-100 transition-opacity duration-400
+
 const Products = () => {
-  const router = useRouter();
   const { t } = useTranslation('product');
   return (
     <div className='mx-auto max-w-[1360px] my-20 lg:my-32 px-10 lg:px-6 relative'>

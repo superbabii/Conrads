@@ -11,12 +11,12 @@ const servicedata = [
     {
         imgSrc: '/images/Services/modernization.png',
         heading: 'Instrument Modernization Solutions',
-        subheading: "Upgrade instruments for peak performance with our modernization services",
+        subheading: "Upgrade instruments for peak performance with modernization services",
     },
     {
         imgSrc: '/images/Services/decision.png',
         heading: 'Decision Support Simulation Services',
-        subheading: 'Harness simulations for informed decisions in design, electronics, and mathematics',
+        subheading: 'Use simulation to make decisions in design, electronics, and mathematics',
     },
     {
         imgSrc: '/images/Services/pcb.png',
@@ -26,22 +26,21 @@ const servicedata = [
     {
         imgSrc: '/images/Services/cam.png',
         heading: 'Collaborative CAD/CAM Design Solutions',
-        subheading: 'Expert design support for products, from small to complex',
+        subheading: 'Professional design support for small to complex products',
     },
     {
         imgSrc: '/images/Services/programming.png',
-        heading: 'Tailored Programming Solutions',
-        subheading: 'From firmware to GUI, we solve software challenges across platforms',
+        heading: 'Custom Programming Solutions',
+        subheading: 'Troubleshoot software issues across platforms, from firmware to GUI',
     },
     {
         imgSrc: '/images/Services/consult.svg',
         heading: 'Strategic Business Consulting Solutions',
-        subheading: 'Expert support for project, sales, and general management',
+        subheading: 'Expert support for projects, sales, and general management',
     },
 ]
 
 const Services = () => {
-    const router = useRouter();
     const { t } = useTranslation('service');
     return (
         <div className='mx-auto max-w-[1360px] mb-20 lg:mb-32 mt-12 lg:mt-20 px-10 lg:px-6 relative'>
@@ -62,7 +61,7 @@ const Services = () => {
                         variants={fadeIn("up", "tween", 0.2, 1)}
                         className='text-maingray text-md'
                     >
-                        Explore our range of premium services, backed by years of experience and a passion for perfection.
+                        {t("description")}
                     </motion.p>
                 </motion.div>
             </div>

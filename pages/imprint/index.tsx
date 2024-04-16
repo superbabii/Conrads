@@ -19,7 +19,7 @@ const Imprint = () => {
     return (
         <Layout>
             <Breadcrumb
-                pageName="imprint"
+                pageName="Imprint"
                 heading="Imprint"
                 description=""
                 backgroundImageUrl=""
@@ -116,6 +116,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({
             'common',
             'header',
             'footer',
+            'breadcrumb'
         ])),
     },
 })

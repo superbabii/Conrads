@@ -1,8 +1,13 @@
 {
     "STEP": "STEP",
     "How we work": "How we work",
+    "description": "",
     "heading-1": "Research Problem",
     "heading-2": "Identify Problem",
     "heading-3": "Solution Problem",
-    "heading-4": "Success Business"
+    "heading-4": "Success Business",
+    "subheading-1": "",
+    "subheading-2": "",
+    "subheading-3": "",
+    "subheading-4": ""
 }

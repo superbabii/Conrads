@@ -84,7 +84,7 @@ const Contact = () => {
                     </div>
                 ))}
             </motion.div>
-            <div className="h-px mb-20 py-[1px] w-full opacity-40 bg-gradient-to-r from-transparent via-[#710010] to-transparent" />
+            <div className="mb-20 pt-[2px] w-full opacity-40 bg-gradient-to-r from-transparent via-[#710010] to-transparent" />
             <div className="red-band"></div>
             <div className="contact-logo rounded-lg bg-[#121212] shadow-lg p-4 hidden lg:block">
                 <img
@@ -180,6 +180,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({
             'common',
             'header',
             'footer',
+            'breadcrumb'
         ])),
     },
 })
