@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Layout from "../layout";
-import Link from "next/link";
+import { useTranslation, Trans } from 'next-i18next';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
@@ -16,6 +16,8 @@ export const metadata: Metadata = {
 };
 
 const Imprint = () => {
+    const { t } = useTranslation('imprint');
+
     return (
         <Layout>
             <Breadcrumb
@@ -116,7 +118,8 @@ export const getStaticProps: GetStaticProps<Props> = async ({
             'common',
             'header',
             'footer',
-            'breadcrumb'
+            'breadcrumb',
+            'imprint'
         ])),
     },
 })
