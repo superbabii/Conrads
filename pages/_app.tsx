@@ -8,7 +8,7 @@ import CCESpinner from './Spinner';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
