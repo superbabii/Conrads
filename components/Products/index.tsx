@@ -7,13 +7,7 @@ import { TypingText, TitleText } from '../Effect/typing';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 
-interface productdata {
-  imgSrc: string;
-  heading: string;
-  subheading: string;
-}
-
-const productdata: productdata[] = [
+const productdata = [
   {
     imgSrc: '/images/Products/AI.png',
     heading: 'Artificial Intelligence',
@@ -65,7 +59,7 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ heading, subheading, imageL
           className="relative rounded-lg bg-cover bg-center bg-no-repeat opacity-70 h-[280px] transition-transform duration-1000"
           style={{
             backgroundImage: `url(${imageLink})`,
-            transform: isScaled ? 'scale(1.5)' : 'scale(1)',
+            transform: isScaled ? 'scale(1.3)' : 'scale(1)',
             filter: isScaled ? 'brightness(90%) sepia(100%) saturate(100%) hue-rotate(10deg)' : 'none',
           }}
         >

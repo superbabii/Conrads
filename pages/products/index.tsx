@@ -66,14 +66,7 @@ const StyledTab = styled((props: StyledTabProps) => (
     },
 }));
 
-interface Product {
-    imgSrc: string;
-    heading: string;
-    price: number;
-    category: string;
-}
-
-const productData: Product[] = [
+const productData = [
     {
         imgSrc: '/images/Products/AI_product.png',
         heading: 'Products-exm1',

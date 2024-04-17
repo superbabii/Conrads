@@ -74,13 +74,7 @@ const SearchTextField = styled(TextField)({
     },
 });
 
-interface NavigationItem {
-    name: string;
-    href: string;
-    current: boolean;
-}
-
-const navigation: NavigationItem[] = [
+const navigation = [
     { name: 'About Us', href: '/about-us', current: false },
     { name: 'Services', href: '/services', current: false },
     { name: 'Products', href: '/products', current: false },

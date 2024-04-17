@@ -3,12 +3,12 @@ import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import CustomSpinner from './Spinner';
+import CCESpinner from './Spinner';
 // import nextI18NextConfig from '../next-i18next.config.js'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -38,7 +38,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       {loading ? (
-        <CustomSpinner loading={loading} />
+        <CCESpinner loading={loading} />
       ) : (
         <Component {...pageProps} />
       )}
