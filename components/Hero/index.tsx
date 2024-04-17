@@ -100,7 +100,7 @@ const Hero: React.FC = () => {
             <div className="dance-text text-primary text-[12px] md:text-lg"
                 style={{ fontFamily: 'Segoe Script, sans-serif', letterSpacing: '4px' }}
             >
-                ==== WE&apos;RE THE BEST ====
+                {t("==== WE'RE THE BEST ====")}
             </div>
             <Carousel
                 autoPlay={true}
