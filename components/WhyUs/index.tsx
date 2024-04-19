@@ -9,7 +9,7 @@ const WhyUs = () => {
     const { t } = useTranslation('whyus');
 
     return (
-        <div className="why-bg mt-16 lg:mt-32">
+        <div className="why-bg mt-24 lg:mt-36">
             <div className="mx-auto max-w-5xl py-36 px-6">
                 <h3 className="text-center text-white text-3xl lg:text-5xl font-thin mb-6">
                     Why <RepeatingText title1='Choose' title2='Need' /> Us <br />

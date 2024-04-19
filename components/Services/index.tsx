@@ -10,33 +10,33 @@ import { fadeIn, staggerContainer } from "../../utils/motion";
 const servicedata = [
     {
         imgSrc: '/images/Services/modernization.png',
-        heading: 'Instrument Modernization Solutions',
-        subheading: "Upgrade instruments for peak performance with modernization services",
+        heading: 'heading-1',
+        subheading: "subheading-1",
     },
     {
         imgSrc: '/images/Services/decision.png',
-        heading: 'Decision Support Simulation Services',
-        subheading: 'Use simulation to make decisions in design, electronics, and mathematics',
+        heading: 'heading-2',
+        subheading: 'subheading-2',
     },
     {
         imgSrc: '/images/Services/pcb.png',
-        heading: 'Rapid PCB Development & Simulation Services',
-        subheading: 'Efficient PCB development and simulation for optimal performance',
+        heading: 'heading-3',
+        subheading: 'subheading-3',
     },
     {
         imgSrc: '/images/Services/cam.png',
-        heading: 'Collaborative CAD/CAM Design Solutions',
-        subheading: 'Professional design support for small to complex products',
+        heading: 'heading-4',
+        subheading: 'subheading-4',
     },
     {
         imgSrc: '/images/Services/programming.png',
-        heading: 'Custom Programming Solutions',
-        subheading: 'Troubleshoot software issues across platforms, from firmware to GUI',
+        heading: 'heading-5',
+        subheading: 'subheading-5',
     },
     {
         imgSrc: '/images/Services/consult.svg',
-        heading: 'Strategic Business Consulting Solutions',
-        subheading: 'Expert support for projects, sales, and general management',
+        heading: 'heading-6',
+        subheading: 'subheading-6',
     },
 ]
 
@@ -65,7 +65,7 @@ const Services = () => {
                     </motion.p>
                 </motion.div>
             </div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-y-12 mt-16'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-y-12 mt-16 lg:mt-24'>
                 {servicedata.map((items, index) => (
                     <Link
                         className="flex flex-col justify-between p-5 transition bg-transparent rounded-lg service-card"
@@ -76,10 +76,10 @@ const Services = () => {
                             <Image src={items.imgSrc} alt={items.imgSrc} width={120} height={120} />
                         </div>
                         <h3 className="text-2xl font-semibold text-white text-center">
-                            {items.heading}
+                            {t(items.heading)}
                         </h3>
                         <p className='text-sm text-maingray text-center pt-3'>
-                            {items.subheading}
+                            {t(items.subheading)}
                         </p>
                     </Link>
                 ))}

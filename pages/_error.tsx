@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Error Page | Conrads Consult & Engineering",
-  description: "This is About Page for Conrads Consult & Engineering",
+  description: "This is Error Page for Conrads Consult & Engineering",
 };
 
 const ErrorPage = () => {

@@ -10,22 +10,22 @@ const workdata = [
     {
         imgSrc: '/images/Work/research.png',
         heading: 'heading-1',
-        subheading: 'Discover opportunities through careful research and analysis.',
+        subheading: 'subheading-1',
     },
     {
         imgSrc: '/images/Work/identification.png',
         heading: 'heading-2',
-        subheading: 'Pinpoint challenges with razor-sharp precision and insight.',
+        subheading: 'subheading-2',
     },
     {
         imgSrc: '/images/Work/solution.png',
         heading: 'heading-3',
-        subheading: 'Craft innovative solutions tailored to your needs.',
+        subheading: 'subheading-3',
     },
     {
         imgSrc: '/images/Work/success.png',
         heading: 'heading-4',
-        subheading: 'Help your business great succeed and excel.',
+        subheading: 'subheading-4',
     },
 ]
 
@@ -51,7 +51,7 @@ const Work = () => {
                         variants={fadeIn("up", "tween", 0.2, 1)}
                         className='text-maingray text-md'
                     >
-                        Let us reveal the blueprint behind the smooth process. At Conrads Consult & Engineering, we believe in clarity, collaboration, and client-centricity. Here&apos;s how we transform your vision into reality.
+                        {t("description")}
                     </motion.p>
                 </motion.div>
             </div>
@@ -85,7 +85,7 @@ const Work = () => {
                                 {t(items.heading)}
                             </h3>
                             <p className='text-sm text-maingray text-center px-1'>
-                                {items.subheading}
+                                {t(items.subheading)}
                             </p>
                         </div>
                     </motion.div>

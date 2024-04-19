@@ -1,4 +1,16 @@
 {
     "Our Services": "Our Services",
-    "description": "Explore our range of premium services based on years of experience and passion for perfection."
+    "description": "Explore our range of premium services based on years of experience and passion for perfection.",
+    "heading-1": "Instrument Modernization Solutions",
+    "heading-2": "Decision Support Simulation Services",
+    "heading-3": "Rapid PCB Development & Simulation Services",
+    "heading-4": "Collaborative CAD/CAM Design Solutions",
+    "heading-5": "Custom Programming Solutions",
+    "heading-6": "Strategic Business Consulting Solutions",
+    "subheading-1": "Upgrade instruments for peak performance with modernization services",
+    "subheading-2": "Use simulation to make decisions in design, electronics, and mathematics",
+    "subheading-3": "Efficient PCB development and simulation for optimal performance",
+    "subheading-4": "Professional design support for small to complex products",
+    "subheading-5": "Troubleshoot software issues across platforms, from firmware to GUI",
+    "subheading-6": "Expert support for projects, sales, and general management"
 }
