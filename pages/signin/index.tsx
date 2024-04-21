@@ -27,7 +27,6 @@ const SigninPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Add form submission logic here, e.g., validation, API call
     console.log(formData);
   };
   return (
@@ -79,10 +78,15 @@ const SigninPage = () => {
               </button>
             </div>
           </form>
-          <p className="text-center text-maingray">
+          <p className="mb-6 text-center text-maingray">
             Don&apos;t have an account?{" "}
             <Link href="/signup" className="text-primary hover:underline">
               Sign up
+            </Link>
+          </p>
+          <p className="text-center text-maingray">
+            <Link href="/" className="text-primary hover:underline">
+              Return to Home
             </Link>
           </p>
         </div>

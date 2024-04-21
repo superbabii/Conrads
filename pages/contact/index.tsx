@@ -41,9 +41,9 @@ const contacts = [
         title: 'Office Hours',
         content: (
             <>
-                Mon to Sat: 09.00am to 18.00pm.
+                Mon to Fri: 09.00am to 18.00pm.
                 <br />
-                Sunday: Closed
+                Saturday, Sunday: Closed
             </>
         ),
     },

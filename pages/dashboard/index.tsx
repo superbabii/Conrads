@@ -35,7 +35,6 @@ const Dashboard = () => {
 
     const handleSave = () => {
         console.log('Saving profile:', profileData);
-        // Add save functionality here
         setIsChanged(false);
     };
 
@@ -43,11 +42,11 @@ const Dashboard = () => {
         <Layout>
             <Breadcrumb
                 pageName="My Account"
-                heading="Profile"
-                description=""
-                backgroundImageUrl="/images/Breadcrumb/contact.png"
-                backgroundSMImageUrl="/images/Breadcrumb/contact_sm.png"
-                height="150px"
+                heading="User Information"
+                description="Manage your account details and preferences"
+                backgroundImageUrl=""
+                backgroundSMImageUrl=""
+                height="120px"
             />
             <div className='mx-auto max-w-[1360px] px-4 sm:py-4 lg:px-8 my-12'>
                 <div className="rounded-lg bg-transparent shadow-lg form-board px-8 md:px-16 py-12">

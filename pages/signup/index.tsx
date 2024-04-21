@@ -13,8 +13,10 @@ const SignupPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    password: ''
+    password: '',
+    confirmPassword: ''
   });
+  const [passwordMismatch, setPasswordMismatch] = useState(false); // State to track password mismatch
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -22,11 +24,18 @@ const SignupPage = () => {
       ...prevState,
       [id]: value
     }));
+    // Reset password mismatch error when user types in either password field
+    setPasswordMismatch(false);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Add form submission logic here, e.g., validation, API call
+    // Validate passwords before submission
+    if (formData.password !== formData.confirmPassword) {
+      setPasswordMismatch(true); // Set password mismatch error
+      return;
+    }
+    // Passwords match, proceed with form submission
     console.log(formData);
   };
 
@@ -73,7 +82,7 @@ const SignupPage = () => {
                 required
               />
             </div>
-            <div className="mb-8">
+            <div className="mb-4">
               <label htmlFor="password" className="font-medium text-lg text-maingray">
                 Password:
               </label>
@@ -83,22 +92,39 @@ const SignupPage = () => {
                 required
               />
             </div>
+            <div className="mb-8">
+              <label htmlFor="confirmPassword" className="font-medium text-lg text-maingray">
+                Confirm Password:
+              </label>
+              <input type="password" id="confirmPassword" value={formData.confirmPassword} onChange={handleChange}
+                placeholder="Confirm your password *"
+                className="w-full rounded-md border border-transparent bg-white opacity-80 px-6 py-3 outline-none focus:border-primary"
+                required
+              />
+            </div>
+            {passwordMismatch && (
+              <p className="text-yellow mb-4 text-center">Passwords do not match</p>
+            )}
             <div className="mb-6">
               <button type="submit" className="flex w-full text-lg text-white justify-center mainbutton rounded-md">
                 Sign up
               </button>
             </div>
           </form>
-          <p className="text-center text-maingray">
+          <p className="mb-6 text-center text-maingray">
             Already using Startup?{" "}
             <Link href="/signin" className="text-primary hover:underline">
               Sign in
             </Link>
           </p>
+          <p className="text-center text-maingray">
+            <Link href="/" className="text-primary hover:underline">
+              Return to Home
+            </Link>
+          </p>
         </div>
       </div>
     </>
-
   );
 };
 
