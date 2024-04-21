@@ -33,7 +33,7 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
                         <div className="flex flex-shrink-0 items-center">
                             <img
                                 className="block h-10 lg:hidden"
-                                src={'/images/Logo/logo.png'}
+                                src={'/images/Logo/logo.svg'}
                                 alt="conrads-engineering-Logo"
                             />
                         </div>

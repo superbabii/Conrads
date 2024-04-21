@@ -3,7 +3,6 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Layout from "../layout";
 import Image from "next/image";
 import React from "react";
-import Slider from "react-slick";
 import Link from "next/link";
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -11,12 +10,6 @@ import Work from "@/components/Work";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 import { RepeatingText } from "../../components/Effect/typing";
-import { TypingText } from "../../components/Effect/typing";
-import { textVariant2 } from "../../utils/motion";
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TelegramIcon from '@mui/icons-material/Telegram';
 
 type Props = {
     // Define the props here
@@ -27,71 +20,7 @@ export const metadata: Metadata = {
     description: "This is About Page for Conrads Consult & Engineering",
 };
 
-// const teamMembers = [
-//     {
-//         role: 'Co-founder',
-//         name: 'John Doe',
-//         imageUrl: '/images/TeamMember/avatar.png',
-//         socialLinks: [
-//             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
-//             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
-//             { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
-//             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
-//         ],
-//     },
-//     {
-//         role: 'Electronic Engineer',
-//         name: 'John Doe',
-//         imageUrl: '/images/TeamMember/avatar.png',
-//         socialLinks: [
-//             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
-//             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
-//             { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
-//             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
-//         ],
-//     },
-//     {
-//         role: 'FPGA Programmer',
-//         name: 'John Doe',
-//         imageUrl: '/images/TeamMember/avatar1.png',
-//         socialLinks: [
-//             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
-//             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
-//             { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
-//             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
-//         ],
-//     },
-//     {
-//         role: 'Software Developer',
-//         name: 'John Doe',
-//         imageUrl: '/images/TeamMember/avatar1.png',
-//         socialLinks: [
-//             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
-//             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
-//             { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
-//             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
-//         ],
-//     },
-//     {
-//         role: 'Accountant',
-//         name: 'John Doe',
-//         imageUrl: '/images/TeamMember/avatar.png',
-//         socialLinks: [
-//             { name: 'Phone', url: 'tel:+49-662-343-645-10', icon: <PhoneIcon /> },
-//             { name: 'Email', url: 'mailto:info@conrads-engineering.com', icon: <EmailIcon /> },
-//             { name: 'Telegram', url: 'https://Telegram.com/johndoe', icon: <TelegramIcon /> },
-//             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe/', icon: <LinkedInIcon /> },
-//         ],
-//     },
-// ]
-
-interface successdata {
-    imgSrc: string;
-    heading: string;
-    subheading: string;
-}
-
-const successdata: successdata[] = [
+const successdata = [
     {
         imgSrc: '/images/About/project.png',
         heading: 'Successful Project',
@@ -115,49 +44,6 @@ const successdata: successdata[] = [
 ]
 
 const AboutUs = () => {
-    // const settings = {
-    //     dots: false,
-    //     infinite: true,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     arrows: false,
-    //     autoplay: true,
-    //     speed: 500,
-    //     autoplaySpeed: 5000,
-    //     cssEase: "linear",
-    //     rtl: true,
-    //     pauseOnHover: true,
-    //     responsive: [
-    //         {
-    //             breakpoint: 1200,
-    //             settings: {
-    //                 slidesToShow: 3,
-    //                 slidesToScroll: 1,
-    //                 infinite: true,
-    //                 dots: false
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 800,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 1,
-    //                 infinite: true,
-    //                 dots: false
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 450,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //                 infinite: true,
-    //                 dots: false
-    //             }
-    //         }
-    //     ]
-    // };
-
     return (
         <Layout>
             <Breadcrumb
@@ -168,31 +54,7 @@ const AboutUs = () => {
                 backgroundSMImageUrl="/images/Breadcrumb/about.png"
                 height="320px"
             />
-            {/* <div className="radial-bgone hidden lg:block"></div> */}
-            {/* <div className='mx-auto max-w-[1360px] px-6 sm:py-4 lg:px-8 my-12'>
-                <div className='grid grid-cols-1 md:grid-cols-2'>
-                    <div className='relative'>
-                        <img src="/images/About/ceo.png" alt="CEO-image" className="rounded-2xl sm:w-64 sm:h-auto lg:w-96 lg:h-auto mx-auto" />
-                    </div>
-                    <div className="relative text-container">
-                        <h2 className="text-3xl lg:text-5xl pt-4 font-bold sm:leading-tight mt-5 text-center text-white">
-                            Dedicated to help people&apos;s needs.
-                        </h2>
-                        <p className="font-medium text-lg mt-5 text-center text-maingray">
-                            Dedicated to fulfilling people&apos;s needs, our mission is to provide innovative solutions that address challenges and enhance lives. With a commitment to customer satisfaction and social responsibility, we strive to make a positive impact in communities and empower individuals to thrive.
-                        </p>
-                        <motion.div
-                            variants={staggerContainer(0.25, 0.25)}
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={{ once: false, amount: 0.25 }}
-                            className="text-lg font-semibold mt-12 lg:ml-32 preline text-center text-white handwritten"
-                        >
-                            <TypingText title="Werner Conrads, CEO" />
-                        </motion.div>
-                    </div>
-                </div>
-            </div> */}
+            
             <motion.div
                 variants={staggerContainer(0.25, 0.25)}
                 initial="hidden"
@@ -238,52 +100,6 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-
-            {/* <div className="bg-wework py-4">
-                <motion.div
-                    variants={staggerContainer(0.25, 0.25)}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: false, amount: 0.25 }}
-                    className="mx-auto max-w-2xl lg:max-w-[1360px] sm:py-4 px-6 lg:px-8"
-                >
-                    <h1 className='text-white text-3xl md:text-5xl mb-3'
-                        style={{ fontFamily: 'Poppins, sans-serif' }}
-                    >
-                        <TypingText title="Meet Our Team Member" />
-                        <div className='bg-primary mt-1 w-[40px] md:w-[70px] h-[3px] md:h-[5px]' />
-                    </h1>
-                </motion.div>
-                <div className="mx-auto max-w-[1360px]">
-                    <Slider {...settings}>
-                        {teamMembers.map((items, i) => (
-                            <div key={i}>
-                                <div className='member-card rounded-md mx-8 p-[1px] my-10 text-center'>
-                                    <img className="w-full h-auto rounded-t-md" src={items.imageUrl} alt={`${items.name}'s profile`} />
-                                    <div className="px-6 py-4">
-                                        <div className="text-white font-bold text-3xl mb-2">
-                                            {items.name}
-                                        </div>
-                                        <p className="text-maingray">
-                                            {items.role}
-                                        </p>
-                                    </div>
-                                    <div className="px-6 pt-2 pb-4 overflow-hidden">
-                                        <div className="flex justify-center space-x-2 overflow-x-hidden">
-                                            {items.socialLinks.map((link, index) => (
-                                                <a key={index} href={link.url} target="_blank" rel="noopener noreferrer"
-                                                    className="inline-block px-3 py-1 transition duration-300 ease-in-out text-white hover:text-primary">
-                                                    {link.icon}
-                                                </a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
-            </div> */}
             <Work />
             <div className="about-wide-bg mt-16 lg:mt-32">
                 <div className="mx-auto max-w-5xl py-36 px-6">
