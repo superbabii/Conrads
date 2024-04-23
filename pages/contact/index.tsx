@@ -10,6 +10,7 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
+import { useTranslation, Trans } from 'next-i18next';
 
 type Props = {
     // Define the props here
@@ -50,6 +51,7 @@ const contacts = [
 ];
 
 const Contact = () => {
+    const { t } = useTranslation('contact');
     return (
         <Layout>
             <Breadcrumb
@@ -76,7 +78,7 @@ const Contact = () => {
                             {contact.icon}
                         </div>
                         <h3 className="text-2xl font-semibold text-white text-center pb-3">
-                            {contact.title}
+                            {t(contact.title)}
                         </h3>
                         <div className='text-sm text-white text-center'>
                             {contact.content}
@@ -180,7 +182,8 @@ export const getStaticProps: GetStaticProps<Props> = async ({
             'common',
             'header',
             'footer',
-            'breadcrumb'
+            'breadcrumb',
+            'contact'
         ])),
     },
 })
