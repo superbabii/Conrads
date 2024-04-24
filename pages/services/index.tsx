@@ -6,6 +6,7 @@ import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { useTranslation, Trans } from 'next-i18next';
 
 type Props = {
     // Define the props here
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 const servicedata = [
     {
         imgSrc: '/images/Services/modernization.png',
-        heading: 'Instrument Modernization Solutions',
+        heading: 'heading-1',
         subheading: "Upgrade instruments for peak performance with our modernization services",
         description: (
             <>
@@ -33,7 +34,7 @@ const servicedata = [
     },
     {
         imgSrc: '/images/Services/decision.png',
-        heading: 'Decision Support Simulation Services',
+        heading: 'heading-2',
         subheading: 'Harness simulations for informed decisions in design, electronics, and mathematics',
         description: (
             <>
@@ -47,7 +48,7 @@ const servicedata = [
     },
     {
         imgSrc: '/images/Services/pcb.png',
-        heading: 'Rapid PCB Development & Simulation Services',
+        heading: 'heading-3',
         subheading: 'Efficient PCB development and simulation for optimal performance',
         description: (
             <>
@@ -61,7 +62,7 @@ const servicedata = [
     },
     {
         imgSrc: '/images/Services/cam.png',
-        heading: 'Collaborative CAD/CAM Design Solutions',
+        heading: 'heading-4',
         subheading: 'Expert design support for products, from small to complex',
         description: (
             <>
@@ -75,7 +76,7 @@ const servicedata = [
     },
     {
         imgSrc: '/images/Services/programming.png',
-        heading: 'Tailored Programming Solutions',
+        heading: 'heading-5',
         subheading: 'From firmware to GUI, we solve software challenges across platforms',
         description: (
             <>
@@ -89,7 +90,7 @@ const servicedata = [
     },
     {
         imgSrc: '/images/Services/consult.svg',
-        heading: 'Strategic Business Consulting Solutions',
+        heading: 'heading-6',
         subheading: 'Expert support for project, sales, and general management',
         description: (
             <>
@@ -106,6 +107,7 @@ const servicedata = [
 const Services = () => {
 
     const router = useRouter();
+    const { t } = useTranslation('service-page');
 
     const section = router.asPath.split('#')[1]?.split('-')[1];
 
@@ -121,7 +123,6 @@ const Services = () => {
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     };
-
     return (
         <Layout>
             <Breadcrumb
@@ -146,7 +147,7 @@ const Services = () => {
                                     <Image src={items.imgSrc} alt={items.imgSrc} width={120} height={120} />
                                 </div>
                                 <h3 className="text-2xl font-semibold text-white text-center py-3">
-                                    {items.heading}
+                                    {t(items.heading)}
                                 </h3>
                                 {/* <p className='text-maingray text-center'>
                                     {items.subheading}
@@ -170,7 +171,8 @@ export const getStaticProps: GetStaticProps<Props> = async ({
             'common',
             'header',
             'footer',
-            'breadcrumb'
+            'breadcrumb',
+            'service-page'
         ])),
     },
 })

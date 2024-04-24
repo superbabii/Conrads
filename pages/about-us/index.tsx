@@ -10,6 +10,7 @@ import Work from "@/components/Work";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 import { RepeatingText } from "../../components/Effect/typing";
+import { useTranslation, Trans } from 'next-i18next';
 
 type Props = {
     // Define the props here
@@ -38,12 +39,13 @@ const successdata = [
     },
     {
         imgSrc: '/images/About/satification.png',
-        heading: 'Client Satisfaction',
+        heading: 'Customer Satisfaction',
         subheading: '3225+',
     },
 ]
 
 const AboutUs = () => {
+    const { t } = useTranslation('about-us');
     return (
         <Layout>
             <Breadcrumb
@@ -78,7 +80,7 @@ const AboutUs = () => {
                                 </h3>
                                 <div className="w-full h-[1px] opacity-50 bg-maingray mb-2"></div>
                                 <p className="text-md text-maingray text-center">
-                                    {items.heading}
+                                    {t(items.heading)}
                                 </p>
                             </div>
                         </div>
@@ -104,7 +106,7 @@ const AboutUs = () => {
             <div className="about-wide-bg mt-16 lg:mt-32">
                 <div className="mx-auto max-w-5xl py-36 px-6">
                     <h3 className="text-center text-white text-3xl lg:text-5xl font-semibold mb-6">
-                        Endless <RepeatingText title1='Possibilities' title2='Opportunities' />
+                        {t("Endless")} <RepeatingText title1={t('Possibilities')} title2={t('Opportunities')} />
                     </h3>
                     <p className="text-center text-white text-lg font-normal mb-8">
                         Anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
@@ -112,10 +114,10 @@ const AboutUs = () => {
                     </p>
                     <div className="flex flex-col lg:flex-row justify-center items-center gap-y-8 lg:gap-x-16">
                         <Link href="/services" className='text-lg text-white mainbutton rounded-full' style={{ width: '200px' }}>
-                            OUR SERVICES
+                            {t("OUR SERVICES")}
                         </Link>
                         <Link href="/products" className='text-lg text-white mainbutton rounded-full' style={{ width: '200px' }}>
-                            OUR PRODUCTS
+                            {t("OUR PRODUCTS")}
                         </Link>
                     </div>
                 </div>
@@ -135,7 +137,8 @@ export const getStaticProps: GetStaticProps<Props> = async ({
             'header',
             'footer',
             'work',
-            'breadcrumb'
+            'breadcrumb',
+            'about-us'
         ])),
     },
 })
