@@ -162,7 +162,7 @@ html:not([data-scroll="0"]) .navbar {
 
 .about-wide-bg::before {
   content: "";
-  background-image: url('/images/WhyUs/electron_lab.png');
+  background-image: url('/images/About/endless.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -171,7 +171,7 @@ html:not([data-scroll="0"]) .navbar {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.4;
+  opacity: 0.3;
   z-index: -1;
 }
 

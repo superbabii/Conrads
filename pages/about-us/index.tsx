@@ -104,11 +104,11 @@ const AboutUs = () => {
             </div>
             <Work />
             <div className="about-wide-bg mt-16 lg:mt-32">
-                <div className="mx-auto max-w-5xl py-36 px-6">
-                    <h3 className="text-center text-white text-3xl lg:text-5xl font-semibold mb-6">
+                <div className="mx-auto max-w-5xl py-44 px-6">
+                    <h3 className="text-center text-white text-3xl lg:text-5xl font-thin mb-12">
                         {t("Endless")} <RepeatingText title1={t('Possibilities')} title2={t('Opportunities')} />
                     </h3>
-                    <p className="text-center text-white text-lg font-normal mb-8">
+                    <p className="text-center text-white text-lg font-normal mb-12">
                         Anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
                         occur in which toil and pain can procure him some great pleasure.
                     </p>
