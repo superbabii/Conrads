@@ -113,10 +113,10 @@ const AboutUs = () => {
                         occur in which toil and pain can procure him some great pleasure.
                     </p>
                     <div className="flex flex-col lg:flex-row justify-center items-center gap-y-8 lg:gap-x-16">
-                        <Link href="/services" className='text-lg text-white mainbutton rounded-full' style={{ width: '200px' }}>
+                        <Link href="/services" className='text-lg text-white mainbutton rounded-full' style={{ width: '210px' }}>
                             {t("OUR SERVICES")}
                         </Link>
-                        <Link href="/products" className='text-lg text-white mainbutton rounded-full' style={{ width: '200px' }}>
+                        <Link href="/products" className='text-lg text-white mainbutton rounded-full' style={{ width: '210px' }}>
                             {t("OUR PRODUCTS")}
                         </Link>
                     </div>
