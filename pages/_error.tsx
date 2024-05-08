@@ -16,8 +16,8 @@ const ErrorPage = () => {
           Sorry, the page can&apos;t be found
         </h3>
         <p className="mb-10 text-maingray sm:text-lg">
-          The page you were looking for appears to have been moved,
-          deleted or does not exist.
+          The page you were looking for appears to have been moved, deleted or
+          does not exist.
         </p>
         <Link
           href="/"

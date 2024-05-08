@@ -1,7 +1,7 @@
-import pkg from './next-i18next.config.js';
+import pkg from "./next-i18next.config.js";
 const { i18n } = pkg;
 
-import { loadCustomBuildParams } from './next-utils.config.js';
+import { loadCustomBuildParams } from "./next-utils.config.js";
 const { esmExternals = false, tsconfigPath } = loadCustomBuildParams();
 
 /** @type {import('next').NextConfig} */

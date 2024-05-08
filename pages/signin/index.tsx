@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Link from "next/link";
-import GoogleIcon from '@mui/icons-material/Google';
+import GoogleIcon from "@mui/icons-material/Google";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 
 const SigninPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: ''
+    name: "",
+    email: "",
+    password: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [id]: value
+      [id]: value,
     }));
   };
 
@@ -31,8 +31,8 @@ const SigninPage = () => {
   };
   return (
     <>
-      <div className='radial-center hidden lg:block'></div>
-      <div className='mx-auto max-w-[1360px] h-screen flex flex-col justify-center items-center p-4'>
+      <div className="radial-center hidden lg:block"></div>
+      <div className="mx-auto max-w-[1360px] h-screen flex flex-col justify-center items-center p-4">
         <div className="max-w-[500px] rounded-lg bg-transparent shadow-lg form-board px-12 py-8">
           <h2 className="mb-4 text-3xl font-bold text-white opacity-80 text-center">
             Sign in to your account
@@ -41,7 +41,7 @@ const SigninPage = () => {
             Login to your account for a faster checkout.
           </p>
           <button className="flex w-full text-lg text-white justify-center mainbutton rounded-md mb-4">
-            <GoogleIcon className='mt-1 mr-3' />
+            <GoogleIcon className="mt-1 mr-3" />
             Sign in with Google
           </button>
           <div className="mb-4 flex items-center justify-center">
@@ -53,27 +53,44 @@ const SigninPage = () => {
           </div>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="name" className="font-medium text-lg text-maingray">
+              <label
+                htmlFor="name"
+                className="font-medium text-lg text-maingray"
+              >
                 Work Email:
               </label>
-              <input type="email" id="email" value={formData.email} onChange={handleChange}
+              <input
+                type="email"
+                id="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Enter your email *"
                 className="w-full rounded-md border border-transparent bg-white opacity-80 px-6 py-3 outline-none focus:border-primary"
                 required
               />
             </div>
             <div className="mb-8">
-              <label htmlFor="password" className="font-medium text-lg text-maingray">
+              <label
+                htmlFor="password"
+                className="font-medium text-lg text-maingray"
+              >
                 Password:
               </label>
-              <input type="password" id="password" value={formData.password} onChange={handleChange}
+              <input
+                type="password"
+                id="password"
+                value={formData.password}
+                onChange={handleChange}
                 placeholder="Enter your password *"
                 className="w-full rounded-md border border-transparent bg-white opacity-80 px-6 py-3 outline-none focus:border-primary"
                 required
               />
             </div>
             <div className="mb-6">
-              <button type="submit" className="flex w-full text-lg text-white justify-center mainbutton rounded-md">
+              <button
+                type="submit"
+                className="flex w-full text-lg text-white justify-center mainbutton rounded-md"
+              >
                 Sign in
               </button>
             </div>
